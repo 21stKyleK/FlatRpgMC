@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2A5E79CA-191C-F1D8-65F2-AF5D7F5B1A45}</ProjectGuid>
+    <ProjectGuid>{51CAFBEE-F937-08B4-06A9-578FE00238DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -67,6 +67,7 @@
     <Compile Include="Assets\PlayerStuff\Player Scripts\PlayerStatistics.cs" />
     <Compile Include="Assets\Scenes\EnemySpawn\Enemies\EnBattleTactics.cs" />
     <Compile Include="Assets\Scenes\EnemySpawn\Enemies\EnemyMovement.cs" />
+    <Compile Include="Assets\Scenes\EnemySpawn\EnemyManager.cs" />
     <Compile Include="Assets\Scenes\EnemySpawn\HomeData.cs" />
     <Compile Include="Assets\Scenes\GameManager.cs" />
     <Compile Include="Assets\Scenes\Loading Zone Stuff\LoadZoneTrigger.cs" />
@@ -78,37 +79,37 @@
     <Compile Include="Assets\Technician\TestingStuff\Example2.cs" />
     <Compile Include="Assets\Technician\User Interface\PauseMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/100040199/OneDrive - Clear Creek ISD/unification/FlatRPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

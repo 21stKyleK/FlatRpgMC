@@ -29,7 +29,7 @@ public class PauseMenu : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(MovePause());
         }
-        else if(GameManager.Instance.CurrentState < (GameManager.States)2 && animCo)
+        else if(GameManager.Instance.CurrentState <= (GameManager.States)1 && animCo)
         {
             animCo = false;
             GetComponent<CanvasGroup>().interactable = true;
