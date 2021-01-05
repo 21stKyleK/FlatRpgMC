@@ -57,6 +57,8 @@ public class PauseMenu : MonoBehaviour
             yield return null;
             time -= Time.unscaledDeltaTime;
             //time -= Time.deltaTime;
+
+            //Time.timeScale = 0;
         }
 
         if (animCo)

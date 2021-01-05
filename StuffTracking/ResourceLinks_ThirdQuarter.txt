@@ -17,3 +17,10 @@ https://git-scm.com/docs/git-branch
 "folders in git": https://stackoverflow.com/questions/12258399/how-do-i-create-a-folder-in-a-github-repository
 "screwing with branches": https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository
 "git checkout": https://www.atlassian.com/git/tutorials/using-branches/git-checkout
+
+"deleting branches": https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely
+"sprite sheets basics": https://answers.unity.com/questions/691438/how-do-i-create-a-sprite-sheet-for-a-2d-character.html
+"Sprite Atlas overview": https://docs.unity3d.com/Manual/class-SpriteAtlas.html
+"Sprite Atlas docs": https://docs.unity3d.com/Manual/SpriteAtlasWorkflow.html
+"Sprite editor + sheets 2019.2+": https://learn.unity.com/tutorial/introduction-to-sprite-editor-sheets-2019-2#
+"Sprite editor + sheets 2019.1-": https://learn.unity.com/tutorial/introduction-to-sprite-editor-and-sheets#
