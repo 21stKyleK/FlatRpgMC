@@ -32,7 +32,7 @@ public class ToFightScreen : MonoBehaviour
 
 		transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, true);
 		//the bool is worldPositionStays, where if true, will keep local transform, else it'll inherit from parent
-		transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+		//transform.position = new Vector3(transform.position.x, transform.position.y, 1007);
 		
 		//Debug.Log("It is now "+GameManager.Instance.CurrentState);
 		
@@ -52,16 +52,21 @@ public class ToFightScreen : MonoBehaviour
 
 		cam.GetComponent<PlayerCamera>().ActivateBG(false);
 
-		StartCoroutine(cam.GetComponent<PlayerCamera>().FadeOut(true));
+		//StartCoroutine(cam.GetComponent<PlayerCamera>().FadeOut(true));
 
-		//if (!destroyMe)
-		//{
-			transform.SetParent(bruh.transform, true);
-		//	transform.position = new Vector2(transform.position.x, transform.position.y);
-		//}
-		//else
-		//{
-		//	Destroy(this);
-		//}
-	}
+		cam.GetComponent<PlayerCamera>().Fading(false, true);
+
+
+		if (!destroyMe)
+        {
+            transform.SetParent(bruh.transform, true);
+            //transform.position = new Vector2(transform.position.x, transform.position.y);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+		//Debug.Log("Epic");
+    }
 }

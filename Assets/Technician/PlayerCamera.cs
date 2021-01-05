@@ -85,7 +85,9 @@ public class PlayerCamera : MonoBehaviour
     //to screen
     public IEnumerator FadeOut(bool sceneTran)
     {
-		yield return null;
+		//yield return null;
+
+        //Debug.Log("Bruh");
 		
         while (fader.color.a > 0)
         {
@@ -102,6 +104,7 @@ public class PlayerCamera : MonoBehaviour
             GameManager.Instance.CurrentState = (GameManager.States)2;
         }
         //player.GetComponent<PlayerMovement>().Activity = true;
+        //Debug.Log("ow");
     }
 
     public void SetBGImage(Texture bruh)
