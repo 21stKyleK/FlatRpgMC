@@ -1,0 +1,19 @@
+"trick to make combat more interesting": https://www.youtube.com/watch?v=6BrZryMz-ac
+"everything wrong with nintendo's design philosophy": https://www.youtube.com/watch?v=EQrZX1lEKnc
+"boss battle design 3": https://www.youtube.com/watch?v=6EIbdNIvl5Q
+"boss battle design 2": https://www.youtube.com/watch?v=o0CKHLumTG0
+"boss battle design": https://www.youtube.com/watch?v=wUPugc51udc
+"what make's odyysey's fights special": https://www.youtube.com/watch?v=wF-RX6zdpS0
+"making the case for paper mario's partners": https://www.youtube.com/watch?v=Yzd1XFHcvHY
+"overly long review of origami king": https://www.youtube.com/watch?v=VQaLLo_tpbU
+
+https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+https://git-scm.com/docs/git-add
+https://forum.unity.com/threads/solved-changing-ui-image-with-script.440347/
+https://stackoverflow.com/questions/37691592/unity-how-to-change-the-rendering-order-of-a-canvas
+https://www.atlassian.com/git/tutorials/using-branches/git-checkout
+https://git-scm.com/docs/git-branch
+
+"folders in git": https://stackoverflow.com/questions/12258399/how-do-i-create-a-folder-in-a-github-repository
+"screwing with branches": https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository
+"git checkout": https://www.atlassian.com/git/tutorials/using-branches/git-checkout

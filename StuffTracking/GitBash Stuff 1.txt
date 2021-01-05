@@ -1,0 +1,189 @@
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ mkdir haveNightmare
+
+//make directory
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ ls
+'3D Objects'/         Desktop/        'Local Settings'@   ntuser.dat.LOG2                                                                               'OneDrive - Clear Creek ISD'/   SendTo@
+ AppData/             Documents/       Music/             NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TM.blf                                        Pictures/                      source/
+'Application Data'@   Downloads/      'My Documents'@     NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TMContainer00000000000000000001.regtrans-ms   PrintHood@                    'Start Menu'@
+ Autodesk/            Favorites/       NetHood@           NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TMContainer00000000000000000002.regtrans-ms   Recent@                        Templates@
+ Contacts/            haveNightmare/   NTUSER.DAT         ntuser.ini                                                                                    'Saved Games'/                  Videos/
+ Cookies@             Links/           ntuser.dat.LOG1    OneDrive/                                                                                      Searches/
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ cd haveNightmare
+
+//change directory
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare
+$ pwd
+/c/Users/100040199/haveNightmare
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare
+$ touch bingus.txt
+
+//creates a file
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare
+$ ls
+bingus.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare
+$ git init
+Initialized empty Git repository in C:/Users/100040199/haveNightmare/.git/
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bingus.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git add bingus.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   bingus.txt
+
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git commit -m "super bingus brothers: initial"
+[master (root-commit) 096a674] super bingus brothers: initial
+ Committer: Kyle King <100040199@ccisd.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 bingus.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git log
+commit 096a674d08cf7a63d68c741071e38f4b9645ff3f (HEAD -> master)
+Author: Kyle King <100040199@ccisd.net>
+Date:   Fri Oct 23 15:15:37 2020 -0500
+
+    super bingus brothers: initial
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git log
+commit 096a674d08cf7a63d68c741071e38f4b9645ff3f (HEAD -> master)
+Author: Kyle King <100040199@ccisd.net>
+Date:   Fri Oct 23 15:15:37 2020 -0500
+
+    super bingus brothers: initial
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ nano bingus.txt
+
+//edit file
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bingus.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git add .
+warning: LF will be replaced by CRLF in bingus.txt.
+The file will have its original line endings in your working directory
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git commit -m "uh sure"
+[master 7909f59] uh sure
+ Committer: Kyle King <100040199@ccisd.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git log
+commit 7909f59f417d0888a7c3b32b49da67bc46808a72 (HEAD -> master)
+Author: Kyle King <100040199@ccisd.net>
+Date:   Fri Oct 23 15:21:22 2020 -0500
+
+    uh sure
+
+commit 096a674d08cf7a63d68c741071e38f4b9645ff3f
+Author: Kyle King <100040199@ccisd.net>
+Date:   Fri Oct 23 15:15:37 2020 -0500
+
+    super bingus brothers: initial
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git git
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+        init
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git diff
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git diff 0
+fatal: ambiguous argument '0': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git diff 096
+fatal: ambiguous argument '096': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$ git diff 096a
+diff --git a/bingus.txt b/bingus.txt
+index e69de29..d80b783 100644
+--- a/bingus.txt
++++ b/bingus.txt
+@@ -0,0 +1,2 @@
++why is the second one correct, but not the first
++like that's real surreal if i SAY SO
+
+100040199@CSHS-2336-23-S MINGW64 ~/haveNightmare (master)
+$

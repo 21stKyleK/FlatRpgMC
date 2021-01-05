@@ -1,0 +1,234 @@
+in GitHub{
+click the +v, then "create repository"
+maybe CtrlShiftV works in the command line, but it might not
+ShiftIns also works maybe
+
+On Windows GIT Bash Ctrl+X would do nothing and found out it works quite like vi/vim. Press i to enter inline insert mode.
+Type the description at the very top, press esc to exit insert mode, then type :x! (now the cursor is at the bottom) and hit enter to save and exit.
+If typing :q! instead, will exit the editor without saving (and commit will be aborted)
+
+BTW, if you try pushing/pulling a cloned repository, you can't if you don't have the access
+
+check Oh Shit, Git
+}
+
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ ls
+'3D Objects'/         Desktop/           Music/            NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TM.blf                                        Pictures/       source/
+ AppData/             Documents/        'My Documents'@    NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TMContainer00000000000000000001.regtrans-ms   PrintHood@     'Start Menu'@
+'Application Data'@   Downloads/         NetHood@          NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TMContainer00000000000000000002.regtrans-ms   Recent@         Templates@
+ Autodesk/            Favorites/         NTUSER.DAT        ntuser.ini                                                                                    'Saved Games'/   Videos/
+ Contacts/            Links/             ntuser.dat.LOG1   OneDrive/                                                                                      Searches/
+ Cookies@            'Local Settings'@   ntuser.dat.LOG2  'OneDrive - Clear Creek ISD'/                                                                   SendTo@
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ cd Documents
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents
+$ cd ./
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents
+$ cd C:
+
+100040199@CSHS-2336-23-S MINGW64 /c
+$ cd
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ ls
+'3D Objects'/         Desktop/           Music/            NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TM.blf                                        Pictures/       source/
+ AppData/             Documents/        'My Documents'@    NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TMContainer00000000000000000001.regtrans-ms   PrintHood@     'Start Menu'@
+'Application Data'@   Downloads/         NetHood@          NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TMContainer00000000000000000002.regtrans-ms   Recent@         Templates@
+ Autodesk/            Favorites/         NTUSER.DAT        ntuser.ini                                                                                    'Saved Games'/   Videos/
+ Contacts/            Links/             ntuser.dat.LOG1   OneDrive/                                                                                      Searches/
+ Cookies@            'Local Settings'@   ntuser.dat.LOG2  'OneDrive - Clear Creek ISD'/                                                                   SendTo@
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ cd Documents/haveNightmare
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (master)
+$ cd ..
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents
+$ cd haveNightmare
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (master)
+$ pwd
+/c/Users/100040199/Documents/haveNightmare
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (master)
+$ 
+bash: $'\302\226\302\226\302\226\302\226\302\226': command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (master)
+$ 
+bash: $'\302\226': command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (master)
+$ 
+bash: $'\302\226': command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (master)
+$ git remote add origin https://github.com/21stKyleK/learningGitBash.git
+git push -u origin main
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (master)
+$ git branch -M main
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git push -u origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (6/6), 508 bytes | 508.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/21stKyleK/learningGitBash.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ touch bigBean.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ nano bigBean.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ nano bigBean.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git add .
+warning: LF will be replaced by CRLF in bigBean.txt.
+The file will have its original line endings in your working directory
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git push
+Everything up-to-date
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   bigBean.txt
+
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ ls
+bigBean.txt  bingus.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git commit
+[main 81322d5] bingus now has food
+ Committer: Kyle King <100040199@ccisd.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 4 insertions(+)
+ create mode 100644 bigBean.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ ..
+bash: ..: command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ cd ..
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents
+$ git clone https://github.com/Youngthanael/githublearning
+Cloning into 'githublearning'...
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 12 (delta 2), reused 12 (delta 2), pack-reused 0
+Unpacking objects: 100% (12/12), 1.35 KiB | 27.00 KiB/s, done.
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents
+$ cd githublearning
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/githublearning (main)
+$ ls
+file.txt  NOTES.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/githublearning (main)
+$ nano NOTES.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/githublearning (main)
+$ cd ..
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents
+$ cd haveNightmare
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ man git
+bash: man: command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ man
+bash: man: command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ man git
+bash: man: command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ man.git
+bash: man.git: command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git remote add origin https://github.com/21stKyleK/learningGitBash.gitgit push -u origin main
+error: unknown switch `u'
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git remote add origin https://github.com/21stKyleK/learningGitBash.git
+fatal: remote origin already exists.
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 358 bytes | 358.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/21stKyleK/learningGitBash.git
+   7909f59..81322d5  main -> main
+
+100040199@CSHS-2336-23-S MINGW64 ~/Documents/haveNightmare (main)
+$

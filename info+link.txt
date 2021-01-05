@@ -1,6 +1,0 @@
-https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
-https://git-scm.com/docs/git-add
-https://forum.unity.com/threads/solved-changing-ui-image-with-script.440347/
-https://stackoverflow.com/questions/37691592/unity-how-to-change-the-rendering-order-of-a-canvas
-https://www.atlassian.com/git/tutorials/using-branches/git-checkout
-https://git-scm.com/docs/git-branch

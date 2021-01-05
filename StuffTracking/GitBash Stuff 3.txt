@@ -1,0 +1,491 @@
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ ls
+'3D Objects'/
+ AppData/
+'Application Data'@
+ Autodesk/
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TM.blf
+ NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{72f8562c-d274-11ea-9239-80e82cc815a5}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ OneDrive/
+'OneDrive - Clear Creek ISD'/
+ Pictures/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+ source/
+'Start Menu'@
+ Templates@
+ Videos/
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ cd Desktop/
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop
+$ ls
+ desktop.ini   IndependentStu/  'Microsoft Teams.lnk'*
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop
+$ cd IndependentStu
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu
+$ ls
+FlatRpgMC/
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu
+$ cd FlatRpgMC
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ -l
+bash: -l: command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git -l
+unknown option: -l
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git branch -l
+  main
+* newWorld
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git checkout newWorld
+Switched to branch 'newWorld'
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git status
+On branch newWorld
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   info+link.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git -u
+unknown option: -u
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git add info+links.txt
+fatal: pathspec 'info+links.txt' did not match any files
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git add info+link.txt
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ status
+bash: status: command not found
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git status
+On branch newWorld
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   info+link.txt
+
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git commit -m "some more links in info+link"
+[newWorld 355a519] some more links in info+link
+ Committer: Kyle King <100040199@ccisd.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git push origin newWorld
+Enumerating objects: 221, done.
+Counting objects: 100% (221/221), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (125/125), done.
+Writing objects: 100% (129/129), 101.31 KiB | 1007.00 KiB/s, done.
+Total 129 (delta 102), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (102/102), completed with 87 local objects.
+remote:
+remote: Create a pull request for 'newWorld' on GitHub by visiting:
+remote:      https://github.com/21stKyleK/FlatRpgMC/pull/new/newWorld
+remote:
+To https://github.com/21stKyleK/FlatRpgMC.git
+ * [new branch]      newWorld -> newWorld
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (newWorld)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git pull origin main
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 11 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (11/11), 96.83 KiB | 1.73 MiB/s, done.
+From https://github.com/21stKyleK/FlatRpgMC
+ * branch            main       -> FETCH_HEAD
+   2323513..aafacc6  main       -> origin/main
+Updating 2323513..aafacc6
+Fast-forward
+ .vs/FlatRpgMC/v16/.suo                             | Bin 0 -> 245760 bytes
+ Assembly-CSharp.csproj                             |  25 +++---
+ .../PlayerStuff/Player Scripts/PlayerDataStuff.cs  |  33 -------
+ .../Player Scripts/PlayerDataStuff.cs.meta         |  11 ---
+ Assets/Scenes/Loading Zone Stuff/ToFightScreen.cs  |  31 ++++---
+ Assets/Scenes/PermaStuff.unity                     |   8 +-
+ Assets/Technician/PlayerCamera.cs                  |   5 +-
+ Assets/Technician/User Interface/PauseMenu.cs      |   2 +-
+ FlatRpgMC.sln                                      |  20 +++++
+ Library/ArtifactDB                                 | Bin 8388608 -> 8388608 bytes
+ .../Artifacts/00/005f4bc4ba4e41e5fbd788600baf2806  | Bin 14624 -> 0 bytes
+ .../Artifacts/05/056f9eb5509ef3f7f1fac0cc43003484  | Bin 27716 -> 0 bytes
+ .../Artifacts/09/0965a37c404d0bab589c9c9bcf25a043  | Bin 13248 -> 0 bytes
+ .../Artifacts/0e/0e6c7cd089b0f583011f2726dc73c41b  | Bin 1913 -> 0 bytes
+ .../Artifacts/14/1495f6e0bf30c97daf7cad3861c01571  | Bin 2347 -> 0 bytes
+ .../Artifacts/14/14ca0367bd94a13f56841e5de5b8b89d  | Bin 3643 -> 0 bytes
+ .../Artifacts/19/19b01a1d95125ab863ec5f75cced38f3  | Bin 2821 -> 0 bytes
+ .../Artifacts/24/245802ee697cde74d65f29bdc35508d0  | Bin 4944 -> 0 bytes
+ .../Artifacts/26/263b28f3ea41f5cc4391f9e8d2b2b3a8  | Bin 11356 -> 0 bytes
+ .../Artifacts/2c/2c59e868d27039b1bb93337e27f43494  | Bin 3593 -> 0 bytes
+ .../Artifacts/2e/2e9b460aba58af46283c595ea622d737  | Bin 2000 -> 0 bytes
+ .../Artifacts/2e/2ee962e37fb35376fa2a3b2c158457ca  | Bin 3746 -> 0 bytes
+ .../Artifacts/37/37cf11c94873e259cf96763431ac2098  | Bin 11444 -> 0 bytes
+ .../3e386112bed18f16a726fed03af60b54}              | Bin 7296 -> 7532 bytes
+ .../Artifacts/42/42d33ca949182982e31c6071c885a79c  | Bin 14624 -> 0 bytes
+ .../Artifacts/46/4669e9e501781cd4f5965840d509f19e  | Bin 2898 -> 0 bytes
+ .../Artifacts/4d/4d01cf1116fbcd4806939bd9ee141dcb  | Bin 2515 -> 0 bytes
+ .../4feb819c8a2c8b1cbe7189f501686405}              | Bin 7260 -> 7532 bytes
+ .../53b41858624e624f4e5a23c50c015e56}              | Bin 6248 -> 6400 bytes
+ .../Artifacts/53/53ff43a985d19c64d3f9efb70b0cacdf  | Bin 4221 -> 0 bytes
+ .../Artifacts/54/547105927a353719c34499f31370b212  | Bin 2066 -> 0 bytes
+ .../Artifacts/5f/5f740f65808b7f4abf06036d47b67a2d  | Bin 3803 -> 0 bytes
+ .../Artifacts/65/655536360aef68aed3651d8a83088e75  | Bin 11436 -> 0 bytes
+ .../Artifacts/66/6645bcfe0c009236a598a7ebf8b15b39  | Bin 4102 -> 0 bytes
+ .../Artifacts/67/6727dd349c0e4b54f12ec6aa44a3c7f6  | Bin 3446 -> 0 bytes
+ .../Artifacts/67/67532b6b18d3ca2da8a648df7a36ac1e  | Bin 3006 -> 0 bytes
+ .../Artifacts/69/6926fca18789770d0b174c38b2e3c830  | Bin 1736 -> 0 bytes
+ .../Artifacts/6a/6afd59dfb856e3ce5850e94e73f3a3cf  | Bin 7116 -> 0 bytes
+ .../Artifacts/6b/6b24a24022ce074bf5320028ad4eee18  | Bin 11476 -> 0 bytes
+ .../Artifacts/6b/6bac027c67c880ef23f849f0415cf936  | Bin 2103 -> 0 bytes
+ .../Artifacts/6d/6dd9091cbdd4ee2dccaace391c2acc32  | Bin 10590 -> 0 bytes
+ .../Artifacts/6f/6f2caf62cab0c65b1ff946e543434a85  | Bin 2995 -> 0 bytes
+ .../Artifacts/73/733f0aff480b57fad4c204f1b21218b8  | Bin 11440 -> 0 bytes
+ .../Artifacts/73/738175a64b5991f414baf9dea1822ccd  | Bin 5108 -> 0 bytes
+ .../7afaa1c824f4aa0bc957ade62162d4fc}              | Bin 5692 -> 7528 bytes
+ .../Artifacts/7b/7b71113636477fbdb4a4688385dcb503  | Bin 13248 -> 0 bytes
+ .../Artifacts/7c/7c6bf58f9b87ac37dbb71be24b8b49bf  | Bin 4620 -> 0 bytes
+ .../Artifacts/7d/7d3663f85a6c793366f5ebb3e1cf73f0  | Bin 0 -> 6408 bytes
+ .../Artifacts/7f/7f26aa7fe95961a53ba4b8938c7e85ca  | Bin 826 -> 0 bytes
+ .../Artifacts/80/80c5760e668c08eb149ef743906ea360  | Bin 2896 -> 0 bytes
+ .../Artifacts/83/831a94f8754faa25289a726c59c602e4  | Bin 13068 -> 0 bytes
+ .../Artifacts/83/8377fa95d119eda16794d01b86970df2  | Bin 0 -> 6404 bytes
+ .../Artifacts/84/84f77545ba00af026d666e2c08de97aa  | Bin 11376 -> 0 bytes
+ .../86a23449fcd572d08692ba743e497053}              | Bin 7444 -> 7500 bytes
+ .../88f54e42a0f9380bda7e80272a85edc6}              | Bin 6260 -> 6312 bytes
+ .../Artifacts/8a/8a00343c01200dda563482c148f22bf0  | Bin 2702 -> 0 bytes
+ .../Artifacts/8b/8b37fba3dbeb8d41f8dadb02100ef85c  | Bin 4233 -> 0 bytes
+ .../Artifacts/8b/8b7842d0d2495f6840e156d4b7809bb9  | Bin 13312 -> 0 bytes
+ .../Artifacts/8d/8d271bbe09e8c7c3a1144a26b9bd3389  | Bin 11476 -> 0 bytes
+ .../Artifacts/94/942f6818c973a7de9fdec5305a27ac72  | Bin 2872 -> 0 bytes
+ .../Artifacts/95/95e47b268e8dedeb181c91bde3f9b75f  | Bin 2712 -> 0 bytes
+ .../Artifacts/97/97dbe8b76ee56393ffbea153310788f4  | Bin 0 -> 6400 bytes
+ .../Artifacts/99/99fa32a78cc7c25c51b1eb8405ed0896  | Bin 6980 -> 0 bytes
+ .../Artifacts/9c/9c974754f10a31deda6f237223d2666c  | Bin 11484 -> 0 bytes
+ .../Artifacts/9c/9cc74be2a10c64ef3ce132d487cd697f  | Bin 1679 -> 0 bytes
+ .../Artifacts/a1/a16965e8078f388af7d916f5a6cc11bf  | Bin 11476 -> 0 bytes
+ .../Artifacts/ad/ad72bf26fe767221f39f42c335673db6  | Bin 1756 -> 0 bytes
+ .../Artifacts/ae/aee0eac7061bd1bda5b4cd6a09428ead  | Bin 858 -> 0 bytes
+ .../Artifacts/b0/b0fe6562297cb4e1a5db2f127d0adce8  | Bin 11480 -> 0 bytes
+ .../Artifacts/b7/b7c1235e76d578a7de744099117731fb  | Bin 323 -> 0 bytes
+ .../c244d36e491e9091f2befe4368e11aa8}              | Bin 5912 -> 6396 bytes
+ .../Artifacts/c3/c3cd8c45a474181105a246a52c4435c6  | Bin 4700 -> 0 bytes
+ .../Artifacts/c4/c45199beb25a4b093e867d4816e8238e  | Bin 3694 -> 0 bytes
+ .../Artifacts/c5/c576a00af5b156bd44561de441f178f4  | Bin 7252 -> 0 bytes
+ .../Artifacts/c8/c8984e1a945abecab9465bdd2e651064  | Bin 13248 -> 0 bytes
+ .../Artifacts/c8/c8bf3e252cd7d6d45226403b019eebb3  | Bin 4229 -> 0 bytes
+ .../Artifacts/c9/c9c723058b90286b5138c5894e2189dc  | Bin 13248 -> 0 bytes
+ .../Artifacts/d7/d7c12a6ed66735424358769e0fde56da  | Bin 27712 -> 0 bytes
+ .../Artifacts/d7/d7d50a2f8db4cc20c7f1b55d732716ee  | Bin 2567 -> 0 bytes
+ .../Artifacts/d9/d9f8e7fa40f4c706f2d9069366563a72  | Bin 0 -> 7836 bytes
+ .../e0424d1024dea11e7f12a0eadbe74611}              | Bin 6248 -> 6340 bytes
+ .../Artifacts/e1/e1d8ed2e65325cc94afcf1ca3a45409b  | Bin 2768 -> 0 bytes
+ .../Artifacts/e2/e2dd62b267e19a05895778822ee8fc69  | Bin 6972 -> 0 bytes
+ .../Artifacts/e5/e5fa87faa94a200a6d2969d7f175a702  | Bin 6984 -> 0 bytes
+ .../Artifacts/e6/e63b8004f77877a47bf9be719d253e69  | Bin 11480 -> 0 bytes
+ .../Artifacts/e6/e6d74a87de50420b81267e53127b57b9  | Bin 13248 -> 0 bytes
+ .../Artifacts/e7/e7e60c8f0a9bef977547795b7e81d2db  | Bin 7252 -> 0 bytes
+ .../Artifacts/ea/ea8fb448be361f7c892f9311a60ef4d0  | Bin 11496 -> 0 bytes
+ .../Artifacts/eb/eb4c28af1f1f16c54ca0164dca199365  | Bin 13248 -> 0 bytes
+ .../Artifacts/eb/eb7a84b028e998c75786a9d9b19ffe28  | Bin 11488 -> 0 bytes
+ .../Artifacts/ec/eccf12384dca87cdca65f15d9cbf90a9  | Bin 1843 -> 0 bytes
+ .../Artifacts/ed/ed7bee28e1bfd8636c4f4baeb6b1944c  | Bin 3435 -> 0 bytes
+ .../Artifacts/ef/efcb698f901edd02ba4634698cd2934e  | Bin 1370 -> 0 bytes
+ .../Artifacts/f5/f5aa91de5e135ef25a8d793057877634  | Bin 6844 -> 0 bytes
+ .../Artifacts/f7/f7bbd64938fa85448aa7d0487683f4ea  | Bin 2729 -> 0 bytes
+ Library/CurrentLayout-default.dwlt                 |  97 ++++++++++-----------
+ Library/ScriptAssemblies/Assembly-CSharp.dll       | Bin 20992 -> 20992 bytes
+ Library/ScriptAssemblies/Assembly-CSharp.pdb       | Bin 6164 -> 6356 bytes
+ Library/SourceAssetDB                              | Bin 2097152 -> 2097152 bytes
+ Library/StateCache/SceneView/cc2798-mainStage.json |   2 +-
+ ResourceLinks_ThirdQuarter                         |   8 ++
+ Temp/UnityLockfile                                 |   0
+ info+link.txt                                      |   6 ++
+ .../Assembly-CSharp.csprojAssemblyReference.cache  | Bin 136064 -> 185389 bytes
+ .../DesignTimeResolveAssemblyReferencesInput.cache | Bin 25396 -> 25214 bytes
+ placeHolder_Interactable_toScale.png               | Bin 0 -> 498 bytes
+ placeHolder_Player_toScale_Cycles.pdn              | Bin 0 -> 22020 bytes
+ scriptableObjects_Layout.png                       | Bin 0 -> 81703 bytes
+ 108 files changed, 123 insertions(+), 125 deletions(-)
+ create mode 100644 .vs/FlatRpgMC/v16/.suo
+ delete mode 100644 Assets/PlayerStuff/Player Scripts/PlayerDataStuff.cs
+ delete mode 100644 Assets/PlayerStuff/Player Scripts/PlayerDataStuff.cs.meta
+ create mode 100644 FlatRpgMC.sln
+ delete mode 100644 Library/Artifacts/00/005f4bc4ba4e41e5fbd788600baf2806
+ delete mode 100644 Library/Artifacts/05/056f9eb5509ef3f7f1fac0cc43003484
+ delete mode 100644 Library/Artifacts/09/0965a37c404d0bab589c9c9bcf25a043
+ delete mode 100644 Library/Artifacts/0e/0e6c7cd089b0f583011f2726dc73c41b
+ delete mode 100644 Library/Artifacts/14/1495f6e0bf30c97daf7cad3861c01571
+ delete mode 100644 Library/Artifacts/14/14ca0367bd94a13f56841e5de5b8b89d
+ delete mode 100644 Library/Artifacts/19/19b01a1d95125ab863ec5f75cced38f3
+ delete mode 100644 Library/Artifacts/24/245802ee697cde74d65f29bdc35508d0
+ delete mode 100644 Library/Artifacts/26/263b28f3ea41f5cc4391f9e8d2b2b3a8
+ delete mode 100644 Library/Artifacts/2c/2c59e868d27039b1bb93337e27f43494
+ delete mode 100644 Library/Artifacts/2e/2e9b460aba58af46283c595ea622d737
+ delete mode 100644 Library/Artifacts/2e/2ee962e37fb35376fa2a3b2c158457ca
+ delete mode 100644 Library/Artifacts/37/37cf11c94873e259cf96763431ac2098
+ rename Library/Artifacts/{3f/3fa7bc52d216a04448ca8685aca19c66 => 3e/3e386112bed18f16a726fed03af60b54} (56%)
+ delete mode 100644 Library/Artifacts/42/42d33ca949182982e31c6071c885a79c
+ delete mode 100644 Library/Artifacts/46/4669e9e501781cd4f5965840d509f19e
+ delete mode 100644 Library/Artifacts/4d/4d01cf1116fbcd4806939bd9ee141dcb
+ rename Library/Artifacts/{94/9434c983f5d42c730813f5881534482d => 4f/4feb819c8a2c8b1cbe7189f501686405} (56%)
+ rename Library/Artifacts/{cc/cc102c253b89d6df6d77657752de1750 => 53/53b41858624e624f4e5a23c50c015e56} (88%)
+ delete mode 100644 Library/Artifacts/53/53ff43a985d19c64d3f9efb70b0cacdf
+ delete mode 100644 Library/Artifacts/54/547105927a353719c34499f31370b212
+ delete mode 100644 Library/Artifacts/5f/5f740f65808b7f4abf06036d47b67a2d
+ delete mode 100644 Library/Artifacts/65/655536360aef68aed3651d8a83088e75
+ delete mode 100644 Library/Artifacts/66/6645bcfe0c009236a598a7ebf8b15b39
+ delete mode 100644 Library/Artifacts/67/6727dd349c0e4b54f12ec6aa44a3c7f6
+ delete mode 100644 Library/Artifacts/67/67532b6b18d3ca2da8a648df7a36ac1e
+ delete mode 100644 Library/Artifacts/69/6926fca18789770d0b174c38b2e3c830
+ delete mode 100644 Library/Artifacts/6a/6afd59dfb856e3ce5850e94e73f3a3cf
+ delete mode 100644 Library/Artifacts/6b/6b24a24022ce074bf5320028ad4eee18
+ delete mode 100644 Library/Artifacts/6b/6bac027c67c880ef23f849f0415cf936
+ delete mode 100644 Library/Artifacts/6d/6dd9091cbdd4ee2dccaace391c2acc32
+ delete mode 100644 Library/Artifacts/6f/6f2caf62cab0c65b1ff946e543434a85
+ delete mode 100644 Library/Artifacts/73/733f0aff480b57fad4c204f1b21218b8
+ delete mode 100644 Library/Artifacts/73/738175a64b5991f414baf9dea1822ccd
+ rename Library/Artifacts/{a3/a3838c464b9ec3cd2ac7e97380589c96 => 7a/7afaa1c824f4aa0bc957ade62162d4fc} (71%)
+ delete mode 100644 Library/Artifacts/7b/7b71113636477fbdb4a4688385dcb503
+ delete mode 100644 Library/Artifacts/7c/7c6bf58f9b87ac37dbb71be24b8b49bf
+ create mode 100644 Library/Artifacts/7d/7d3663f85a6c793366f5ebb3e1cf73f0
+ delete mode 100644 Library/Artifacts/7f/7f26aa7fe95961a53ba4b8938c7e85ca
+ delete mode 100644 Library/Artifacts/80/80c5760e668c08eb149ef743906ea360
+ delete mode 100644 Library/Artifacts/83/831a94f8754faa25289a726c59c602e4
+ create mode 100644 Library/Artifacts/83/8377fa95d119eda16794d01b86970df2
+ delete mode 100644 Library/Artifacts/84/84f77545ba00af026d666e2c08de97aa
+ rename Library/Artifacts/{60/606082e0a25cbad5104a5e6cd560f305 => 86/86a23449fcd572d08692ba743e497053} (96%)
+ rename Library/Artifacts/{8b/8b4e2f46bbd56dc0894261bd2de1af8d => 88/88f54e42a0f9380bda7e80272a85edc6} (91%)
+ delete mode 100644 Library/Artifacts/8a/8a00343c01200dda563482c148f22bf0
+ delete mode 100644 Library/Artifacts/8b/8b37fba3dbeb8d41f8dadb02100ef85c
+ delete mode 100644 Library/Artifacts/8b/8b7842d0d2495f6840e156d4b7809bb9
+ delete mode 100644 Library/Artifacts/8d/8d271bbe09e8c7c3a1144a26b9bd3389
+ delete mode 100644 Library/Artifacts/94/942f6818c973a7de9fdec5305a27ac72
+ delete mode 100644 Library/Artifacts/95/95e47b268e8dedeb181c91bde3f9b75f
+ create mode 100644 Library/Artifacts/97/97dbe8b76ee56393ffbea153310788f4
+ delete mode 100644 Library/Artifacts/99/99fa32a78cc7c25c51b1eb8405ed0896
+ delete mode 100644 Library/Artifacts/9c/9c974754f10a31deda6f237223d2666c
+ delete mode 100644 Library/Artifacts/9c/9cc74be2a10c64ef3ce132d487cd697f
+ delete mode 100644 Library/Artifacts/a1/a16965e8078f388af7d916f5a6cc11bf
+ delete mode 100644 Library/Artifacts/ad/ad72bf26fe767221f39f42c335673db6
+ delete mode 100644 Library/Artifacts/ae/aee0eac7061bd1bda5b4cd6a09428ead
+ delete mode 100644 Library/Artifacts/b0/b0fe6562297cb4e1a5db2f127d0adce8
+ delete mode 100644 Library/Artifacts/b7/b7c1235e76d578a7de744099117731fb
+ rename Library/Artifacts/{86/867c90e9b94eb4fe11c7ce8e77968840 => c2/c244d36e491e9091f2befe4368e11aa8} (84%)
+ delete mode 100644 Library/Artifacts/c3/c3cd8c45a474181105a246a52c4435c6
+ delete mode 100644 Library/Artifacts/c4/c45199beb25a4b093e867d4816e8238e
+ delete mode 100644 Library/Artifacts/c5/c576a00af5b156bd44561de441f178f4
+ delete mode 100644 Library/Artifacts/c8/c8984e1a945abecab9465bdd2e651064
+ delete mode 100644 Library/Artifacts/c8/c8bf3e252cd7d6d45226403b019eebb3
+ delete mode 100644 Library/Artifacts/c9/c9c723058b90286b5138c5894e2189dc
+ delete mode 100644 Library/Artifacts/d7/d7c12a6ed66735424358769e0fde56da
+ delete mode 100644 Library/Artifacts/d7/d7d50a2f8db4cc20c7f1b55d732716ee
+ create mode 100644 Library/Artifacts/d9/d9f8e7fa40f4c706f2d9069366563a72
+ rename Library/Artifacts/{8a/8af4f0de6b654492ab7f96884ceebd38 => e0/e0424d1024dea11e7f12a0eadbe74611} (90%)
+ delete mode 100644 Library/Artifacts/e1/e1d8ed2e65325cc94afcf1ca3a45409b
+ delete mode 100644 Library/Artifacts/e2/e2dd62b267e19a05895778822ee8fc69
+ delete mode 100644 Library/Artifacts/e5/e5fa87faa94a200a6d2969d7f175a702
+ delete mode 100644 Library/Artifacts/e6/e63b8004f77877a47bf9be719d253e69
+ delete mode 100644 Library/Artifacts/e6/e6d74a87de50420b81267e53127b57b9
+ delete mode 100644 Library/Artifacts/e7/e7e60c8f0a9bef977547795b7e81d2db
+ delete mode 100644 Library/Artifacts/ea/ea8fb448be361f7c892f9311a60ef4d0
+ delete mode 100644 Library/Artifacts/eb/eb4c28af1f1f16c54ca0164dca199365
+ delete mode 100644 Library/Artifacts/eb/eb7a84b028e998c75786a9d9b19ffe28
+ delete mode 100644 Library/Artifacts/ec/eccf12384dca87cdca65f15d9cbf90a9
+ delete mode 100644 Library/Artifacts/ed/ed7bee28e1bfd8636c4f4baeb6b1944c
+ delete mode 100644 Library/Artifacts/ef/efcb698f901edd02ba4634698cd2934e
+ delete mode 100644 Library/Artifacts/f5/f5aa91de5e135ef25a8d793057877634
+ delete mode 100644 Library/Artifacts/f7/f7bbd64938fa85448aa7d0487683f4ea
+ create mode 100644 ResourceLinks_ThirdQuarter
+ delete mode 100644 Temp/UnityLockfile
+ create mode 100644 info+link.txt
+ create mode 100644 placeHolder_Interactable_toScale.png
+ create mode 100644 placeHolder_Player_toScale_Cycles.pdn
+ create mode 100644 scriptableObjects_Layout.png
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ ls
+Assembly-CSharp.csproj  Packages/
+Assets/                 placeHolder_Interactable_toScale.png
+FlatRPG.sln             placeHolder_Player_toScale_Cycles.pdn
+FlatRpgMC.sln           ProjectSettings/
+info+link.txt           README.md
+Library/                ResourceLinks_ThirdQuarter
+Logs/                   scriptableObjects_Layout.png
+obj/                    UserSettings/
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git add StuffTracking
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   StuffTracking/GitBash Stuff 1.txt
+        new file:   StuffTracking/GitBash Stuff 2.txt
+        new file:   StuffTracking/KyleKing_TimeSheet.docx
+        new file:   StuffTracking/KyleKing_TimeSheet_Week17.docx
+        new file:   StuffTracking/ProjectPresentation3rd/scriptableObjects_Layout.png
+        new file:   StuffTracking/ResourceLinks_ThirdQuarter
+        new file:   StuffTracking/placeHolder_Interactable_toScale.png
+        new file:   StuffTracking/placeHolder_Player_toScale_Cycles.pdn
+        new file:   StuffTracking/~$leKing_TimeSheet_Week17.docx
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ResourceLinks_ThirdQuarter
+        modified:   info+link.txt
+        deleted:    placeHolder_Interactable_toScale.png
+        deleted:    placeHolder_Player_toScale_Cycles.pdn
+        deleted:    scriptableObjects_Layout.png
+
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git add .
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   StuffTracking/GitBash Stuff 1.txt
+        new file:   StuffTracking/GitBash Stuff 2.txt
+        new file:   StuffTracking/KyleKing_TimeSheet.docx
+        new file:   StuffTracking/KyleKing_TimeSheet_Week17.docx
+        renamed:    scriptableObjects_Layout.png -> StuffTracking/ProjectPresentation3rd/scriptableObjects_Layout.png
+        renamed:    ResourceLinks_ThirdQuarter -> StuffTracking/ResourceLinks_ThirdQuarter
+        renamed:    placeHolder_Interactable_toScale.png -> StuffTracking/placeHolder_Interactable_toScale.png
+        renamed:    placeHolder_Player_toScale_Cycles.pdn -> StuffTracking/placeHolder_Player_toScale_Cycles.pdn
+        new file:   StuffTracking/~$leKing_TimeSheet_Week17.docx
+        modified:   info+link.txt
+
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git add .
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   StuffTracking/GitBash Stuff 1.txt
+        new file:   StuffTracking/GitBash Stuff 2.txt
+        new file:   StuffTracking/KyleKing_TimeSheet.docx
+        new file:   StuffTracking/KyleKing_TimeSheet_Week17.docx
+        renamed:    scriptableObjects_Layout.png -> StuffTracking/ProjectPresentation3rd/scriptableObjects_Layout.png
+        renamed:    ResourceLinks_ThirdQuarter -> StuffTracking/ResourceLinks_ThirdQuarter
+        renamed:    placeHolder_Interactable_toScale.png -> StuffTracking/placeHolder_Interactable_toScale.png
+        renamed:    placeHolder_Player_toScale_Cycles.pdn -> StuffTracking/placeHolder_Player_toScale_Cycles.pdn
+        new file:   StuffTracking/~$leKing_TimeSheet_Week17.docx
+        deleted:    info+link.txt
+
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$
