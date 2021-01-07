@@ -1,6 +1,8 @@
 //week 16 unity 2017 talk link : https://www.youtube.com/watch?app=desktop&v=raQ3iHhE_Kk
 //project files : http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html
-//unity 2016 talk link : 
+//unity 2016 talk link : https://www.youtube.com/watch?v=6vmRwLYWNRo
+//Note: Destroy() and DestroyImmediate() only remove the C++ side, C# side must have all references gone
+
 
 /*
 Focus on data
@@ -33,9 +35,26 @@ Inventory Example:
 --can have different inventories for each scene
 
 Systems CAN interact with other systems
+
+
+Shared (values used across multiple objects) v non-shared (exclusive to one instance/type) states
+MonoBehaviours create sub-file granularity (possible conflicts and issues when editing)
+Hard to figure out where callbacks are coming and going
+ScriptableObjects can't be attached to GameObjects/Prefabs, doesn't get most callbacks, and can be serialized and inspected like MonoBehaviour
+
+only callbacks are OnEnable(), OnDisable(), and Destroy()
+
+Usage ends up being for seperating shared states (ScriptableObject) from non-shared (MonoBehaviour)
+
+"dies" on deletion or Resources.UnloadUnusedAssets() //removes anything not referenced
+
+Enum pattern uses Empty SO's, binds them to assets, and treats SO like dictionary keys
+
+Dual Serialization with JSON/JsonUtility
 */
 
 [CreateAssetMenu]
+//automates asset creation
 
 public class DataType : ScriptableObject{
   public type Value;
@@ -132,3 +151,14 @@ access class Dynamite : ScriptableObject{
     collider.Destroy();
   }
 }
+
+
+
+//different talk
+
+//creates instance in-memory
+ScriptableObject.CreateInstance<BiggerThing>();
+
+//binding to asset files
+AssetDatabase.CreateAsset(); //or
+AssetBatabase.AddObjectToAsset();
