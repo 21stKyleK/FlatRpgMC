@@ -24,3 +24,5 @@ https://git-scm.com/docs/git-branch
 "Sprite Atlas docs": https://docs.unity3d.com/Manual/SpriteAtlasWorkflow.html
 "Sprite editor + sheets 2019.2+": https://learn.unity.com/tutorial/introduction-to-sprite-editor-sheets-2019-2#
 "Sprite editor + sheets 2019.1-": https://learn.unity.com/tutorial/introduction-to-sprite-editor-and-sheets#
+
+"deleting git repository" : https://www.codegrepper.com/code-examples/delphi/how+to+delete+git+repository+local
