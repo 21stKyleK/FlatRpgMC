@@ -1,0 +1,134 @@
+//week 16 unity 2017 talk link : https://www.youtube.com/watch?app=desktop&v=raQ3iHhE_Kk
+//project files : http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html
+//unity 2016 talk link : 
+
+/*
+Focus on data
+Editable w/o code
+Only one outcome/expectable outcomes
+
+Similar to MonoBehaviour w/o Transform (same type in c++ layer)
+typically saved as .asset, but can be created at runtime and can also have multiple in one
+
+uses the Unity Inspector like an Injector
+
+BiggerThing can reference and edit DataType (and/or DataReferences)
+while OtherThing can view the same DataType
+
+can be used for Events as well
+(check about 37 minutes in)
+
+"RuntimeSets" keep track of a list of things, mostly a type of object
+multiple types of thign may require multiple lists and have them be added in to each one
+different items may not need it, but flyiong vs. grounded enemies might
+Also good for renderers, mini map stuff
+
+Can also be used like Enums (Elements and/or their extensions and what they beat/lose to)
+
+You CAN write entire objects or more inside a ScriptableObject, they aren't just "data buckets"
+
+Inventory Example:
+-ScriptableObject Master List
+-ScriptableObject per item(? just to avoid changing everything)
+--can have different inventories for each scene
+
+Systems CAN interact with other systems
+*/
+
+[CreateAssetMenu]
+
+public class DataType : ScriptableObject{
+  public type Value;
+}
+
+//will this work?
+
+public class BiggerThing : ScriptableObject{
+  public DataType ValueA;
+  public DataReference ValueB
+}
+
+
+//different file ?
+
+
+[Serializable]
+public class DataReference{
+  public bool UseConstant = bool;
+  public type Constant;
+  public DataType Vari;
+  
+  public type Value{
+    get{ UseConstant ? Constant : Vari.Value;}
+  }
+}
+
+
+//different file ?
+
+
+//abstract template
+
+[CreateAssetMenu]
+public class GameEvents : ScriptableObject{
+  access List<GameEventListener> listeners = new List<GameEventListener>();
+  
+  //backwards because some events might remove themselves from the list
+  public void Raise(){
+    for(int i = listeners.Count - 1; i>=0; i--){
+      listeners[i].OnEventRaised();
+    }
+  }
+  
+  /*
+  methods that add and remove listeners
+  */
+}
+
+
+//different file ?
+
+
+public class GameEventListener : MonoBehaviour{
+  access GameEvents Event;
+  access UnityEvent Respond;
+  
+  private void OnEnable(){
+    Event.RegisterEvent(this);
+  }
+  //private void OnDisable
+  
+  public void OnEventRaised(){
+    Respond.Invoke();
+  }
+}
+
+
+//different file ?
+
+public abstract class RuntimeSet<T> : ScriptableObject {
+  public List<T> Things = new List<T>();
+  
+  public void Add(T thing){
+    if(!Things.Contains(thing)){
+      Things.Add(thing);
+    }
+  }
+  public void Rem(T thing){
+    if(Things.Contains(thing)){
+      Things.Remove(thing);
+    }
+  }
+}
+
+//different file ?
+
+//[CreateAssetMenu]
+access class Dynamite : ScriptableObject{
+  access T ValueA;
+  access T ValueB;
+  
+  access return DestroyContact(T collider){ //? I don't know I've never used one before
+    collider.Destroy();
+  }
+}
