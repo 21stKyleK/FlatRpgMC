@@ -1,8 +1,8 @@
 //week 16 unity 2017 talk link : https://www.youtube.com/watch?app=desktop&v=raQ3iHhE_Kk
 //project files : http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html
 //unity 2016 talk link : https://www.youtube.com/watch?v=6vmRwLYWNRo
-//Note: Destroy() and DestroyImmediate() only remove the C++ side, C# side must have all references gone
-
+//Note: Destroy() and DestroyImmediate() only remove the C++ side, C# side must have all references gone (might only be for ScriptableObjects)
+//bitbucket link is defunt : https://bitbucket.org/richardfine/scriptableobjectdemo/
 
 /*
 Focus on data
@@ -50,7 +50,11 @@ Usage ends up being for seperating shared states (ScriptableObject) from non-sha
 
 Enum pattern uses Empty SO's, binds them to assets, and treats SO like dictionary keys
 
-Dual Serialization with JSON/JsonUtility
+Delegates;
+Scenes can be pased into ScriptableObjects so its methods can do work on the scene (called from the scene)
+
+SOs and Monobehaviours should work in tandem, not serve as absolute replacements
+supposed to seperate tasks so people can change elements without crashing everything
 */
 
 [CreateAssetMenu]
@@ -88,7 +92,7 @@ public class DataReference{
 
 //abstract template
 
-[CreateAssetMenu]
+[CreateAssetMenu (menuName="Tab Name/Asset Name")]
 public class GameEvents : ScriptableObject{
   access List<GameEventListener> listeners = new List<GameEventListener>();
   
@@ -162,3 +166,67 @@ ScriptableObject.CreateInstance<BiggerThing>();
 //binding to asset files
 AssetDatabase.CreateAsset(); //or
 AssetBatabase.AddObjectToAsset();
+
+
+//Double serialization
+
+
+class LevelLayout : ScriptableObject{
+  access Vector2[] thingPosA;
+  access Vector2[] thingPosB;
+  access Vector2 startPos;
+}
+
+//loading from built-In
+level = someBundle.LoadAsset<LevelLayout>("levelName.asset");
+
+//loading from JSON
+level = CreateInstance<LevelLayout>();
+var jsonThing = File.ReadAllText("custom.json");
+JsonUtility.FromJsonOverwrite(jsonTing, level);
+
+
+//Reload proof singletons
+
+
+class SomeSingle : ScriptableObject{
+  private static SomeSingle _inst;
+  
+  public static SomeSingle Instance{
+    get{
+      if(!_inst){
+        _inst = Resources.FindObjectOfType<SomeSingle>();
+        //takes advantage of some data being in the C++ side for ScriptableObjects
+        
+      } if(!_inst){
+        _inst = CreateInstance<SomeSingle>();
+      }
+      return _inst;
+    }
+  }
+}
+
+
+//Delegating
+
+
+abstract class Collectable : ScriptableObject{
+  public abstract void DoThing(GameObject collector);
+}
+
+//other class
+public void OnTriggerEnter(GameObject collector){
+  Destroy(gameObject);
+  collectableObject.DoThing(collector);
+}
+
+/*
+public class ValueChange : Collectable{
+  public type whatever;
+  public override void DoThing(GameObject collector){
+    collector.GetComponent<ChangeThingThing>().value += whatever;
+    //or
+    Instantiate(whatever, collector.position, collector.rotation);
+  }
+}
+*/
