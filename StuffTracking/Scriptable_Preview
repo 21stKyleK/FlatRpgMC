@@ -1,0 +1,232 @@
+//week 16 unity 2017 talk link : https://www.youtube.com/watch?app=desktop&v=raQ3iHhE_Kk
+//project files : http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html
+//unity 2016 talk link : https://www.youtube.com/watch?v=6vmRwLYWNRo
+//Note: Destroy() and DestroyImmediate() only remove the C++ side, C# side must have all references gone (might only be for ScriptableObjects)
+//bitbucket link is defunt : https://bitbucket.org/richardfine/scriptableobjectdemo/
+
+/*
+Focus on data
+Editable w/o code
+Only one outcome/expectable outcomes
+
+Similar to MonoBehaviour w/o Transform (same type in c++ layer)
+typically saved as .asset, but can be created at runtime and can also have multiple in one
+
+uses the Unity Inspector like an Injector
+
+BiggerThing can reference and edit DataType (and/or DataReferences)
+while OtherThing can view the same DataType
+
+can be used for Events as well
+(check about 37 minutes in)
+
+"RuntimeSets" keep track of a list of things, mostly a type of object
+multiple types of thign may require multiple lists and have them be added in to each one
+different items may not need it, but flyiong vs. grounded enemies might
+Also good for renderers, mini map stuff
+
+Can also be used like Enums (Elements and/or their extensions and what they beat/lose to)
+
+You CAN write entire objects or more inside a ScriptableObject, they aren't just "data buckets"
+
+Inventory Example:
+-ScriptableObject Master List
+-ScriptableObject per item(? just to avoid changing everything)
+--can have different inventories for each scene
+
+Systems CAN interact with other systems
+
+
+Shared (values used across multiple objects) v non-shared (exclusive to one instance/type) states
+MonoBehaviours create sub-file granularity (possible conflicts and issues when editing)
+Hard to figure out where callbacks are coming and going
+ScriptableObjects can't be attached to GameObjects/Prefabs, doesn't get most callbacks, and can be serialized and inspected like MonoBehaviour
+
+only callbacks are OnEnable(), OnDisable(), and Destroy()
+
+Usage ends up being for seperating shared states (ScriptableObject) from non-shared (MonoBehaviour)
+
+"dies" on deletion or Resources.UnloadUnusedAssets() //removes anything not referenced
+
+Enum pattern uses Empty SO's, binds them to assets, and treats SO like dictionary keys
+
+Delegates;
+Scenes can be pased into ScriptableObjects so its methods can do work on the scene (called from the scene)
+
+SOs and Monobehaviours should work in tandem, not serve as absolute replacements
+supposed to seperate tasks so people can change elements without crashing everything
+*/
+
+[CreateAssetMenu]
+//automates asset creation
+
+public class DataType : ScriptableObject{
+  public type Value;
+}
+
+//will this work?
+
+public class BiggerThing : ScriptableObject{
+  public DataType ValueA;
+  public DataReference ValueB
+}
+
+
+//different file ?
+
+
+[Serializable]
+public class DataReference{
+  public bool UseConstant = bool;
+  public type Constant;
+  public DataType Vari;
+  
+  public type Value{
+    get{ UseConstant ? Constant : Vari.Value;}
+  }
+}
+
+
+//different file ?
+
+
+//abstract template
+
+[CreateAssetMenu (menuName="Tab Name/Asset Name")]
+public class GameEvents : ScriptableObject{
+  access List<GameEventListener> listeners = new List<GameEventListener>();
+  
+  //backwards because some events might remove themselves from the list
+  public void Raise(){
+    for(int i = listeners.Count - 1; i>=0; i--){
+      listeners[i].OnEventRaised();
+    }
+  }
+  
+  /*
+  methods that add and remove listeners
+  */
+}
+
+
+//different file ?
+
+
+public class GameEventListener : MonoBehaviour{
+  access GameEvents Event;
+  access UnityEvent Respond;
+  
+  private void OnEnable(){
+    Event.RegisterEvent(this);
+  }
+  //private void OnDisable
+  
+  public void OnEventRaised(){
+    Respond.Invoke();
+  }
+}
+
+
+//different file ?
+
+public abstract class RuntimeSet<T> : ScriptableObject {
+  public List<T> Things = new List<T>();
+  
+  public void Add(T thing){
+    if(!Things.Contains(thing)){
+      Things.Add(thing);
+    }
+  }
+  public void Rem(T thing){
+    if(Things.Contains(thing)){
+      Things.Remove(thing);
+    }
+  }
+}
+
+//different file ?
+
+//[CreateAssetMenu]
+access class Dynamite : ScriptableObject{
+  access T ValueA;
+  access T ValueB;
+  
+  access return DestroyContact(T collider){ //? I don't know I've never used one before
+    collider.Destroy();
+  }
+}
+
+
+
+//different talk
+
+//creates instance in-memory
+ScriptableObject.CreateInstance<BiggerThing>();
+
+//binding to asset files
+AssetDatabase.CreateAsset(); //or
+AssetBatabase.AddObjectToAsset();
+
+
+//Double serialization
+
+
+class LevelLayout : ScriptableObject{
+  access Vector2[] thingPosA;
+  access Vector2[] thingPosB;
+  access Vector2 startPos;
+}
+
+//loading from built-In
+level = someBundle.LoadAsset<LevelLayout>("levelName.asset");
+
+//loading from JSON
+level = CreateInstance<LevelLayout>();
+var jsonThing = File.ReadAllText("custom.json");
+JsonUtility.FromJsonOverwrite(jsonTing, level);
+
+
+//Reload proof singletons
+
+
+class SomeSingle : ScriptableObject{
+  private static SomeSingle _inst;
+  
+  public static SomeSingle Instance{
+    get{
+      if(!_inst){
+        _inst = Resources.FindObjectOfType<SomeSingle>();
+        //takes advantage of some data being in the C++ side for ScriptableObjects
+        
+      } if(!_inst){
+        _inst = CreateInstance<SomeSingle>();
+      }
+      return _inst;
+    }
+  }
+}
+
+
+//Delegating
+
+
+abstract class Collectable : ScriptableObject{
+  public abstract void DoThing(GameObject collector);
+}
+
+//other class
+public void OnTriggerEnter(GameObject collector){
+  Destroy(gameObject);
+  collectableObject.DoThing(collector);
+}
+
+/*
+public class ValueChange : Collectable{
+  public type whatever;
+  public override void DoThing(GameObject collector){
+    collector.GetComponent<ChangeThingThing>().value += whatever;
+    //or
+    Instantiate(whatever, collector.position, collector.rotation);
+  }
+}
+*/

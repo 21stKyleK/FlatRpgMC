@@ -1,0 +1,39 @@
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ cd Desktop/IndependantStu/FlatRpgMC
+bash: cd: Desktop/IndependantStu/FlatRpgMC: No such file or directory
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ cd Desktop
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop
+$ cd /IndependentStu/FlatRpgMC
+bash: cd: /IndependentStu/FlatRpgMC: No such file or directory
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop
+$ ls
+ desktop.ini   IndependentStu/  'Microsoft Teams.lnk'*
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop
+$ IndependentStu/FlatRpgMC
+bash: IndependentStu/FlatRpgMC: Is a directory
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop
+$ cd IndependentStu/FlatRpgMC
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (main)
+$ git checkout -b scriptableObjection
+Switched to a new branch 'scriptableObjection'
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (scriptableObjection)
+$ git branch
+  main
+  newWorld
+* scriptableObjection
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (scriptableObjection)
+$ git branch -d newWorld
+Deleted branch newWorld (was 355a519).
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (scriptableObjection)
+$
