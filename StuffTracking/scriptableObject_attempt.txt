@@ -1,0 +1,17 @@
+/*//[Serializable]?
+public class PlayerNumbers //: ScriptableObject
+{
+	public 
+}*/
+
+public abstract PlayerStats : ScriptableObject{
+	//public T value
+	//no, because probably errors from not knowing what type/non-matching
+	public int value;
+}
+
+/*
+public class PlayerHP : PlayerStats{
+	
+}
+*/
