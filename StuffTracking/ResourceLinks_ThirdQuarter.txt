@@ -26,3 +26,7 @@ https://git-scm.com/docs/git-branch
 "Sprite editor + sheets 2019.1-": https://learn.unity.com/tutorial/introduction-to-sprite-editor-and-sheets#
 
 "deleting git repository" : https://www.codegrepper.com/code-examples/delphi/how+to+delete+git+repository+local
+
+"austin unity 2017 blog" : http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html
+"austin unity 2017 git" : https://github.com/roboryantron/Unite2017   //don't think I can really look at any of this outside of Unity
+"tryharding" : https://www.youtube.com/watch?v=oS4mT_4aQMM
