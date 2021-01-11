@@ -30,3 +30,8 @@ https://git-scm.com/docs/git-branch
 "austin unity 2017 blog" : http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html
 "austin unity 2017 git" : https://github.com/roboryantron/Unite2017   //don't think I can really look at any of this outside of Unity
 "tryharding" : https://www.youtube.com/watch?v=oS4mT_4aQMM
+
+"force git checkout" : https://stackoverflow.com/questions/17223527/how-do-i-force-git-to-checkout-the-master-branch-and-remove-carriage-returns-aft
+"unity discussion: failed to load window layout" : https://stackoverflow.com/questions/17223527/how-do-i-force-git-to-checkout-the-master-branch-and-remove-carriage-returns-aft
+"unity answer: failed to load window layout" : https://answers.unity.com/questions/757942/how-do-i-fix-failed-to-load-window-layout.html
+"unity answer: failed to load window layout (popular)" : https://answers.unity.com/questions/1712501/stuck-in-failed-to-load-window-layout-loop.html
