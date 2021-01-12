@@ -35,3 +35,6 @@ https://git-scm.com/docs/git-branch
 "unity discussion: failed to load window layout" : https://stackoverflow.com/questions/17223527/how-do-i-force-git-to-checkout-the-master-branch-and-remove-carriage-returns-aft
 "unity answer: failed to load window layout" : https://answers.unity.com/questions/757942/how-do-i-fix-failed-to-load-window-layout.html
 "unity answer: failed to load window layout (popular)" : https://answers.unity.com/questions/1712501/stuck-in-failed-to-load-window-layout-loop.html
+
+"basic branching and merging" : https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+"stashing and cleaning" : https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_stashing
