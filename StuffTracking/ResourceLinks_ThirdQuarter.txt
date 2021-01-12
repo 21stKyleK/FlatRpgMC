@@ -38,3 +38,5 @@ https://git-scm.com/docs/git-branch
 
 "basic branching and merging" : https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 "stashing and cleaning" : https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_stashing
+"enter a commit message for merge" : https://stackoverflow.com/questions/19085807/please-enter-a-commit-message-to-explain-why-this-merge-is-necessary-especially
+"abort git merge" : https://stackoverflow.com/questions/44048982/abort-a-git-merge/44049103

@@ -5,6 +5,15 @@
 //bitbucket link is defunt : https://bitbucket.org/richardfine/scriptableobjectdemo/
 
 /*
+How work:
+You write the script (C#) with the [CreateAssetMenu]
+You create an asset, name it (because.)
+Set the value; this is like using instances
+So while each asset might be edited and change everything (haven't tested)
+Each asset with ScriptableObject won't change if a ScriptableObject of the same kind is changed
+*/
+
+/*
 Focus on data
 Editable w/o code
 Only one outcome/expectable outcomes
@@ -230,3 +239,45 @@ public class ValueChange : Collectable{
   }
 }
 */
+
+
+
+//actually looking at Unite 2017 files
+//scripts (like above) were put into own folder, different from assets (which were created by them)
+
+//taken straight from file
+namespace RoboRyanTron.Unite2017.Variables
+{
+    [CreateAssetMenu]
+    public class FloatVariable : ScriptableObject
+    {
+#if UNITY_EDITOR
+        [Multiline]
+        public string DeveloperDescription = "";
+#endif
+        public float Value;
+
+        public void SetValue(float value)
+        {
+            Value = value;
+        }
+
+        public void SetValue(FloatVariable value)
+        {
+            Value = value.Value;
+        }
+
+        public void ApplyChange(float amount)
+        {
+            Value += amount;
+        }
+
+        public void ApplyChange(FloatVariable amount)
+        {
+            Value += amount.Value;
+        }
+    }
+}
+//should be obvious you'd want getters and setters
+
+

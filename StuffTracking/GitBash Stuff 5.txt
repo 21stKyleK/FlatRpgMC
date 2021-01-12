@@ -1,0 +1,203 @@
+
+100040199@CSHS-2336-23-S MINGW64 ~
+$ cd Desktop/IndependentStu/FlatRpgMC
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (logging)
+$ git add .
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (logging)
+$ git commit -b "preumptive log update"
+error: unknown switch `b'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (logging)
+$ git commit -m "preumptive log update"
+[logging a2accb9] preumptive log update
+ Committer: Kyle King <100040199@ccisd.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 3 insertions(+)
+ create mode 100644 StuffTracking/~$leKing_TimeSheet_Week18.docx
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/FlatRpgMC (logging)
+$ cd ..
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu
+$ cd Programming
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (main)
+$ git branch
+* main
+  treeStuff
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (main)
+$ git merge treeStuff
+Removing .metadata/.plugins/org.eclipse.core.resources/.root/18.tree
+error: Empty commit message.
+Not committing merge; use 'git commit' to complete the merge.
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (main|MERGING)
+$ git merge --abort
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (main)
+$ git pull origin main
+From https://github.com/21stKyleK/ISAssignments
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (main)
+$ git branch -d treeStuff
+error: The branch 'treeStuff' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D treeStuff'.
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (main)
+$ git branch -D treeStuff
+Deleted branch treeStuff (was 499ae01).
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (main)
+$ git checkout heaveHo
+error: pathspec 'heaveHo' did not match any file(s) known to git
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (main)
+$ git checkout -b heaveHo
+Switched to a new branch 'heaveHo'
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (heaveHo)
+$ git pull origin heaveHo
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 8 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (8/8), 2.03 KiB | 94.00 KiB/s, done.
+From https://github.com/21stKyleK/ISAssignments
+ * branch            heaveHo    -> FETCH_HEAD
+ * [new branch]      heaveHo    -> origin/heaveHo
+Updating 5321db8..f86986b
+Fast-forward
+ IndieLabos/src/Heap.java           | 54 ++++++++++++++++++++++++++++++++++++++
+ IndieLabos/src/HeapRunner.java     | 48 +++++++++++++++++++++++++++++++++
+ IndieLabos/src/HeapSort.java       | 43 ++++++++++++++++++++++++++++++
+ IndieLabos/src/HeapSortRunner.java | 20 ++++++++++++++
+ 4 files changed, 165 insertions(+)
+ create mode 100644 IndieLabos/src/Heap.java
+ create mode 100644 IndieLabos/src/HeapRunner.java
+ create mode 100644 IndieLabos/src/HeapSort.java
+ create mode 100644 IndieLabos/src/HeapSortRunner.java
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (heaveHo)
+$ git branch
+* heaveHo
+  main
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (heaveHo)
+$ git add .
+warning: LF will be replaced by CRLF in .metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt.
+The file will have its original line endings in your working directory
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (heaveHo)
+$ git commit -m "created folder for heap labs"
+[heaveHo 6605572] created folder for heap labs
+ Committer: Kyle King <100040199@ccisd.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 27 files changed, 762 insertions(+), 186 deletions(-)
+ create mode 100644 .metadata/.plugins/org.eclipse.core.resources/.history/1b/3024f3fdeb54001b1ea0bd050435f18d
+ create mode 100644 .metadata/.plugins/org.eclipse.core.resources/.history/40/50c5b5caeb54001b1ea0bd050435f18d
+ create mode 100644 .metadata/.plugins/org.eclipse.core.resources/.history/56/20473cd4eb54001b1ea0bd050435f18d
+ rename IndieLabos/src/HeapSortRunner.java => .metadata/.plugins/org.eclipse.core.resources/.history/aa/40bcf5fdeb54001b1ea0bd050435f18d (94%)
+ create mode 100644 .metadata/.plugins/org.eclipse.core.resources/.history/c2/b009edfdeb54001b1ea0bd050435f18d
+ create mode 100644 .metadata/.plugins/org.eclipse.core.resources/.history/fe/208cf0fdeb54001b1ea0bd050435f18d
+ create mode 100644 .metadata/.plugins/org.eclipse.core.resources/.projects/IndieLabos/.indexes/e4/9c/history.index
+ rename .metadata/.plugins/org.eclipse.core.resources/.root/{18.tree => 19.tree} (52%)
+ rewrite .metadata/.plugins/org.eclipse.jdt.core/2201541699.index (98%)
+ create mode 100644 IndieLabos/bin/heapOfFun/Heap.class
+ create mode 100644 IndieLabos/bin/heapOfFun/HeapRunner.class
+ create mode 100644 IndieLabos/bin/heapOfFun/HeapSort.class
+ create mode 100644 IndieLabos/bin/heapOfFun/HeapSortRunner.class
+ rename IndieLabos/src/{ => heapOfFun}/Heap.java (93%)
+ rename IndieLabos/src/{ => heapOfFun}/HeapRunner.java (93%)
+ rename IndieLabos/src/{ => heapOfFun}/HeapSort.java (92%)
+ create mode 100644 IndieLabos/src/heapOfFun/HeapSortRunner.java
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (heaveHo)
+$ git push origin heaveHo
+Enumerating objects: 88, done.
+Counting objects: 100% (88/88), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (51/51), done.
+Writing objects: 100% (58/58), 20.55 KiB | 1.87 MiB/s, done.
+Total 58 (delta 15), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (15/15), completed with 11 local objects.
+To https://github.com/21stKyleK/ISAssignments.git
+   f86986b..6605572  heaveHo -> heaveHo
+
+100040199@CSHS-2336-23-S MINGW64 ~/Desktop/IndependentStu/Programming (heaveHo)
+$ cd ..
