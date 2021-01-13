@@ -4,14 +4,80 @@ public class PlayerNumbers //: ScriptableObject
 	public 
 }*/
 
-public abstract PlayerStats : ScriptableObject{
-	//public T value
-	//no, because probably errors from not knowing what type/non-matching
-	public int value;
+[CreateAssetMenu]
+//for stats and such
+/*
+PlayerHP
+PlayerMaxHP
+PlayerLvl
+PlayerSpecial
+PlayerAtk
+EnemyHP
+EnemyMaxHP
+EnemySpecial
+EnemyFast
+EnemyAtk
+*/
+public class IntVariable : ScriptableObject{
+	public int Value;
+	
+	public int GetValue(){
+		return Value;
+	}
+	public int SetValue(int bruh){
+		Value = bruh;
+	}
+	public int SetValue(IntVariable bruh){
+		Value = bruh.GetValue();
+	}
+	
+	public int Add(int bruh){
+		Value += bruh;
+	}
+	public int Add(IntVariable bruh){
+		Value += bruh.GetValue();
+	}
 }
 
-/*
-public class PlayerHP : PlayerStats{
+
+public class Movement : MonoBehaviour{
+	[Serializable]
+	public class AlongAxis{
+		public KeyCode Pos, Neg;
+		
+		public AlongAxis(KeyCode plus, KeyCode minus){
+			Pos = plus;
+			Neg = minus;
+		}
+	}
 	
+	public AlongAxis Horizon = new AlongAxis(/*KeyCodes or whatever else is used*/);
+	public AlongAxis Vertica = new AlongAxis(/*KeyCodes or whatever else is used*/);
+	
+	private void Update(){
+		//vector stuff to move, use Time.deltaTime
+	}
 }
-*/
+
+
+public class DamageHandler : ?{
+	//^may not be neccesary^
+	
+	//counter intuitive, as IntVariable.Add() uses +=
+	public void TakeDamage(int ow){
+		//actual damage should be negative
+		ObjHP.Add(ow);
+	}
+	public void TakeDamage(IntVariable ow){
+		//actual damage should be negative
+		ObjHP.Add(ow);
+	}
+	
+	public void IfDead(int hp){
+		if(hp < 0){
+			Destroy(obj);
+			//if player, should trigger gameOver sequence
+			//if enemy, should trigger victorySequence or check if other enemies are alive
+		}
+	}
+}
