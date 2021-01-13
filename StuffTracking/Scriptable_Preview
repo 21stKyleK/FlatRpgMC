@@ -420,3 +420,46 @@ public class GameEventListener : MonoBehaviour
             Response.Invoke();
         }
     }
+
+//how events work (w/ scriptable objects)
+/*
+Have the GameEvent and GameEventListener scripts (Scriptable and MonoBehaviour respectively)
+Create an asset out of the GameEvent (call it whatever)
+In an event thing (such as a button's), have the function to be called the GameEvent's Raise()
+put the Asset (Whatever) inside the parameter thing/holder
+Create an Object and add the GEListener
+Add the Asset to the GameEvent variable thing
+Under the Respone() event tab, attach the script/event/object to happen, then the function
+Magic
+*/
+
+
+//Enums
+
+public class Elemental : MonoBehaviour
+    {
+        [Tooltip("Element represented by this elemental.")]
+        public AttackElement Element;
+
+        [Tooltip("Text to fill in with the element name.")]
+        public Text Label;
+
+        private void OnEnable()
+        {
+            if(Label != null)
+                Label.text = Element.name;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Elemental e = other.gameObject.GetComponent<Elemental>();
+            if (e != null)
+            {
+                if (e.Element.DefeatedElements.Contains(Element))
+                    Destroy(gameObject);
+            }
+        }
+    }
+
+//where AttackElement is a ScriptableObject that has just a List of itself
+// and is turned into an Asset where other AttackElements are put in
