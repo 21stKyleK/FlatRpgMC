@@ -278,7 +278,7 @@ namespace RoboRyanTron.Unite2017.Variables
         }
     }
 }
-//should be obvious you'd want getters and setters
+//should be obvious you'd want getters and setters, except there are no getters
 
 
 public class KeyboardMover : MonoBehaviour
@@ -313,5 +313,110 @@ public class KeyboardMover : MonoBehaviour
             Vector3 moveNormal = new Vector3(Horizontal, Vertical, 0.0f).normalized;
 
             transform.position += moveNormal*Time.deltaTime*MoveRate.Value;
+        }
+    }
+
+
+//extedning an abstract RunTimeSet
+//v can be put over any class, including an abstract parent apparently
+[CreateAssetMenu]
+public class ThingSet : RunTimeSet<Thing>{
+//that's all that's neccesary, but just in case you want it
+	public void override Add(Thing t){ //I actually don't know, as VisualStudio is not displaying any errors
+		//something else
+	}
+
+	private int DoThing(){
+		//something new
+	}
+}
+
+
+//UI thing for the Sets demo
+
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace RoboRyanTron.Unite2017.Sets
+{
+    public class ThingMonitor : MonoBehaviour
+    {
+        public ThingRuntimeSet Set;
+
+        public Text Text;
+
+        private int previousCount = -1;
+
+        private void OnEnable()
+        {
+            UpdateText();
+        }
+
+        private void Update()
+        {
+            if (previousCount != Set.Items.Count)
+            {
+                UpdateText();
+                previousCount = Set.Items.Count;
+            }
+        }
+
+        public void UpdateText()
+        {
+            Text.text = "There are " + Set.Items.Count + " things.";
+        }
+    }
+}
+
+[CreateAssetMenu]
+    public class GameEvent : ScriptableObject
+    {
+        /// <summary>
+        /// The list of listeners that this event will notify if it is raised.
+        /// </summary>
+        private readonly List<GameEventListener> eventListeners = 
+            new List<GameEventListener>();
+
+        public void Raise()
+        {
+            for(int i = eventListeners.Count -1; i >= 0; i--)
+                eventListeners[i].OnEventRaised();
+        }
+
+        public void RegisterListener(GameEventListener listener)
+        {
+            if (!eventListeners.Contains(listener))
+                eventListeners.Add(listener);
+        }
+
+        public void UnregisterListener(GameEventListener listener)
+        {
+            if (eventListeners.Contains(listener))
+                eventListeners.Remove(listener);
+        }
+    }
+
+
+public class GameEventListener : MonoBehaviour
+    {
+        [Tooltip("Event to register with.")]
+        public GameEvent Event;
+
+        [Tooltip("Response to invoke when Event is raised.")]
+        public UnityEvent Response;
+
+        private void OnEnable()
+        {
+            Event.RegisterListener(this);
+        }
+
+        private void OnDisable()
+        {
+            Event.UnregisterListener(this);
+        }
+
+        public void OnEventRaised()
+        {
+            Response.Invoke();
         }
     }
