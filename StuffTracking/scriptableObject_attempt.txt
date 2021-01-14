@@ -81,3 +81,16 @@ public class DamageHandler : ?{
 		}
 	}
 }
+
+//just rewrite the Event stuff from Unite 2017
+
+public class PlayerMovement : MonoBehaviour{
+	
+	//can either use keycodes like the example
+	//or use Input.GetAxis, which may actually be the reason behind the super bug
+	
+	//move, man
+	public void FixedUpdate(){
+		rb.velocity = new Vector2(x * PlayerSpeedMap * Time.deltaTime * (mod + 1), y but same);
+	}
+}
