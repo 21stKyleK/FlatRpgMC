@@ -36,14 +36,14 @@ Also good for renderers, mini map stuff
 
 Can also be used like Enums (Elements and/or their extensions and what they beat/lose to)
 
-You CAN write entire objects or more inside a ScriptableObject, they aren't just "data buckets"
+You !! CAN !! write entire objects or more inside a ScriptableObject, they aren't just "data buckets"
 
 Inventory Example:
 -ScriptableObject Master List
 -ScriptableObject per item(? just to avoid changing everything)
 --can have different inventories for each scene
 
-Systems CAN interact with other systems
+Systems !! CAN !! interact with other systems
 
 
 Shared (values used across multiple objects) v non-shared (exclusive to one instance/type) states
@@ -84,7 +84,9 @@ public class BiggerThing : ScriptableObject{
 //different file ?
 
 
+//gets broken down into bytes that can be turned into a file or back to its object
 [Serializable]
+
 public class DataReference{
   public bool UseConstant = bool;
   public type Constant;
@@ -94,6 +96,7 @@ public class DataReference{
     get{ UseConstant ? Constant : Vari.Value;}
   }
 }
+//
 
 
 //different file ?
@@ -284,6 +287,9 @@ namespace RoboRyanTron.Unite2017.Variables
 public class KeyboardMover : MonoBehaviour
     {
         [Serializable]
+	//having this on lets you change the MoveAxis Parameters inside the inspector
+	//perhaps lets you treat non-object classes like one?
+
         public class MoveAxis
         {
             public KeyCode Positive;
@@ -430,7 +436,8 @@ put the Asset (Whatever) inside the parameter thing/holder
 Create an Object and add the GEListener
 Add the Asset to the GameEvent variable thing
 Under the Respone() event tab, attach the script/event/object to happen, then the function
-Magic
+When the object with the component is initialized/eneabled, the OnEnable() command calls
+placing it into the Event list, letting it be called when the Event asset is triggered
 */
 
 

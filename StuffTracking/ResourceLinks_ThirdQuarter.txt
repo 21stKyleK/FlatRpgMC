@@ -49,3 +49,5 @@ https://git-scm.com/docs/git-branch
 "Serializing (Manual), Unity Doc" : https://docs.unity3d.com/Manual/script-Serialization.html
 "ScriptableObjects (Manual), Unity Doc" : https://docs.unity3d.com/Manual/class-ScriptableObject.html
 "CreateAssetMenu, UnityDoc" : https://docs.unity3d.com/ScriptReference/CreateAssetMenuAttribute.html
+Serialization turns something into bytes and stuff, which can be put into a file and/or brought back for later use
+
