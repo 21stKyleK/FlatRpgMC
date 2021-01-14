@@ -85,9 +85,26 @@ public class DamageHandler : ?{
 //just rewrite the Event stuff from Unite 2017
 
 public class PlayerMovement : MonoBehaviour{
+	[Serializable]
+	//lets values be changed in the Inspector, but not what this tag is really used for
+	
+	public class Axis{
+		public string AxialName;
+		
+		public Axis(string name){
+			AxialName = name;
+		}
+		
+		public static implicit operator float(Axis axis){
+			return Input.GetAxisRaw(axis.AxialName);
+		}
+	}
 	
 	//can either use keycodes like the example
-	//or use Input.GetAxis, which may actually be the reason behind the super bug
+	//or use Input.GetAxisRaw, which may actually be the reason behind the super bug (isn't)
+	
+	public Axis x = new Axis("Horizontal");
+	public Axis y = new Axis("Vertical");
 	
 	//move, man
 	public void FixedUpdate(){
