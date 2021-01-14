@@ -44,3 +44,8 @@ https://git-scm.com/docs/git-branch
 "implicit and explicit keywords" : https://medium.com/dev-genius/implicit-and-explicit-operators-c-30d28fb573e0
 //implicit lets you convert a class to a different one without the need of casts, while explicit lets you do the same only with casting
 "using implicit/explicit" : https://stackoverflow.com/questions/32519131/c-sharp-implicit-operator-with-generic
+
+"Serializing (Scripting), Unity Doc" : https://docs.unity3d.com/ScriptReference/Serializable.html
+"Serializing (Manual), Unity Doc" : https://docs.unity3d.com/Manual/script-Serialization.html
+"ScriptableObjects (Manual), Unity Doc" : https://docs.unity3d.com/Manual/class-ScriptableObject.html
+"CreateAssetMenu, UnityDoc" : https://docs.unity3d.com/ScriptReference/CreateAssetMenuAttribute.html
