@@ -63,18 +63,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerStuff\Player Scripts\PlayerMovement.cs" />
-    <Compile Include="Assets\PlayerStuff\Player Scripts\PlayerStatistics.cs" />
-    <Compile Include="Assets\Scenes\EnemySpawn\Enemies\EnBattleTactics.cs" />
-    <Compile Include="Assets\Scenes\EnemySpawn\Enemies\EnemyMovement.cs" />
-    <Compile Include="Assets\Scenes\EnemySpawn\EnemyManager.cs" />
-    <Compile Include="Assets\Scenes\EnemySpawn\HomeData.cs" />
-    <Compile Include="Assets\Scenes\GameManager.cs" />
-    <Compile Include="Assets\Scenes\Loading Zone Stuff\LoadZoneTrigger.cs" />
-    <Compile Include="Assets\Scenes\Loading Zone Stuff\ToFightScreen.cs" />
-    <Compile Include="Assets\Scenes\StartGame.cs" />
-    <Compile Include="Assets\Scenes\StartScene.cs" />
-    <Compile Include="Assets\Technician\PlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\EnemyManager.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript\EnBattleTactics.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\LoadZoneTrigger.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript\PlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\StartGame.cs" />
+    <Compile Include="Assets\Scripts\StartScene.cs" />
+    <Compile Include="Assets\Scripts\ToFightScreen.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\IntegerVar.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example1.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example2.cs" />
     <Compile Include="Assets\Technician\User Interface\PauseMenu.cs" />
