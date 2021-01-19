@@ -52,3 +52,5 @@ https://git-scm.com/docs/git-branch
 Serialization turns something into bytes and stuff, which can be put into a file and/or brought back for later use
 
 "New Input System announcement" : https://blogs.unity3d.com/2019/10/14/introducing-the-new-input-system/
+
+"changing remote's origin url thing": https://docs.github.com/en/github/using-git/changing-a-remotes-url
