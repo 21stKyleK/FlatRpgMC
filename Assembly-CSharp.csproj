@@ -70,11 +70,13 @@
     <Compile Include="Assets\Scripts\LoadZoneTrigger.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\PlayerScript\PlayerExMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\StartGame.cs" />
     <Compile Include="Assets\Scripts\StartScene.cs" />
     <Compile Include="Assets\Scripts\ToFightScreen.cs" />
     <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\GenericNumVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\IntegerVar.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example1.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example2.cs" />

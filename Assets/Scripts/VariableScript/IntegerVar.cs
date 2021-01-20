@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu (menuName = "Scriptable Variables/Integer")]
-public class IntegerVar : ScriptableObject
+[CreateAssetMenu(menuName = "Scriptable Variables/Integer")]
+//doesn't work if there are compile errors
+public class IntegerVar : GenericNumVar<int>
 {
-    public int Value;
+    //public int Value;
 
-    public void SetValue(int v)
-    {
-        Value = v;
-    }
+    //public void SetValue(int v)
+    //{
+    //    Value = v;
+    //}
 
     public void SetValue(IntegerVar v)
     {

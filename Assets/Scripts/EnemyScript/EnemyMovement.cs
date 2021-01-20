@@ -52,7 +52,7 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         //parS = GetComponentInParent<HomeData>();
-        t = (MovementType) parS.GetMove();
+        t = (MovementType) 3/*parS.GetMove()*/;
         SetMoveType(t);
 
         Vector2 home = transform.parent.position;
