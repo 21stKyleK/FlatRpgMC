@@ -54,3 +54,5 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "New Input System announcement" : https://blogs.unity3d.com/2019/10/14/introducing-the-new-input-system/
 
 "changing remote's origin url thing": https://docs.github.com/en/github/using-git/changing-a-remotes-url
+
+"CreateAssetMenu  issue" : https://forum.unity.com/threads/using-createassetmenu-and-scriptableobject.518022/
