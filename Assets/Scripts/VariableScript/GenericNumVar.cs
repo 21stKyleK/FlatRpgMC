@@ -17,6 +17,11 @@ using UnityEngine;
         {
             Value = v.Value;
         }
+
+        public static implicit operator T(GenericNumVar<T> v)
+        {
+            return v.Value;
+        }
     }
 
 //}

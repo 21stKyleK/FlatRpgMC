@@ -65,10 +65,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnBattleTactics.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\BasicEnemyMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\LoadZoneTrigger.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerExMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerMovement.cs" />

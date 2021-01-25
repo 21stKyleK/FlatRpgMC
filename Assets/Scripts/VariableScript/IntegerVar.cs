@@ -14,10 +14,10 @@ public class IntegerVar : GenericNumVar<int>
     //    Value = v;
     //}
 
-    public void SetValue(IntegerVar v)
-    {
-        Value = v.Value;
-    }
+    //public void SetValue(IntegerVar v)
+    //{
+    //    Value = v.Value;
+    //}
 
     public void AddValue(int v)
     {

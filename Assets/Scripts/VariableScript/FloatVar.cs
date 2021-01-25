@@ -14,10 +14,10 @@ using UnityEngine;
         //    Value = v;
         //}
 
-        public void SetValue(FloatVar v)
-        {
-            Value = v.Value;
-        }
+        //public void SetValue(FloatVar v)
+        //{
+        //    Value = v.Value;
+        //}
 
         public void AddValue(float v)
         {
