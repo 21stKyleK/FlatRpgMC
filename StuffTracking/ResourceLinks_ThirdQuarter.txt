@@ -56,3 +56,6 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "changing remote's origin url thing": https://docs.github.com/en/github/using-git/changing-a-remotes-url
 
 "CreateAssetMenu  issue" : https://forum.unity.com/threads/using-createassetmenu-and-scriptableobject.518022/
+
+"Markdown" : https://www.markdownguide.org/
+"Markdown with Github" : https://guides.github.com/features/mastering-markdown/
