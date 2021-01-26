@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\EnemyManager.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnBattleTactics.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\BasicEnemyMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMovement.cs" />

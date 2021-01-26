@@ -19,9 +19,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     public IntegerVar mSpd;
+    public FloatVar boostAmt;
     public Axis x = new Axis("Horizontal");
     public Axis y = new Axis("Vertical");
-    //public Axis b = new Axis(whatever the shift is);
+    public Axis b = new Axis("Fire3");
     //run speed (if the build doesn't remove the problem, then I don't kow what will)
 
     public Rigidbody2D rb;
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(x * mSpd * Time.deltaTime, y * mSpd * Time.deltaTime);
+        Vector2 normie = new Vector2(x, y).normalized;
+        rb.velocity = new Vector2(normie.x * mSpd * Time.deltaTime * (1 + b * boostAmt), normie.y * mSpd * Time.deltaTime * (1 + b * boostAmt));
     }
 }

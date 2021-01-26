@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mSpd: {fileID: 11400000, guid: e9aa546648741cf47a348c691b3b1cc5, type: 2}
+  boostAmt: {fileID: 11400000, guid: 8674f6c698726c9448ee2e31d87d6f09, type: 2}
   rb: {fileID: 7380277635758664902}
 --- !u!50 &7380277635758664902
 Rigidbody2D:
