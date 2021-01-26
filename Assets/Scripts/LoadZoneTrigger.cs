@@ -17,8 +17,15 @@ public class LoadZoneTrigger : MonoBehaviour
         //collision.GetComponent<PlayerMovement>().Activity = false;
 
         //should consider passing in "collision" to not have to search for the player object everytime, and just have the formula
-        StartCoroutine(GameManager.Instance.SceneChange(xTarPos, yTarPos, tarDir, scene, collision));
-    }
+        //StartCoroutine(GameManager.Instance.SceneChange(xTarPos, yTarPos, tarDir, scene, collision));
+        Time.timeScale = 0;
 
+        StartCoroutine(LoadScene());
+    }
     //will just use ^ a screen transition to disguise the freeze (camera fade in and out)
+
+    public IEnumerator LoadScene()
+    {
+        return null;
+    }
 }

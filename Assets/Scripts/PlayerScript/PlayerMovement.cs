@@ -37,6 +37,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 normie = new Vector2(x, y).normalized;
-        rb.velocity = new Vector2(normie.x * mSpd * Time.deltaTime * (1 + b * boostAmt), normie.y * mSpd * Time.deltaTime * (1 + b * boostAmt));
+        rb.velocity = normie * mSpd * Time.deltaTime * (1 + b * boostAmt);
     }
 }

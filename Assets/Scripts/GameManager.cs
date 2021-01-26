@@ -72,7 +72,7 @@ public class GameManager
 
         //camera fade in
         //yield return StartCoroutine( cam.GetComponent<PlayerCamera>().FadeIn() );
-        cam.GetComponent<PlayerCamera>().Fading(true, false);
+        cam.GetComponent<PlayerCamera>().Fading(true);
 
         //Debug.Log(cS);
 
@@ -103,7 +103,7 @@ public class GameManager
 
         //camera fade out
         //yield return StartCoroutine( cam.GetComponent<PlayerCamera>().FadeOut(true) );
-        cam.GetComponent<PlayerCamera>().Fading(false, true);
+        cam.GetComponent<PlayerCamera>().Fading(false);
 
         //Debug.Log(cS);
 

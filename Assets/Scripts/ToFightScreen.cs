@@ -38,7 +38,7 @@ public class ToFightScreen : MonoBehaviour
 		
 		//StartCoroutine(cam.GetComponent<PlayerCamera>().FadeOut(false));
 		
-		yield return StartCoroutine(cam.GetComponent<PlayerCamera>().FadeOut(false));
+		yield return StartCoroutine(cam.GetComponent<PlayerCamera>().FadeOut());
 		
 		StartCoroutine(leaveFight(GameManager.Instance.GetRandValueInc() > 0.5f));
 		
@@ -54,7 +54,7 @@ public class ToFightScreen : MonoBehaviour
 
 		//StartCoroutine(cam.GetComponent<PlayerCamera>().FadeOut(true));
 
-		cam.GetComponent<PlayerCamera>().Fading(false, true);
+		cam.GetComponent<PlayerCamera>().Fading(false);
 
 
 		if (!destroyMe)

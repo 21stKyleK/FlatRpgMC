@@ -42,7 +42,7 @@ public class PlayerCamera : MonoBehaviour
         conY = y;
     }
 
-    public void Fading(bool toBlack, bool sceneTran)
+    public void Fading(bool toBlack)
     {
         //sbyte fadeDir;
 
@@ -52,7 +52,7 @@ public class PlayerCamera : MonoBehaviour
         }
         else
         {
-            StartCoroutine(FadeOut(sceneTran));
+            StartCoroutine(FadeOut());
         }
 
         //bruh = FadeImage(fadeDir);
@@ -76,14 +76,14 @@ public class PlayerCamera : MonoBehaviour
 
         while (fader.color.a < 1)
         {
-            fader.color = new Color(0, 0, 0, fader.color.a + Time.deltaTime);
+            fader.color = new Color(0, 0, 0, fader.color.a + Time.unscaledDeltaTime);
             yield return null;
         }
 
     }
 
     //to screen
-    public IEnumerator FadeOut(bool sceneTran)
+    public IEnumerator FadeOut()
     {
 		//yield return null;
 
@@ -91,17 +91,8 @@ public class PlayerCamera : MonoBehaviour
 		
         while (fader.color.a > 0)
         {
-            fader.color = new Color(0, 0, 0, fader.color.a - Time.deltaTime);
+            fader.color = new Color(0, 0, 0, fader.color.a - Time.unscaledDeltaTime);
             yield return null;
-        }
-
-        if (sceneTran)
-        {
-            GameManager.Instance.CurrentState = (GameManager.States)1;
-        }
-        else
-        {
-            GameManager.Instance.CurrentState = (GameManager.States)2;
         }
         //player.GetComponent<PlayerMovement>().Activity = true;
         //Debug.Log("ow");
