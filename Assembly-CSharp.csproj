@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\EnemyScript\EnBattleTactics.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\BasicEnemyMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\EventHandling\GameEventEar.cs" />
+    <Compile Include="Assets\Scripts\EventHandling\GameEventHolder.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\LoadZoneTrigger.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerCamera.cs" />

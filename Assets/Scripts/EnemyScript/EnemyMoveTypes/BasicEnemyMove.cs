@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class BasicEnemyMove //: MonoBehaviour
+public class BasicEnemyMove //: MonoBehaviour
 {
     //specifically Linear
     public int intervals = 4;
