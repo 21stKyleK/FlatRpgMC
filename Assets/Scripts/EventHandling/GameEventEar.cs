@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [CreateAssetMenu]
-public class GameEventEar : ScriptableObject
+public class GameEventEar : MonoBehaviour
 {
     //what to register with
     public GameEventHolder papi;
