@@ -59,3 +59,9 @@ Serialization turns something into bytes and stuff, which can be put into a file
 
 "Markdown" : https://www.markdownguide.org/
 "Markdown with Github" : https://guides.github.com/features/mastering-markdown/
+
+"ScriptableObjects demonstration; Brackeyes" : https://www.youtube.com/watch?v=aPXvoWVabPY
+"ScriptableObjects introdction; Game Dev Guide" : https://www.youtube.com/watch?v=lJxy3oTZeCs
+"ScriptableObjects demonstration; Sirenex" : https://www.youtube.com/watch?v=W5ECIJyoW80
+"ScriptableObject usage; Unite '17 Seoul (very good at end)" : https://www.youtube.com/watch?v=VtuSKmfrFDU
+"ScriptableObject demonstration; Dapper Dino" : https://www.youtube.com/watch?v=iBBUv9MIIK8
