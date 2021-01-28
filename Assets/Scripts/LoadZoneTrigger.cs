@@ -10,8 +10,9 @@ public class LoadZoneTrigger : MonoBehaviour
     //the scene to load after touching loading zone
     public float xTarPos, yTarPos;
     //position of spawnpoint. based on loading zone
+    //
     public byte tarDir;
-    // 0 = no offset, 1-4 = SWNE, direction of spawn displacement
+    // direction player will face
 
     void OnTriggerEnter2D(Collider2D collision)
     {

@@ -64,7 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyScript\EnBattleTactics.cs" />
-    <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\BasicEnemyMove.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\BaseEnemyMove.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\FreeMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EventHandling\GameEventEar.cs" />
     <Compile Include="Assets\Scripts\EventHandling\GameEventHolder.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\Scripts\ToFightScreen.cs" />
     <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\GenericNumVar.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\GenericRTSet.cs" />
     <Compile Include="Assets\Scripts\VariableScript\IntegerVar.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example1.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example2.cs" />
