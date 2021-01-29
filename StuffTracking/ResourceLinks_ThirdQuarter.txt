@@ -65,3 +65,6 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "ScriptableObjects demonstration; Sirenex" : https://www.youtube.com/watch?v=W5ECIJyoW80
 "ScriptableObject usage; Unite '17 Seoul (very good at end)" : https://www.youtube.com/watch?v=VtuSKmfrFDU
 "ScriptableObject demonstration; Dapper Dino" : https://www.youtube.com/watch?v=iBBUv9MIIK8
+
+"Interfaces; Microsoft Documentation" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/
+"Abstract, Sealed, and Class Members" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members
