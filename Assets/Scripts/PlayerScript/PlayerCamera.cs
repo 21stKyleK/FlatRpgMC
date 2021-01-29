@@ -11,9 +11,14 @@ public class PlayerCamera : MonoBehaviour
     //camera constraints; assumes that all scenes are camera sized at least, will have to work around not being able to have non-rectangle rooms and changing visibility based on camera size
     private int conX = 0, conY = 0;
 
-    public RawImage fader, bg;
+    public RawImage fader
+    //, bg
+    ;
 
     //IEnumerator bruh;
+    
+    public UnityEvent FadeInEnd;
+    //will trigger the scene change itself
 
     //void Start()
     //{
@@ -71,15 +76,18 @@ public class PlayerCamera : MonoBehaviour
     //to black
     public IEnumerator FadeIn()
     {
-        GameManager.Instance.CurrentState = 0;
+        //GameManager.Instance.CurrentState = 0;
         //player.GetComponent<PlayerMovement>().Activity = false;
+	Time.scale = 0;
+	//freezes all movement
 
         while (fader.color.a < 1)
         {
             fader.color = new Color(0, 0, 0, fader.color.a + Time.unscaledDeltaTime);
             yield return null;
         }
-
+	
+	FadeInEnd.Invoke();
     }
 
     //to screen
@@ -96,8 +104,14 @@ public class PlayerCamera : MonoBehaviour
         }
         //player.GetComponent<PlayerMovement>().Activity = true;
         //Debug.Log("ow");
+	
+	Time.scale = 1f;
+	//resumes all movement, though may happen elsewhere
     }
+    
+    //might need to make different IEnumerators for entering fight scenes
 
+/*
     public void SetBGImage(Texture bruh)
     {
         bg.texture = bruh;
@@ -107,4 +121,5 @@ public class PlayerCamera : MonoBehaviour
     {
         bg.enabled = bruh;
     }
+    */
 }
