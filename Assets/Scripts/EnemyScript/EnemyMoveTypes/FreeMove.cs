@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FreeMove : BaseEnemyMove
 {
+    public abstract int intervals = 360;
+    
     public override Vector2 Move(float speed)
     {
         //return new Vector2(0, 0);
@@ -16,7 +18,7 @@ public class FreeMove : BaseEnemyMove
 
     public override float MakeAngle()
     {
-        return (int)(Random.value * 360);
+        return (int)(Random.value * intervals);
     }
     /*
      * get abgle intervals
@@ -25,7 +27,7 @@ public class FreeMove : BaseEnemyMove
      *  return a * interval;
      * }
      * 
-     * do special thing (turn enemy invisible)
+     * do special thing (turn enemy invisible) actually, that might be better suited for the enemy script iself, or a different thing altogether
      * 
      * get random value (either from here or else where)
     
