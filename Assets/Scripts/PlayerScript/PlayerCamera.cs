@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class PlayerCamera : MonoBehaviour
 {
@@ -78,7 +79,7 @@ public class PlayerCamera : MonoBehaviour
     {
         //GameManager.Instance.CurrentState = 0;
         //player.GetComponent<PlayerMovement>().Activity = false;
-	Time.scale = 0;
+	Time.timeScale = 0;
 	//freezes all movement
 
         while (fader.color.a < 1)
@@ -105,7 +106,7 @@ public class PlayerCamera : MonoBehaviour
         //player.GetComponent<PlayerMovement>().Activity = true;
         //Debug.Log("ow");
 	
-	Time.scale = 1f;
+	Time.timeScale = 1f;
 	//resumes all movement, though may happen elsewhere
     }
     

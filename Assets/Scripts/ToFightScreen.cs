@@ -25,10 +25,10 @@ public class ToFightScreen : MonoBehaviour
 		yield return StartCoroutine(cam.GetComponent<PlayerCamera>().FadeIn());
 		//no, change the coroutine to public, and make this a coroutine as well
 
-		cam.GetComponent<PlayerCamera>().SetBGImage(GetComponent<EnBattleTactics>().GetTexture());
+		//cam.GetComponent<PlayerCamera>().SetBGImage(GetComponent<EnBattleTactics>().GetTexture());
 		//Debug.Log(GetComponent<EnBattleTactics>().GetTexture());
 
-		cam.GetComponent<PlayerCamera>().ActivateBG(true);
+		//cam.GetComponent<PlayerCamera>().ActivateBG(true);
 
 		transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, true);
 		//the bool is worldPositionStays, where if true, will keep local transform, else it'll inherit from parent
@@ -50,7 +50,7 @@ public class ToFightScreen : MonoBehaviour
 
 		yield return StartCoroutine(cam.GetComponent<PlayerCamera>().FadeIn());
 
-		cam.GetComponent<PlayerCamera>().ActivateBG(false);
+		//cam.GetComponent<PlayerCamera>().ActivateBG(false);
 
 		//StartCoroutine(cam.GetComponent<PlayerCamera>().FadeOut(true));
 

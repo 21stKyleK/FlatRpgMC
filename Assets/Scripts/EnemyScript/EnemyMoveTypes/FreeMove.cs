@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreeMove : BaseEnemyMove
+[CreateAssetMenu(menuName = "Enemy Movement/Free")]
+public class FreeMove : NoMove
 {
-    public abstract int intervals = 360;
+    public int intervals = 360;
     
     public override Vector2 Move(float speed)
     {
