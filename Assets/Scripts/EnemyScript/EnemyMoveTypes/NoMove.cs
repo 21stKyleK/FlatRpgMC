@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Enemy Movement/None")]
 public class NoMove : BaseEnemyMove
 {
-    public override Vector2 Move(float spd)
+    public override Vector2 Move(float spd, float angle)
     {
         return new Vector2(0, 0);
     }
