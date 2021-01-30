@@ -2,17 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiagonalMove : MonoBehaviour
+public class DiagonalMove : FreeMove
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    intervals = 8;
+    public int intervalSize;
+    
+    public override float MakeAngle(){
+        return base.MakeAngle()*intervalSize;
     }
 }
