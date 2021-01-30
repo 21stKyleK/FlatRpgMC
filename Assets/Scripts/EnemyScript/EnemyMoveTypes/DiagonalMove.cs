@@ -5,7 +5,7 @@ using UnityEngine;
 public class DiagonalMove : FreeMove
 {
     intervals = 8;
-    public int intervalSize;
+    public int intervalSize = 45;
     
     public override float MakeAngle(){
         return base.MakeAngle()*intervalSize;
