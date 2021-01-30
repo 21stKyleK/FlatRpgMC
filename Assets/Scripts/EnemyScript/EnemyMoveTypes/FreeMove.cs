@@ -7,11 +7,11 @@ public class FreeMove : NoMove
 {
     public int intervals = 360;
     
-    public override Vector2 Move(float speed)
+    public override Vector2 Move(float speed, float angle)
     {
         //return new Vector2(0, 0);
 
-        Vector3 yeesh = Quaternion.Euler(0, 0, MakeAngle()) * Vector3.up;
+        Vector3 yeesh = Quaternion.Euler(0, 0, angle) * Vector3.up;
         
         return (Vector2)yeesh.normalized * speed * Time.deltaTime;
 
