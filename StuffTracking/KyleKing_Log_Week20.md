@@ -4,4 +4,4 @@ Date|Time|Activity
 1/26|9:05 - 9:50 AM, 2:50 - 3:15 PM|Tried working on scriptable objects, but got stuck. Should try using the Event pattern for scene loading
 1/27|9:05 - 9:50 AM, 2:50 - 3:20 PM, 9:00 - 11:00|Understood UnityEvents with SOs better; watched videos about scriptableObjects
 1/28|9:05 - 9:50 AM, 2:50 - 3:20 PM, 8:45 - 9:30|Possibly figured out how to do scene changes with SOs; completed last lab
-1/29|9:05 - 9:50 AM|
+1/29|9:05 - 9:50 AM, 2:50 - 3:20 PM|Learned about interfaces and abstract keywords
