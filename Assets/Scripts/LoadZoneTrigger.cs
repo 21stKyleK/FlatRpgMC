@@ -12,8 +12,10 @@ public class LoadZoneTrigger : MonoBehaviour
     //position of spawnpoint. based on loading zone
     public byte tarDir;
     // direction player will face
-    //public LoadZoneRTS lad
+    
+    public LoadZoneRTS lad;
     //adds the LoadingZones to the list
+    
     public UnityEvent FadeInStart;
     //the thing to start the whole skishkabang, will trigger the camera to do start the FadeIn
     public bool Bruh{get; set;} = false;
