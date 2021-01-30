@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class BaseEnemyMove : ScriptableObject
 {
     //otherwise known as None/Still
-    public Vector2 Move(float spd);
+    public Vector2 Move(float spd, float angle);
 
     public float MakeAngle();
 
