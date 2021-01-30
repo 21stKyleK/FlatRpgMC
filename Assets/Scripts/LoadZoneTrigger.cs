@@ -13,7 +13,7 @@ public class LoadZoneTrigger : MonoBehaviour
     public byte tarDir;
     // direction player will face
     
-    public LoadZoneRTS lad;
+    public ObjectRTS lad;
     //adds the LoadingZones to the list
     
     public UnityEvent FadeInStart;
