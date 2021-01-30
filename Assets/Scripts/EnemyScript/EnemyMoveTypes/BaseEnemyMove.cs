@@ -6,9 +6,9 @@ using UnityEngine;
 public abstract class BaseEnemyMove : ScriptableObject
 {
     //otherwise known as None/Still
-    public abstract Vector2 Move(float spd);
+    public Vector2 Move(float spd);
 
-    public abstract float MakeAngle();
+    public float MakeAngle();
 
     //The modifier 'virtual' is not valid for this item
 }
