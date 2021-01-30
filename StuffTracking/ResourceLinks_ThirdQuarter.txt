@@ -73,3 +73,5 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Properties in Interfaces; Microsfot Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/interface-properties
 "Polymorphism; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/polymorphism
 "Virtual keyword; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual
+
+"Why you shouldn't use game engines" : https://www.youtube.com/watch?v=nBaCRp9UzDw
