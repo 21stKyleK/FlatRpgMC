@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectRTS : MonoBehaviour
+public class ObjectRTS : GenericRTSet<LoadingZoneTest>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void ClearOut(){
+        things = new List<LoadingZoneTest>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    
+    public LoadingZoneTest CheckActive(){
+        foreach(LoadingZoneTest arg in things){
+            if(arg.Bruh){
+                return arg;
+            }
+        }
+        return things.Get(0);
     }
 }
