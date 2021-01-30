@@ -75,3 +75,5 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Virtual keyword; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual
 
 "Why you shouldn't use game engines" : https://www.youtube.com/watch?v=nBaCRp9UzDw
+"How to code (almost) any feature" : https://www.youtube.com/watch?v=h1o5UzKfZcQ
+"Free GameDev tools" : https://www.youtube.com/watch?v=ung_U17kxDI
