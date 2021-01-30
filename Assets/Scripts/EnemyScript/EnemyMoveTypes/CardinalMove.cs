@@ -5,5 +5,5 @@ using UnityEngine;
 public class CardinalMove : DiagonalMove
 {
     intervals = 4;
-    intervalAmount = 90;
+    intervalSize = 90;
 }
