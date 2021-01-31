@@ -2,20 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagment;
+using UnityEngine.Event;
 
 public class StartScene : MonoBehaviour
 {
-    //public int x, y;
-
-    ////scene specific enemies, but always have "Nothing" at the end
-    //public GameObject[] en;
-
-    ///* 0 = RETURN, 1 = CHASE, 2 = NONE
-    //     * 3 = LINEAR, 4 = DIAGONAL, 5 = FREEFORM
-    //     * 6 = SPORADIC, 7 = PATROL, 8 = TELEPORT
-    //     */
-    //public int[] mT;
-    //public Texture[] bg;
+    public ObjectRTS loadZones;
+    public Scene current;
+    public UnityEvent StartFadeOut;
+    
+    public FloatVar pX, pY;
+    //player x and y positions
+    //have Camera's constraints in SOs
 
     //// Start is called before the first frame update
     //void Start()
@@ -24,7 +22,17 @@ public class StartScene : MonoBehaviour
     //    //Destroy(this);
     //}
 
-    /*
-     * turn into the scene loader
-     */
+    public void NewSceneLoad(){
+        LoadZoneTrigger bruh = loadZone.GetActivated().GetComponent;
+        SceneManager.UnloadSceneAsync(current);
+        current = bruh.scene;
+        float x = bruh.x, y = bruh.y;
+        pX.SetValue(x);
+        pY.SetValue(y);
+        SceneManager.LoadSceneAsync(current);
+        StartFadeOut.Invoke();
+    }
+    //may need different systems to compensate for fight screens
+    //also, enemies in fight screens will be put into canvas objects
+     
 }
