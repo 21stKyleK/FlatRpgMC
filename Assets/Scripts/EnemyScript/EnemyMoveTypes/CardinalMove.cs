@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class CardinalMove : DiagonalMove
 {
-    intervals = 4;
-    intervalSize = 90;
+    public override int Intervals { get => 4; }
+    public override int IntervalSize{ get => 90; }
 }

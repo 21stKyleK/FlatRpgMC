@@ -93,7 +93,7 @@ public class EnemyMovement : MonoBehaviour
 
             do
             {
-            transform.position = transform.position + moveType.Move(mSpd, ang);
+            transform.position = (Vector2) transform.position + moveType.Move(mSpd, ang);
 //                 Move(ang, mSpd);
 //                 yield return null;
                 stam -= Time.deltaTime;

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class LoadZoneTrigger : MonoBehaviour
 {
-    public string scene;
+    public Scene scene;
     //the scene to load after touching loading zone
     public float xTarPos, yTarPos;
     //position of spawnpoint. based on loading zone
@@ -18,11 +18,11 @@ public class LoadZoneTrigger : MonoBehaviour
     
     public UnityEvent FadeInStart;
     //the thing to start the whole skishkabang, will trigger the camera to do start the FadeIn
-    public bool Bruh{get; set;} = false;
+    //public bool Bruh{get; set;} = false;
     //whether or not the object was triggered
 
     private void Start(){
-        //lad.Add(this);
+        lad.Add(gameObject);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -35,8 +35,9 @@ public class LoadZoneTrigger : MonoBehaviour
 
         //StartCoroutine(LoadScene());
         
-        Bruh = true;
+        //Bruh = true;
         FadeInStart.Invoke();
+        gameObject.SetActive(false);
     }
     //will just use ^ a screen transition to disguise the freeze (camera fade in and out)
 }

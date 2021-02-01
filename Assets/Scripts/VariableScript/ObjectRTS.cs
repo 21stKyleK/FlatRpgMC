@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectRTS : GenericRTSet<LoadingZoneTest>
+public class ObjectRTS : GenericRTSet<GameObject>
 {
     public void ClearOut(){
-        things = new List<LoadingZoneTest>();
+        Things = new List<GameObject>();
     }
     
-    public LoadingZoneTest CheckActive(){
-        foreach(LoadingZoneTest arg in things){
-            if(arg.Bruh){
+    public GameObject CheckActive(){
+        foreach(GameObject arg in Things){
+            if(arg.activeSelf){
                 return arg;
             }
         }
-        return things.Get(0);
+        return Things[0];
     }
 }

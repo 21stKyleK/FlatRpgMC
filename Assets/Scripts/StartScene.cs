@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagment;
-using UnityEngine.Event;
+using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class StartScene : MonoBehaviour
 {
-    public ObjectRTS loadZones;
+    public ObjectRTS loadZone;
     public Scene current;
     public UnityEvent StartFadeOut;
     
@@ -22,14 +22,24 @@ public class StartScene : MonoBehaviour
     //    //Destroy(this);
     //}
 
+    public void SetCurrentScene(Scene c)
+    {
+        current = c;
+    }
+
     public void NewSceneLoad(){
-        LoadZoneTrigger bruh = loadZone.GetActivated().GetComponent;
+        LoadZoneTrigger bruh = loadZone.CheckActive().GetComponent<LoadZoneTrigger>();
+        float x = bruh.xTarPos, y = bruh.yTarPos;
+        Scene temp = bruh.scene;
         SceneManager.UnloadSceneAsync(current);
-        current = bruh.scene;
-        float x = bruh.x, y = bruh.y;
+
+        SetCurrentScene(temp);
+
         pX.SetValue(x);
         pY.SetValue(y);
-        SceneManager.LoadSceneAsync(current);
+
+        SceneManager.LoadSceneAsync(current.buildIndex, LoadSceneMode.Additive);
+
         StartFadeOut.Invoke();
     }
     //may need different systems to compensate for fight screens

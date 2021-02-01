@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Enemy Movement/Free")]
 public class FreeMove : NoMove
 {
-    public int intervals = 360;
+    public virtual int Intervals { get => 360; }
     
     public override Vector2 Move(float speed, float angle)
     {
@@ -19,7 +19,7 @@ public class FreeMove : NoMove
 
     public override float MakeAngle()
     {
-        return (int)(Random.value * intervals);
+        return (int)(Random.value * Intervals);
     }
     /*
      * get abgle intervals

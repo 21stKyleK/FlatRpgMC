@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class GenericRTSet<T> : ScriptableObject
+public class GenericRTSet<T> : ScriptableObject
 {
     public List<T> Things = new List<T>();
     
