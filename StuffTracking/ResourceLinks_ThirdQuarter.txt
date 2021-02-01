@@ -80,3 +80,5 @@ Serialization turns something into bytes and stuff, which can be put into a file
 
 "foreach; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in
 "Lambda expressions" : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions
+
+"overriding C# variables; StackOverflow" : https://stackoverflow.com/questions/8844649/how-do-i-override-not-hide-a-member-variable-field-in-a-c-sharp-subclass
