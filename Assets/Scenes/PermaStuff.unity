@@ -291,9 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1100842146bacfe44a0de979a55a4a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadZone: {fileID: 0}
-  current:
-    m_Handle: 0
+  loadZone: {fileID: 11400000, guid: a9951b80570e68f4f97c98abb96f0493, type: 2}
+  current: 
   StartFadeOut:
     m_PersistentCalls:
       m_Calls: []
@@ -433,9 +432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d98b7a6e0324a641a18d30dab30dfcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoad:
-    m_Handle: 0
-  theThing: {fileID: 0}
+  sceneLoad: TestingScene1
+  sceneStart: {fileID: 620418000}
 --- !u!1 &1044691729
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +523,7 @@ GameObject:
   - component: {fileID: 1182691395}
   - component: {fileID: 1182691394}
   - component: {fileID: 1182691397}
+  - component: {fileID: 1182691398}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -614,6 +613,33 @@ MonoBehaviour:
   FadeInEnd:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1182691398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182691393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f93d02e11b8df3468771cc453c0745d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  papi: {fileID: 11400000, guid: fd9a93cba8512c74ca6f97fd963c0ac2, type: 2}
+  theThing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1182691397}
+        m_MethodName: Fading
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1212320565
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class StartScene : MonoBehaviour
 {
     public ObjectRTS loadZone;
-    public Scene current;
+    public string current;
     public UnityEvent StartFadeOut;
     
     public FloatVar pX, pY;
@@ -22,7 +22,7 @@ public class StartScene : MonoBehaviour
     //    //Destroy(this);
     //}
 
-    public void SetCurrentScene(Scene c)
+    public void SetCurrentScene(string c)
     {
         current = c;
     }
@@ -30,7 +30,9 @@ public class StartScene : MonoBehaviour
     public void NewSceneLoad(){
         LoadZoneTrigger bruh = loadZone.CheckActive().GetComponent<LoadZoneTrigger>();
         float x = bruh.xTarPos, y = bruh.yTarPos;
-        Scene temp = bruh.scene;
+        string temp = bruh.scene;
+        loadZone.ClearOut();
+
         SceneManager.UnloadSceneAsync(current);
 
         SetCurrentScene(temp);
@@ -38,7 +40,7 @@ public class StartScene : MonoBehaviour
         pX.SetValue(x);
         pY.SetValue(y);
 
-        SceneManager.LoadSceneAsync(current.buildIndex, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(current, LoadSceneMode.Additive);
 
         StartFadeOut.Invoke();
     }

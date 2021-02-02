@@ -236,8 +236,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071749223116136818, guid: 7e2adec810e840947aa4b90c374bc6dd,
         type: 3}
-      propertyPath: scene
-      value: TestingScene2
+      propertyPath: yTarPos
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2071749223116136818, guid: 7e2adec810e840947aa4b90c374bc6dd,
         type: 3}
@@ -246,8 +246,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2071749223116136818, guid: 7e2adec810e840947aa4b90c374bc6dd,
         type: 3}
-      propertyPath: yTarPos
-      value: -1
+      propertyPath: scene
+      value: TestingScene2
       objectReference: {fileID: 0}
     - target: {fileID: 4690359395201158689, guid: 7e2adec810e840947aa4b90c374bc6dd,
         type: 3}

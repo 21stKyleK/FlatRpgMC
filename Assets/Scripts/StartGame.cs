@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    public Scene sceneLoad;
-    public GameObject theThing;
+    public string sceneLoad;
+    public GameObject sceneStart;
 
     private void Start()
     {
         //call GameManager, which'll create player, then load the scene
         //GameManager.Instance.Throwaway();
-        theThing.GetComponent<StartScene>().SetCurrentScene(sceneLoad);
+        sceneStart.GetComponent<StartScene>().SetCurrentScene(sceneLoad);
 
-        SceneManager.LoadScene(sceneLoad.buildIndex, LoadSceneMode.Additive);
+        SceneManager.LoadScene(sceneLoad, LoadSceneMode.Additive);
 
         //GameManager.Instance.SetCurrent(sceneLoad);
 

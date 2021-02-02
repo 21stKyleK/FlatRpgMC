@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Run Time Set/GameObject")]
 public class ObjectRTS : GenericRTSet<GameObject>
 {
     public void ClearOut(){

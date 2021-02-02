@@ -4,7 +4,7 @@ using UnityEngine;
 
 using UnityEngine.Events;
 
-//[CreateAssetMenu]
+//[CreateAssetMenu(menuName = "Game Event Trigger")]
 public class GameEventEar : MonoBehaviour
 {
     //what to register with

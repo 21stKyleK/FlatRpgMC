@@ -6,12 +6,13 @@ using UnityEngine.Events;
 
 public class LoadZoneTrigger : MonoBehaviour
 {
-    public Scene scene;
+    public string scene;
     //the scene to load after touching loading zone
     public float xTarPos, yTarPos;
     //position of spawnpoint. based on loading zone
-    public byte tarDir;
-    // direction player will face
+    
+    //public byte tarDir;
+    // direction player will face, but would be maintained anyways as player doesn't get destroyed
     
     public ObjectRTS lad;
     //adds the LoadingZones to the list
@@ -34,10 +35,11 @@ public class LoadZoneTrigger : MonoBehaviour
         //Time.timeScale = 0;
 
         //StartCoroutine(LoadScene());
-        
+
         //Bruh = true;
-        FadeInStart.Invoke();
         gameObject.SetActive(false);
+        FadeInStart.Invoke();
+        //gameObject.SetActive(false);
     }
     //will just use ^ a screen transition to disguise the freeze (camera fade in and out)
 }
