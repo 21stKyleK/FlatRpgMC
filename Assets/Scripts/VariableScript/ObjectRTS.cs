@@ -9,12 +9,12 @@ public class ObjectRTS : GenericRTSet<GameObject>
         Things = new List<GameObject>();
     }
     
-    public GameObject CheckActive(){
-        foreach(GameObject arg in Things){
-            if(arg.activeSelf){
-                return arg;
-            }
-        }
+    public virtual GameObject CheckActive(){
+        //foreach(GameObject arg in Things){
+        //    if(arg.activeSelf){
+        //        return arg;
+        //    }
+        //}
         return Things[0];
     }
 }

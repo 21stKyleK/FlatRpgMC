@@ -11,7 +11,7 @@ public class GameEventHolder : ScriptableObject
     public void RaiseAll()
     {
         //going backwards lets events remove themselves
-        for(int i = hearEvents.Count; i>=0; i--)
+        for(int i = hearEvents.Count-1; i>=0; i--)
         {
             hearEvents[i].OnEventRaised();
         }

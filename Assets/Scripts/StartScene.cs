@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class StartScene : MonoBehaviour
 {
-    public ObjectRTS loadZone;
+    public LoadZoneRTS loadZone;
     public string current;
     public UnityEvent StartFadeOut;
     

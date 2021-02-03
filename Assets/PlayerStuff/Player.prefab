@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7380277635758664901}
   - component: {fileID: 9119881793389162445}
   - component: {fileID: -8852868122009442179}
+  - component: {fileID: 582613129401733994}
   - component: {fileID: 7380277635758664902}
   - component: {fileID: 8576349882540018264}
   m_Layer: 0
@@ -114,6 +115,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSpwn: {fileID: 11400000, guid: 6d5c026e80380ff41ad323bf80afe02a, type: 2}
   ySpwn: {fileID: 11400000, guid: 667ab38bd75cedf47b4eff001e2e4289, type: 2}
+--- !u!114 &582613129401733994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7380277635758664920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f93d02e11b8df3468771cc453c0745d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  papi: {fileID: 11400000, guid: 836b914759fca9c4d940e50616f70662, type: 2}
+  theThing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8852868122009442179}
+        m_MethodName: SetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &7380277635758664902
 Rigidbody2D:
   serializedVersion: 4

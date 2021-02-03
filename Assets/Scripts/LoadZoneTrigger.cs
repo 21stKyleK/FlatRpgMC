@@ -19,7 +19,7 @@ public class LoadZoneTrigger : MonoBehaviour
     
     public UnityEvent FadeInStart;
     //the thing to start the whole skishkabang, will trigger the camera to do start the FadeIn
-    //public bool Bruh{get; set;} = false;
+    public bool Bruh{get; set;} = false;
     //whether or not the object was triggered
 
     private void Start(){
@@ -36,8 +36,8 @@ public class LoadZoneTrigger : MonoBehaviour
 
         //StartCoroutine(LoadScene());
 
-        //Bruh = true;
-        gameObject.SetActive(false);
+        Bruh = true;
+        //gameObject.SetActive(false);
         FadeInStart.Invoke();
         //gameObject.SetActive(false);
     }
