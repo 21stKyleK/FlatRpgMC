@@ -10,7 +10,7 @@ public class PlayerCamera : MonoBehaviour
     public GameObject player;
 
     //camera constraints; assumes that all scenes are camera sized at least, will have to work around not being able to have non-rectangle rooms and changing visibility based on camera size
-    private int conX = 0, conY = 0;
+    public FloatVar conX, conY;
 
     public RawImage fader
     //, bg
@@ -42,10 +42,10 @@ public class PlayerCamera : MonoBehaviour
      */
 
     //these could be properties instead...
-    public void SetConstraints(int x, int y)
+    public void SetConstraints(float x, float y)
     {
-        conX = x;
-        conY = y;
+        conX.SetValue(x);
+        conY.SetValue(y);
     }
 
     public void Fading(bool toBlack)

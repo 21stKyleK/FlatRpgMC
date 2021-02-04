@@ -40,7 +40,7 @@ public class EnemyMovement : MonoBehaviour
     //IEnumerator move;
     
     //scriptableObject with the wanted method; the index of the object from a list?
-    public BaseEnemyMove moveType;
+    public NoMove moveType;
     int moveT_index;
 
     //private HomeData parS;

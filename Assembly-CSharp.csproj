@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyScript\EnBattleTactics.cs" />
-    <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\BaseEnemyMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\CardinalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\DiagonalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\FreeMove.cs" />
@@ -73,13 +72,14 @@
     <Compile Include="Assets\Scripts\EventHandling\GameEventEar.cs" />
     <Compile Include="Assets\Scripts\EventHandling\GameEventHolder.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\LoadZoneTrigger.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerExMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerSpawn.cs" />
-    <Compile Include="Assets\Scripts\StartGame.cs" />
-    <Compile Include="Assets\Scripts\StartScene.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\LoadZoneTrigger.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\SceneSetup.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\StartGame.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\StartScene.cs" />
     <Compile Include="Assets\Scripts\ToFightScreen.cs" />
     <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\GenericNumVar.cs" />
