@@ -17,6 +17,20 @@ public class GenericRTSet<T> : ScriptableObject
             Things.Remove(thing);
         }
     }
+
+    public void ClearOut()
+    {
+        Things = new List<T>();
+    }
+
+    public T GetThing(int i)
+    {
+        if(i >= 0 && i < Things.Count)
+        {
+            return Things[i];
+        }
+        return Things[0];
+    }
     
     /* in an extension for LoadingZones
     include a method to reset the List

@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\VariableScript\IntegerVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\LoadZoneRTS.cs" />
     <Compile Include="Assets\Scripts\VariableScript\ObjectRTS.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\ScriptableObjectRTS.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example1.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example2.cs" />
     <Compile Include="Assets\Technician\User Interface\PauseMenu.cs" />

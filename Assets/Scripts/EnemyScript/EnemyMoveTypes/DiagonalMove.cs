@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Enemy Movement/Diagonal")]
 public class DiagonalMove : FreeMove
 {
     public override int Intervals { get => 8; }

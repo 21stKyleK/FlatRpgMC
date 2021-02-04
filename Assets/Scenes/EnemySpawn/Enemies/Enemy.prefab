@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4209594290124034989}
   - component: {fileID: 7333051739936437819}
   - component: {fileID: -1589708238136890950}
-  - component: {fileID: -7330409218444855914}
+  - component: {fileID: 7051422704173485613}
   - component: {fileID: -6904423008295368711}
   m_Layer: 0
   m_Name: Enemy
@@ -118,7 +118,8 @@ MonoBehaviour:
   mStamMax: 0.25
   stamMod: 1
   notLazy: 0
---- !u!114 &-7330409218444855914
+  moveType: {fileID: 11400000, guid: c7257ed066e6c52478d6b066a5a01765, type: 2}
+--- !u!114 &7051422704173485613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,9 +128,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7068368310467576358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a6f3fc73f646f40bc248e3c6bd9f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f93d02e11b8df3468771cc453c0745d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  papi: {fileID: 11400000, guid: fd9a93cba8512c74ca6f97fd963c0ac2, type: 2}
+  theThing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -1589708238136890950}
+        m_MethodName: StopAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!70 &-6904423008295368711
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

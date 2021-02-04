@@ -28,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
     // switch script when player is in range?
     public bool notLazy;
 
-    //home X and Y, for returning to it; range X and Y, limiting where the enemy can travel (modified so its hit box doesn't stick out)
+    //home X and Y, for returning to home's center; range X and Y, limiting where the enemy can travel (modified so its hit box doesn't stick out)
     float hX, hY, rX, rY;
 
     //debugging vibration; caused by two scripts
@@ -63,23 +63,13 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-//         if (!coRo1)
-//         {
-//             coRo1 = true;
-//             StartCoroutine(move);
-//         }
+        if (!coRo1)
+        {
+            coRo1 = true;
+            StartCoroutine(Move());
+        }
 
         //yield return StartCoroutine(DoThing());
-    }
-    
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        //if (!fightOn && collision.transform.tag.Equals("Player"))
-        //{
-        //    fightOn = true;
-            StartCoroutine(GetComponent<ToFightScreen>().enterFight());
-        //}
     }
     
     IEnumerator Move(){
@@ -94,60 +84,84 @@ public class EnemyMovement : MonoBehaviour
             do
             {
             transform.position = (Vector2) transform.position + moveType.Move(mSpd, ang);
-//                 Move(ang, mSpd);
-//                 yield return null;
+                //Move(ang, mSpd);
+                yield return null;
                 stam -= Time.deltaTime;
                     
             } while (stam > 0);
 
             yield return new WaitForSeconds(wL);
         }
-    }
-    
-    //changes the type of Movement
-    public void SwitchType(){
+
         coRo1 = false;
     }
     
+    //judged by Boolean, will change visibily and possibly Collider to simulate teleportation
+    IEnumerator InvisibleOn()
+    {
+        return null;
+    }
 
-//     private void Move()
-//     {
-       // Vector3 bruh = Quaternion.Euler(0, 0, a) * Vector3.up; //going positive (0-360) goes counter clockwise
+    //changes the type of Movement
+    public void SwitchType(){
+        StopAll();
+    }
 
-        //Debug.Log(recurCount++);
+    //in case everything has to be stopped
+    public void StopAll()
+    {
+        //Debug.Log("Ceasate");
+        coRo1 = false;
+        StopAllCoroutines();
+    }
 
-       // bruh.Normalize();
-       
-        //transform.position = ;
-        //(GameManager.Instance.CurrentState == (GameManager.States)1) ? (Vector2)(transform.position + bruh * s * Time.deltaTime) : (Vector2) transform.position;
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    //if (!fightOn && collision.transform.tag.Equals("Player"))
+    //    //{
+    //    //    fightOn = true;
+    //        StartCoroutine(GetComponent<ToFightScreen>().enterFight());
+    //    //}
+    //}
 
-        //rb.MovePosition(new Vector2(transform.position.x + bruh.x * s, transform.position.x + bruh.y * s));
-        
-        //V works for linear :: may need to change code to accomodatge other types better
-        //rb.MovePosition(transform.position + bruh * s);
-        //var _ = Quaternion.Euler(x rotation, y rotation, z rotate)
-//     }
+    //     private void Move()
+    //     {
+    // Vector3 bruh = Quaternion.Euler(0, 0, a) * Vector3.up; //going positive (0-360) goes counter clockwise
 
-//     IEnumerator Linear()
-//     {
-//         float stam, ang;
-//         while (coRo1)
-//         {
-//             ang = (int)(GameManager.Instance.GetRandValueInc() * 4) * 90;
+    //Debug.Log(recurCount++);
 
-//             //if max = min, then will always be min * mod
-//             stam = (GameManager.Instance.GetRandValueInc() * (mStamMax - mStamMin) + mStamMin) * stamMod;
+    // bruh.Normalize();
 
-//             do
-//             {
-//                 Move(ang, mSpd);
-//                 yield return null;
-//                 stam -= Time.deltaTime;
-//             } while (stam > 0);
+    //transform.position = ;
+    //(GameManager.Instance.CurrentState == (GameManager.States)1) ? (Vector2)(transform.position + bruh * s * Time.deltaTime) : (Vector2) transform.position;
 
-//             yield return new WaitForSeconds(wL);
-//         }
-//     }
+    //rb.MovePosition(new Vector2(transform.position.x + bruh.x * s, transform.position.x + bruh.y * s));
+
+    //V works for linear :: may need to change code to accomodatge other types better
+    //rb.MovePosition(transform.position + bruh * s);
+    //var _ = Quaternion.Euler(x rotation, y rotation, z rotate)
+    //     }
+
+    //     IEnumerator Linear()
+    //     {
+    //         float stam, ang;
+    //         while (coRo1)
+    //         {
+    //             ang = (int)(GameManager.Instance.GetRandValueInc() * 4) * 90;
+
+    //             //if max = min, then will always be min * mod
+    //             stam = (GameManager.Instance.GetRandValueInc() * (mStamMax - mStamMin) + mStamMin) * stamMod;
+
+    //             do
+    //             {
+    //                 Move(ang, mSpd);
+    //                 yield return null;
+    //                 stam -= Time.deltaTime;
+    //             } while (stam > 0);
+
+    //             yield return new WaitForSeconds(wL);
+    //         }
+    //     }
 
     //perhaps should use a delegate to store methods (methods might be in GameManager)
 
@@ -163,37 +177,37 @@ GetRandValueInc()numerator DoThing()
     //public EnemyMovement meth;
     //public EnemyMovement Movement { get; }
 
-//     void SetMoveType(MovementType type)
-//     {
-//         switch (type)
-//         {
-//             case (MovementType)1:
-//                 move = Chase();
-//                 break;
-//             case (MovementType)2:
-//                 move = None();
-//                 break;
-//             case (MovementType)3:
-//                 move = Linear();
-//                 break;
-//             case (MovementType)4:
-//                 move = Diagonal();
-//                 break;
-//             case (MovementType)5:
-//                 move = Freeform();
-//                 break;
-//             case (MovementType)6:
-//                 move = Sporadic();
-//                 break;
-//             case (MovementType)7:
-//                 move = Patrol();
-//                 break;
-//             case (MovementType)8:
-//                 move = Teleport();
-//                 break;
-//             default:
-//                 move = Return();
-//                 break;
-//         }
-//     }
+    //     void SetMoveType(MovementType type)
+    //     {
+    //         switch (type)
+    //         {
+    //             case (MovementType)1:
+    //                 move = Chase();
+    //                 break;
+    //             case (MovementType)2:
+    //                 move = None();
+    //                 break;
+    //             case (MovementType)3:
+    //                 move = Linear();
+    //                 break;
+    //             case (MovementType)4:
+    //                 move = Diagonal();
+    //                 break;
+    //             case (MovementType)5:
+    //                 move = Freeform();
+    //                 break;
+    //             case (MovementType)6:
+    //                 move = Sporadic();
+    //                 break;
+    //             case (MovementType)7:
+    //                 move = Patrol();
+    //                 break;
+    //             case (MovementType)8:
+    //                 move = Teleport();
+    //                 break;
+    //             default:
+    //                 move = Return();
+    //                 break;
+    //         }
+    //     }
 }
