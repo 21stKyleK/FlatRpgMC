@@ -29,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
     public bool notLazy;
 
     //home X and Y, for returning to home's center; range X and Y, limiting where the enemy can travel (modified so its hit box doesn't stick out)
-    float hX, hY, rX, rY;
+    //float hX = 0, hY = 0, rX = 0, rY = 0;             !!!!!
 
     //debugging vibration; caused by two scripts
     //int recurCount = 0;
@@ -46,7 +46,7 @@ public class EnemyMovement : MonoBehaviour
     //private HomeData parS;
     void Start()
     {
-        //parS = GetComponentInParent<HomeData>();
+        //EnemySpawn parS = GetComponentInParent<EnemySpawn>();
         //t = (MovementType) 3/*parS.GetMove()*/;
 //         SetMoveType(t);
 

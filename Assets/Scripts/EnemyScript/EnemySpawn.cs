@@ -12,12 +12,25 @@ public class EnemySpawn : MonoBehaviour
     {
         float bruh = Random.value * 100;
 
-        Instanti
+        Instantiate( GetEnemy(bruh), transform );
     }
 
     public GameObject GetEnemy(float x)
     {
+        float cnt = 0;
 
+        for(int i = 0; i < rngs.Length; i++)
+        {
+            //if x = 0, rngs[0] = 0, then it won't fire because 0 !< 0, but is 0 = 0
+            if(x < cnt + rngs[i])
+            {
+                return enL[i];
+            }
+
+            cnt += rngs[i];
+        }
+
+        return new GameObject();
     }
 
     /*
