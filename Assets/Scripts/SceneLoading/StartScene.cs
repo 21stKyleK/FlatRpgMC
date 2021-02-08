@@ -28,7 +28,7 @@ public class StartScene : MonoBehaviour
     }
 
     public void NewSceneLoad(){
-        LoadZoneTrigger bruh = loadZone.CheckActive().GetComponent<LoadZoneTrigger>();
+        LoadZoneTrigger bruh = loadZone.GetActive().GetComponent<LoadZoneTrigger>();
         float x = bruh.xTarPos, y = bruh.yTarPos;
         string temp = bruh.scene;
         loadZone.ClearOut();

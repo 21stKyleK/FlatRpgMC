@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Run Time Set/LoadingZones")]
 public class LoadZoneRTS : ObjectRTS
 {
-    public override GameObject CheckActive()
+    public GameObject GetActive()
     {
         foreach (GameObject arg in Things)
         {
@@ -14,6 +14,6 @@ public class LoadZoneRTS : ObjectRTS
                 return arg;
             }
         }
-        return base.CheckActive();
+        return new GameObject();
     }
 }
