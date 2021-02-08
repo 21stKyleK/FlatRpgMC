@@ -89,3 +89,4 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Instantiating At Runtime; Unity Manual" : https://docs.unity3d.com/Manual/InstantiatingPrefabs.html
 "Object Instantiate; Unity Docs" : https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
 "Create Objects with Script; Unity Answers" : https://answers.unity.com/questions/315908/create-objects-with-script.html
+"Try and Catch; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch
