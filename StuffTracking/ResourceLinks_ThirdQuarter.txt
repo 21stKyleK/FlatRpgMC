@@ -82,3 +82,10 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Lambda expressions" : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions
 
 "overriding C# variables; StackOverflow" : https://stackoverflow.com/questions/8844649/how-do-i-override-not-hide-a-member-variable-field-in-a-c-sharp-subclass
+
+"Mathf Round; Unity Docs" : https://docs.unity3d.com/ScriptReference/Mathf.Round.html
+"Math Round; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/api/system.math.round?view=net-5.0
+"Creating Objects at Runtime; StudyTonight" : https://www.studytonight.com/game-development-in-2D/basic-fundamentals-of-game-objects
+"Instantiating At Runtime; Unity Manual" : https://docs.unity3d.com/Manual/InstantiatingPrefabs.html
+"Object Instantiate; Unity Docs" : https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
+"Create Objects with Script; Unity Answers" : https://answers.unity.com/questions/315908/create-objects-with-script.html
