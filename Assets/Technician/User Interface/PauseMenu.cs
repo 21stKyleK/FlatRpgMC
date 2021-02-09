@@ -4,55 +4,93 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    //keeps track of the animation
-    bool animCo;
+    //keeps track of the animation, if the animation can happen now
+    public bool menuOut = true, canDo = true;
+
+    public float baseTime = 0.3f;
 
     public float xOut, xIn;
 
     public GameObject pauseMenu;
 
     //Awake thing
-    private void Awake()
-    {
-        animCo = false;
-    }
+    //private void Awake()
+    //{
+    //    menuOut = false;
+    //}
 
     // Update is called once per fram
-    void LateUpdate()
-    {
-        if(GameManager.Instance.CurrentState >= (GameManager.States) 2 && !animCo)
-        {
-            //Debug.Log("Bromentum");
+    //void LateUpdate()
+    //{
+    //    if(Time.timeScale < 0 && !menuOut)
+    //    {
+    //        //Debug.Log("Bromentum");
 
-            animCo = true;
-            GetComponent<CanvasGroup>().interactable = true;
-            StopAllCoroutines();
-            StartCoroutine(MovePause());
-        }
-        else if(GameManager.Instance.CurrentState <= (GameManager.States)1 && animCo)
+    //        menuOut = true;
+    //        GetComponent<CanvasGroup>().interactable = true;
+    //        StopAllCoroutines();
+    //        StartCoroutine(MovePause());
+    //    }
+    //    else if(Time.timeScale > 1 && menuOut)
+    //    {
+    //        menuOut = false;
+    //        GetComponent<CanvasGroup>().interactable = true;
+    //        StopAllCoroutines();
+    //        StartCoroutine(MovePause());
+    //    }
+    //}
+
+    public void Update()
+    {
+        if (canDo && Input.GetAxisRaw("Fire1") > 0)
         {
-            animCo = false;
-            GetComponent<CanvasGroup>().interactable = true;
-            StopAllCoroutines();
-            StartCoroutine(MovePause());
+            if (menuOut)
+            {
+                Time.timeScale = 0;
+                pauseMenu.GetComponent<CanvasGroup>().interactable = true;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                pauseMenu.GetComponent<CanvasGroup>().interactable = false;
+            }
+            DoAnim();
         }
     }
 
-    // (animCo) true, it goes to the right, else it goes to the left
+    public void DoAnim()
+    {
+        StartCoroutine(MovePause());
+    }
+
+    public void CantDo()
+    {
+        StopAllCoroutines();
+        pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+        canDo = false;
+    }
+
+    public void CanDo()
+    {
+        canDo = true;
+    }
+
+    // (menuOut) true, it goes to the right, else it goes to the left
     IEnumerator MovePause()
     {
-        float time = 0.3f;
+        canDo = false;
+        float time = baseTime;
         int cnt = 1;
 
         while (time > 0)
         {
-            if (animCo)
+            if (menuOut)
             {
-                transform.position = new Vector3(transform.position.x + 40f/cnt++, transform.position.y, transform.position.z);
+                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x + 40f/cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
             }
             else
             {
-                transform.position = new Vector3(transform.position.x - 40f / cnt++, transform.position.y, transform.position.z);
+                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x - 40f / cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
             }
             yield return null;
             time -= Time.unscaledDeltaTime;
@@ -61,14 +99,18 @@ public class PauseMenu : MonoBehaviour
             //Time.timeScale = 0;
         }
 
-        if (animCo)
+        if (menuOut)
         {
-            transform.position = new Vector3(xOut, transform.position.y, transform.position.z);
+            pauseMenu.transform.position = new Vector3(xOut, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+            menuOut = false;
         }
         else
         {
-            transform.position = new Vector3(xIn, transform.position.y, transform.position.z);
+            pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+            menuOut = true;
         }
+
+        canDo = true;
     }
 
     //Animator pause;
