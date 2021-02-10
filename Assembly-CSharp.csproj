@@ -82,6 +82,8 @@
     <Compile Include="Assets\Scripts\SceneLoading\StartGame.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\StartScene.cs" />
     <Compile Include="Assets\Scripts\ToFightScreen.cs" />
+    <Compile Include="Assets\Scripts\User Interface\PauseListen.cs" />
+    <Compile Include="Assets\Scripts\User Interface\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\GenericNumVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\IntegerVar.cs" />
@@ -90,7 +92,6 @@
     <Compile Include="Assets\Scripts\VariableScript\ScriptableObjectRTS.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example1.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example2.cs" />
-    <Compile Include="Assets\Technician\User Interface\PauseMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
