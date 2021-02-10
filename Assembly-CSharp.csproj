@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\ToFightScreen.cs" />
     <Compile Include="Assets\Scripts\User Interface\PauseListen.cs" />
     <Compile Include="Assets\Scripts\User Interface\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\BoolVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\GenericNumVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\IntegerVar.cs" />

@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     //keeps track of the animation, if the animation can happen now
     public bool menuOut = true, canDo = true;
 
-    public float baseTime = 0.3f;
+    public float baseTime = 0.3f, howFast = 40f;
 
     public float xOut, xIn;
 
@@ -55,11 +55,11 @@ public class PauseMenu : MonoBehaviour
         {
             if (menuOut)
             {
-                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x + 40f/cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x + howFast/cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
             }
             else
             {
-                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x - 40f / cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x - howFast / cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
             }
             yield return null;
             time -= Time.unscaledDeltaTime;

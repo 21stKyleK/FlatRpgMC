@@ -481,7 +481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &997439523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,6 +865,7 @@ GameObject:
   - component: {fileID: 1212320566}
   - component: {fileID: 1212320567}
   - component: {fileID: 1212320569}
+  - component: {fileID: 1212320568}
   m_Layer: 0
   m_Name: TestMenu
   m_TagString: Untagged
@@ -905,6 +906,33 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
+--- !u!114 &1212320568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212320565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d9755b19245cc40abb3bad5f929f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notPos: {fileID: 11400000, guid: 61b757634594e114f8f0c1f5781778f8, type: 2}
+  PauseOn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1212320569}
+        m_MethodName: DoAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1212320569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,6 +948,7 @@ MonoBehaviour:
   menuOut: 0
   canDo: 1
   baseTime: 0.3
+  howFast: 40
   xOut: 97.45001
   xIn: -97.45001
   pauseMenu: {fileID: 1212320565}
