@@ -17,8 +17,11 @@ public class PlayerCamera : MonoBehaviour
     ;
 
     //IEnumerator bruh;
+
+    //is a coroutine running
+    private bool yell = false;
     
-    public UnityEvent FadeInEnd;
+    public UnityEvent FadeInEnd, FadeOutEnd;
     //will trigger the scene change itself
 
     //void Start()
@@ -48,17 +51,33 @@ public class PlayerCamera : MonoBehaviour
         conY.SetValue(y);
     }
 
+    //actually, would have all the methods happen instantly
+
+    //public void FadeChangeScene()
+    //{
+    //    Time.timeScale = 0;
+    //    Fading(true);
+    //    FadeInEnd.Invoke();
+    //}
+
+    //public void FadeEndTran()
+    //{
+    //    Fading(false);
+    //    Time.timeScale = 1f;
+    //    FadeOutEnd.Invoke();
+    //}
+
     public void Fading(bool toBlack)
     {
         //sbyte fadeDir;
 
         if (toBlack)
         {
-            StartCoroutine(FadeIn());
+            StartCoroutine(FadeSceneStart());
         }
         else
         {
-            StartCoroutine(FadeOut());
+            StartCoroutine(FadeSceneEnd());
         }
 
         //bruh = FadeImage(fadeDir);
@@ -77,23 +96,28 @@ public class PlayerCamera : MonoBehaviour
     //to black
     public IEnumerator FadeIn()
     {
+        yell = true;
+
         //GameManager.Instance.CurrentState = 0;
         //player.GetComponent<PlayerMovement>().Activity = false;
-	Time.timeScale = 0;
-	//freezes all movement
+        //Time.timeScale = 0;
+        //freezes all movement
 
         while (fader.color.a < 1)
         {
             fader.color = new Color(0, 0, 0, fader.color.a + Time.unscaledDeltaTime);
             yield return null;
         }
-	
-	FadeInEnd.Invoke();
+
+        yell = false;
+
+        //FadeInEnd.Invoke();
     }
 
     //to screen
     public IEnumerator FadeOut()
     {
+        yell = true;
 		//yield return null;
 
         //Debug.Log("Bruh");
@@ -105,22 +129,53 @@ public class PlayerCamera : MonoBehaviour
         }
         //player.GetComponent<PlayerMovement>().Activity = true;
         //Debug.Log("ow");
-	
-	Time.timeScale = 1f;
-	//resumes all movement, though may happen elsewhere
+
+        //Time.timeScale = 1f;
+        //resumes all movement, though may happen elsewhere
+
+        //FadeOutEnd.Invoke();
+        yell = false;
     }
-    
+
+    public IEnumerator FadeSceneStart()
+    {
+        Time.timeScale = 0;
+
+        StartCoroutine(FadeIn());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        FadeInEnd.Invoke();
+    }
+
+    public IEnumerator FadeSceneEnd()
+    {
+        Time.timeScale = 1;
+
+        StartCoroutine(FadeOut());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        FadeOutEnd.Invoke();
+    }
+
     //might need to make different IEnumerators for entering fight scenes
 
-/*
-    public void SetBGImage(Texture bruh)
-    {
-        bg.texture = bruh;
-    }
+    /*
+        public void SetBGImage(Texture bruh)
+        {
+            bg.texture = bruh;
+        }
 
-    public void ActivateBG(bool bruh)
-    {
-        bg.enabled = bruh;
-    }
-    */
+        public void ActivateBG(bool bruh)
+        {
+            bg.enabled = bruh;
+        }
+        */
 }
