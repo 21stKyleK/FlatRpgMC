@@ -96,3 +96,5 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Visual Studio Multiple Select; Stack Overflow" : https://stackoverflow.com/questions/16495727/multiple-select-in-visual-studio
 
 "Check if Coroutine is running; UnityAnswers" : https://answers.unity.com/questions/126783/can-i-check-if-a-coroutine-is-running.html
+
+"Earthbound in Unity; Alberto Castañeda" : https://www.youtube.com/watch?v=qr4H6wyu64w
