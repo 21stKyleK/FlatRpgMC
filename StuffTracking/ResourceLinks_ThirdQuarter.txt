@@ -98,3 +98,7 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Check if Coroutine is running; UnityAnswers" : https://answers.unity.com/questions/126783/can-i-check-if-a-coroutine-is-running.html
 
 "Earthbound in Unity; Alberto Castañeda" : https://www.youtube.com/watch?v=qr4H6wyu64w
+
+"Managing Different UIs ; Unity Forums" : https://forum.unity.com/threads/how-do-your-manage-your-different-ui-menus.391598/
+"Pause Menu Unity ; Brakeyes" : https://www.youtube.com/watch?v=zc8ac_qUXQY
+"Multiple Menus in Unity ; Learn to Be Indie" : https://www.youtube.com/watch?v=23p1vFsNvKo
