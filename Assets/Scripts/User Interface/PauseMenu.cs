@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     //keeps track of the animation, if the animation can happen now
-    public bool menuOut = true, canDo = true;
+    public bool menuOut = false, canDo = true;
 
     public float baseTime = 0.3f, howFast = 40f;
 
