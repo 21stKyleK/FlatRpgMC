@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour
     //keeps track of the animation, if the animation can happen now
     public bool menuOut = false, canDo = true;
 
+    public BoolVar cantPause;
+
     public float baseTime = 0.3f, howFast = 40f;
 
     public float xOut, xIn;
@@ -17,16 +19,18 @@ public class PauseMenu : MonoBehaviour
     {
         if (canDo)
         {
-            if (menuOut)
-            {
-                Time.timeScale = 0;
-                pauseMenu.GetComponent<CanvasGroup>().interactable = true;
-            }
-            else
-            {
-                Time.timeScale = 1;
-                pauseMenu.GetComponent<CanvasGroup>().interactable = false;
-            }
+            //if (menuOut)
+            //{
+            //    //Time.timeScale = 0;
+            //    pauseMenu.GetComponent<CanvasGroup>().interactable = true;
+            //}
+            //else
+            //{
+            //    //Time.timeScale = 1;
+            //    pauseMenu.GetComponent<CanvasGroup>().interactable = false;
+            //}
+
+            pauseMenu.GetComponent<CanvasGroup>().interactable = menuOut ? false : true;
 
             StartCoroutine(MovePause());
         }
@@ -47,13 +51,15 @@ public class PauseMenu : MonoBehaviour
     // (menuOut) true, it goes to the right, else it goes to the left
     IEnumerator MovePause()
     {
+        cantPause.SetValue(true);
+
         canDo = false;
         float time = baseTime;
         int cnt = 1;
 
         while (time > 0)
         {
-            if (menuOut)
+            if (!menuOut)
             {
                 pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x + howFast/cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
             }
@@ -70,16 +76,18 @@ public class PauseMenu : MonoBehaviour
 
         if (menuOut)
         {
-            pauseMenu.transform.position = new Vector3(xOut, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+            pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
             menuOut = false;
         }
         else
         {
-            pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+            pauseMenu.transform.position = new Vector3(xOut, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
             menuOut = true;
         }
 
         canDo = true;
+
+        cantPause.SetValue(false);
     }
 
     //Awake thing

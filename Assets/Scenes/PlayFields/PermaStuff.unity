@@ -1050,6 +1050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuOut: 0
   canDo: 1
+  cantPause: {fileID: 11400000, guid: 61b757634594e114f8f0c1f5781778f8, type: 2}
   baseTime: 0.3
   howFast: 40
   xOut: 97.45001
@@ -1237,18 +1238,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1460320876}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 8674f6c698726c9448ee2e31d87d6f09, type: 2}
-        m_MethodName: SetValue
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1.2
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1460320876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1334,7 +1324,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 0
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1560889395
 MonoBehaviour:
@@ -1350,6 +1340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuOut: 0
   canDo: 1
+  cantPause: {fileID: 11400000, guid: 61b757634594e114f8f0c1f5781778f8, type: 2}
   baseTime: 0.3
   howFast: 60
   xOut: 97.45001
@@ -1545,6 +1536,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1212320567}
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1654875890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1736,6 +1738,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1560889395}
         m_MethodName: DoAnim
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1212320567}
+        m_MethodName: set_interactable
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
