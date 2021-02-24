@@ -102,3 +102,5 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Managing Different UIs ; Unity Forums" : https://forum.unity.com/threads/how-do-your-manage-your-different-ui-menus.391598/
 "Pause Menu Unity ; Brakeyes" : https://www.youtube.com/watch?v=zc8ac_qUXQY
 "Multiple Menus in Unity ; Learn to Be Indie" : https://www.youtube.com/watch?v=23p1vFsNvKo
+
+"UI ; Unity Manual" : https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/index.html
