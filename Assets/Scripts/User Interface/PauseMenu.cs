@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     //keeps track of the animation, if the animation can happen now
     public bool menuOut = false, canDo = true;
 
-    public BoolVar cantPause;
+    //public BoolVar cantPause;
 
     public float baseTime = 0.3f, howFast = 40f;
 
@@ -51,7 +51,7 @@ public class PauseMenu : MonoBehaviour
     // (menuOut) true, it goes to the right, else it goes to the left
     IEnumerator MovePause()
     {
-        cantPause.SetValue(true);
+        //cantPause.SetValue(true);
 
         canDo = false;
         float time = baseTime;
@@ -87,7 +87,7 @@ public class PauseMenu : MonoBehaviour
 
         canDo = true;
 
-        cantPause.SetValue(false);
+        //cantPause.SetValue(false);
     }
 
     //Awake thing
