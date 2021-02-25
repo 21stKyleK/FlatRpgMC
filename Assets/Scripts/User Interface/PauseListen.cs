@@ -16,7 +16,7 @@ public class PauseListen : MonoBehaviour
         {
             Time.timeScale = Time.timeScale.Equals(0) ? 1 : 0;
 
-            Debug.Log(Time.timeScale);
+            //Debug.Log(Time.timeScale);
             //notPos.SetValue(false);
 
             PauseOn.Invoke();

@@ -5,7 +5,9 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     //keeps track of the animation, if the animation can happen now
-    public bool menuOut = false, canDo = true;
+    public bool menuOut = false//, canDo = true;
+        ;
+    public BoolVar cantDo;
 
     //public BoolVar cantPause;
 
@@ -17,7 +19,7 @@ public class PauseMenu : MonoBehaviour
 
     public void DoAnim()
     {
-        if (canDo)
+        if (!cantDo)
         {
             //if (menuOut)
             //{
@@ -40,12 +42,12 @@ public class PauseMenu : MonoBehaviour
     {
         StopAllCoroutines();
         pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
-        canDo = false;
+        cantDo.SetValue(true);
     }
 
     public void CanDo()
     {
-        canDo = true;
+        cantDo.SetValue(false);
     }
 
     // (menuOut) true, it goes to the right, else it goes to the left
@@ -53,7 +55,7 @@ public class PauseMenu : MonoBehaviour
     {
         //cantPause.SetValue(true);
 
-        canDo = false;
+        cantDo.SetValue(true);
         float time = baseTime;
         int cnt = 1;
 
@@ -85,7 +87,7 @@ public class PauseMenu : MonoBehaviour
             menuOut = true;
         }
 
-        canDo = true;
+        cantDo.SetValue(false);
 
         //cantPause.SetValue(false);
     }
