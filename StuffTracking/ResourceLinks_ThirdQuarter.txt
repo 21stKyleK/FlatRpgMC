@@ -104,3 +104,7 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Multiple Menus in Unity ; Learn to Be Indie" : https://www.youtube.com/watch?v=23p1vFsNvKo
 
 "UI ; Unity Manual" : https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/index.html
+
+"Making Pause Menu ; Brackeyes" : https://www.youtube.com/watch?v=JivuXdrIHK0
+"UI Navigation ; Unity Learn" : https://learn.unity.com/tutorial/ui-navigation-2019-3#
+"Dropdown UI ; Unity Answers" : https://forum.unity.com/threads/nest-dropdowns.401804/
