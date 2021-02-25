@@ -153,7 +153,7 @@ public class PlayerCamera : MonoBehaviour
 
     public IEnumerator FadeSceneEnd()
     {
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
 
         StartCoroutine(FadeOut());
 
@@ -161,6 +161,8 @@ public class PlayerCamera : MonoBehaviour
         {
             yield return null;
         }
+
+        Time.timeScale = 1;
 
         FadeOutEnd.Invoke();
     }
