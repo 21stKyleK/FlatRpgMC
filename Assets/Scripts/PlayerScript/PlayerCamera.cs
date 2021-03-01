@@ -92,6 +92,18 @@ public class PlayerCamera : MonoBehaviour
         //^waiting for coroutines will freexe your everything^
     }
 
+    public void FadeFight(bool toBlack)
+    {
+        if (toBlack)
+        {
+            StartCoroutine(FadeIn());
+        }
+        else
+        {
+            StartCoroutine(FadeOut());
+        }
+    }
+
     //uses the Raw Image, probably could make these public
     //to black
     public IEnumerator FadeIn()
