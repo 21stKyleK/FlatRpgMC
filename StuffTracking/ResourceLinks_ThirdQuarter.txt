@@ -109,3 +109,7 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "UI Navigation ; Unity Learn" : https://learn.unity.com/tutorial/ui-navigation-2019-3#
 "Dropdown UI ; Unity Answers" : https://forum.unity.com/threads/nest-dropdowns.401804/
 "Controller UI navigation ; gamesplusjames" : https://www.youtube.com/watch?v=SXBgBmUcTe0
+
+"How personality affects what you play" : https://www.youtube.com/watch?v=gvjVP56r0BA
+"Houdini Engine now Free" : https://www.youtube.com/watch?v=J14LIyitJ3c
+"Red X's Unity UI : Unity Answers" : https://answers.unity.com/questions/889161/unity-ui-red-xs-in-scene-view.html
