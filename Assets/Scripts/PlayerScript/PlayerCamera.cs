@@ -32,7 +32,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, -conX, conX), Mathf.Clamp(player.transform.position.y, -conY, conY), -10);
+        transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, -conX, conX), Mathf.Clamp(player.transform.position.y, -conY, conY), -20);
     }
 
     /*

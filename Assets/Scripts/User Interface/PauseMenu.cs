@@ -44,7 +44,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
         pauseMenu.GetComponent<CanvasGroup>().interactable = false;
         menuOut = false;
-        cantDo.SetValue(true);
+        //cantDo.SetValue(true);
         //Debug.Log("oh");
     }
 
