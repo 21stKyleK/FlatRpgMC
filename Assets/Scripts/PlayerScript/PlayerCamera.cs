@@ -21,7 +21,7 @@ public class PlayerCamera : MonoBehaviour
     //is a coroutine running
     private bool yell = false;
     
-    public UnityEvent FadeInEnd, FadeOutEnd;
+    public UnityEvent FadeInEnd, FadeOutEnd, FightInEnd, FightOutEnd;
     //will trigger the scene change itself
 
     //void Start()
@@ -92,15 +92,15 @@ public class PlayerCamera : MonoBehaviour
         //^waiting for coroutines will freexe your everything^
     }
 
-    public void FadeFight(bool toBlack)
+    public void FadeFight(bool toFight)
     {
-        if (toBlack)
+        if (toFight)
         {
-            StartCoroutine(FadeIn());
+            StartCoroutine(FadeFightStart());
         }
         else
         {
-            StartCoroutine(FadeOut());
+            StartCoroutine(FadeFightEnd());
         }
     }
 
@@ -149,6 +149,7 @@ public class PlayerCamera : MonoBehaviour
         yell = false;
     }
 
+    //for scene transistions
     public IEnumerator FadeSceneStart()
     {
         Time.timeScale = 0;
@@ -177,6 +178,52 @@ public class PlayerCamera : MonoBehaviour
         Time.timeScale = 1;
 
         FadeOutEnd.Invoke();
+    }
+
+    //For fight scene transitions, wait a little inside the body
+    public IEnumerator FadeFightStart()
+    {
+        Time.timeScale = 0;
+
+        StartCoroutine(FadeIn());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSecondsRealtime(0.2f);
+
+        FightInEnd.Invoke();
+
+        StartCoroutine(FadeOut());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        /*
+         * Can either activate canvas's in here or outside (should probably do it outside)
+         */
+
+        //Debug.Log("woah");
+
+        //FightInEnd.Invoke();
+    }
+
+    public IEnumerator FadeFightEnd()
+    {
+        StartCoroutine(FadeOut());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        Time.timeScale = 1;
+
+        FightOutEnd.Invoke();
     }
 
     //might need to make different IEnumerators for entering fight scenes

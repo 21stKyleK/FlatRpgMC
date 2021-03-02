@@ -9,7 +9,7 @@ public class FightBouncer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
 
         StartFight.Invoke();
     }
