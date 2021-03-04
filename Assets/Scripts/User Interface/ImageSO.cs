@@ -9,9 +9,9 @@ public class ImageSO : ScriptableObject {
     public Color BackColor;
     public Sprite Layer1, Layer2, Layer3;
 
-    public void SetColor(float r, float b, float g)
+    public void SetColor(Color col)
     {
-        BackColor = new Color(r,b,g,1);
+        BackColor = col;
     }
 
     public void SetLayer1(Sprite l1)

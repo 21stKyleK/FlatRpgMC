@@ -107,7 +107,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  bg: {fileID: 0}
+  bg: {fileID: 11400000, guid: d2783f2e69a2de84d9b1d9917a986d13, type: 2}
+  bgc: {r: 0.57254905, g: 0.23629406, b: 0.23629406, a: 1}
+  l1: {fileID: 21300000, guid: 28e60868c8c170b4dab7ee2f9ac6708c, type: 3}
+  l2: {fileID: 0}
+  l3: {fileID: 0}
 --- !u!70 &-6904423008295368711
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
