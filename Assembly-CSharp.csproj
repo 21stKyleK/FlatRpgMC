@@ -77,6 +77,8 @@
     <Compile Include="Assets\Scripts\PlayerScript\PlayerExMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerSpawn.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\FightHandling\SetColor.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\FightHandling\SetSprite.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\LoadZoneTrigger.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\SceneSetup.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\StartGame.cs" />

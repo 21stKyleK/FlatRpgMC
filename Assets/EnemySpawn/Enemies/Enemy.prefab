@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f95f019021d87d4bb3bf2aa186dc680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartFight:
+  Encountered:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: cdb2fa009f9d16041a76e558ecae09d9, type: 2}
@@ -107,6 +107,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  bg: {fileID: 0}
 --- !u!70 &-6904423008295368711
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
