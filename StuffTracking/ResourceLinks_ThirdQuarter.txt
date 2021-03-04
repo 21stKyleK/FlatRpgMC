@@ -119,3 +119,4 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Earthbound BGs in Unity ; Reddit" : https://www.reddit.com/r/Unity2D/comments/aup7py/earthboundlike_battle_backgrounds_made_with_unity/
 "UI Image ; Unity Doc" : https://docs.unity3d.com/2018.3/Documentation/ScriptReference/UI.Image.html
 "Changing and Image ; Unity Forum" : https://forum.unity.com/threads/ui-image-change-sprite-on-script.264056/
+"Earthbound Background Making ; Mother 4 (Oddity) Blog" : https://blog.mother4game.com/post/123598820159/update-2-focus-on-the-background-hey-folks
