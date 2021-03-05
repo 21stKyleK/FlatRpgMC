@@ -120,3 +120,6 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "UI Image ; Unity Doc" : https://docs.unity3d.com/2018.3/Documentation/ScriptReference/UI.Image.html
 "Changing and Image ; Unity Forum" : https://forum.unity.com/threads/ui-image-change-sprite-on-script.264056/
 "Earthbound Background Making ; Mother 4 (Oddity) Blog" : https://blog.mother4game.com/post/123598820159/update-2-focus-on-the-background-hey-folks
+
+"Disable Mouse ; Unity Answers" : https://answers.unity.com/questions/1507986/disable-mouse-input-and-cursor-in-game.html
+"Stop Mouse Stealing Focus ; Unity Answers" : https://answers.unity.com/questions/943854/ui-46-disable-mouse-from-stealing-focus.html?_ga=2.247606471.1741570486.1614978418-1031676528.1600094299
