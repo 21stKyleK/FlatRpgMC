@@ -21,6 +21,11 @@ public class PauseListen : MonoBehaviour
 
             PauseOn.Invoke();
         }
+
+        if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
+        {
+
+        }
     }
 
     private void OnDestroy()

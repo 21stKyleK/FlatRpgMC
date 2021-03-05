@@ -7,6 +7,11 @@ public class PauseNav : MonoBehaviour
 {
     //public GameObject targetButton;
 
+    //private void Start()
+    //{
+    //    EventSystem.current.SetSelectedGameObject(targetButton);
+    //}
+
     //public void SetCursor()
     //{
     //    //probably have to use this
