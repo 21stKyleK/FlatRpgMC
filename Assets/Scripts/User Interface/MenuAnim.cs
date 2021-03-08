@@ -10,7 +10,7 @@ public class MenuAnim : MonoBehaviour
 
     public void Handle()
     {
-        Debug.Log("Trigger");
+        //Debug.Log("Trigger");
         if (!cantDo) { ButtonPress.Invoke(); }
     }
 }

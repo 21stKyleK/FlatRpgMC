@@ -7,11 +7,11 @@ public class PauseListen : BackMenu
 {
     public UnityEvent ClickBruh;
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!notPos && Input.GetAxisRaw("Fire1") > 0)
         {
-            Time.timeScale = Time.timeScale.Equals(0) ? 1 : 0;
+            ChangeTime();
 
             //Debug.Log(Time.timeScale);
             //notPos.SetValue(false);

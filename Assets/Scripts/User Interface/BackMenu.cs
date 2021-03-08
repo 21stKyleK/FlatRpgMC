@@ -9,11 +9,17 @@ public class BackMenu : MonoBehaviour
 
     public UnityEvent PauseOn;
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if(!notPos && Input.GetAxisRaw("Fire1") > 0)
+        if(!notPos && Input.GetAxisRaw("Fire3") > 0)
         {
-
+            //Debug.Log("Thing");
+            PauseOn.Invoke();
         }
+    }
+
+    public void ChangeTime()
+    {
+        Time.timeScale = Time.timeScale.Equals(0) ? 1 : 0;
     }
 }
