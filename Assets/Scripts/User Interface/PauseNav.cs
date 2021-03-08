@@ -5,20 +5,20 @@ using UnityEngine.EventSystems;
 
 public class PauseNav : MonoBehaviour
 {
-    //public GameObject targetButton;
+    public GameObject targetButton;
 
     //private void Start()
     //{
     //    EventSystem.current.SetSelectedGameObject(targetButton);
     //}
 
-    //public void SetCursor()
-    //{
-    //    //probably have to use this
-    //    EventSystem.current.SetSelectedGameObject(null);
+    public void SetCursor()
+    {
+        //probably have to use this
+        EventSystem.current.SetSelectedGameObject(null);
 
-    //    EventSystem.current.SetSelectedGameObject(targetButton);
-    //}
+        EventSystem.current.SetSelectedGameObject(targetButton);
+    }
 
     //might be able to use this in button events
     public void SetCursor(GameObject tb)
@@ -26,5 +26,7 @@ public class PauseNav : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
 
         EventSystem.current.SetSelectedGameObject(tb);
+
+        targetButton = tb;
     }
 }

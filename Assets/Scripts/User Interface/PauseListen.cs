@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PauseListen : MonoBehaviour
+public class PauseListen : BackMenu
 {
-    public BoolVar notPos;
+    public UnityEvent ClickBruh;
 
-    public UnityEvent PauseOn;
-
-
-    private void Update()
+    private void FixedUpdate()
     {
         if (!notPos && Input.GetAxisRaw("Fire1") > 0)
         {
@@ -24,7 +21,7 @@ public class PauseListen : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {
-
+            ClickBruh.Invoke();
         }
     }
 

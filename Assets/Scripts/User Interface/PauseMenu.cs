@@ -35,14 +35,15 @@ public class PauseMenu : MonoBehaviour
             pauseMenu.GetComponent<CanvasGroup>().interactable = menuOut ? false : true;
 
             StartCoroutine(MovePause());
-        } else if (menuOut)
-        {
-            pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
         }
-        else
-        {
-            pauseMenu.transform.position = new Vector3(xOut, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
-        }
+        //if (menuOut)
+        //{
+        //    pauseMenu.transform.position = new Vector3(xOut, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+        //}
+        //else
+        //{
+        //    pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+        //}
     }
 
     public void CantDo()
@@ -89,10 +90,12 @@ public class PauseMenu : MonoBehaviour
         if (menuOut)
         {
             pauseMenu.transform.position = new Vector3(xIn, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+            menuOut = false;
         }
         else
         {
             pauseMenu.transform.position = new Vector3(xOut, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+            menuOut = true;
         }
 
         cantDo.SetValue(false);
