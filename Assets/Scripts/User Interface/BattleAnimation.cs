@@ -3,16 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BattleAnimation : PauseMenu {
-    
-    new public void DoAnim()
-    {
 
+    private RectTransform bad;
+
+    private void Start()
+    {
+        bad = pauseMenu.GetComponent<RectTransform>();
     }
 
-    IEnumerator MovePause()
+    new public void DoAnim()
     {
-        //cantPause.SetValue(true);
+        if (!cantDo)
+        {
+            pauseMenu.GetComponent<CanvasGroup>().interactable = menuOut ? false : true;
 
+            StartCoroutine(MovePause());
+        }
+    }
+
+    new public void CantDo()
+    {
+        StopAllCoroutines();
+        bad.anchoredPosition = new Vector2(bad.anchoredPosition.x, inPos);
+        pauseMenu.GetComponent<CanvasGroup>().interactable = false;
+        menuOut = false;
+        //cantDo.SetValue(true);
+        //Debug.Log("oh");
+    }
+
+    private IEnumerator MovePause()
+    {
         cantDo.SetValue(true);
         float time = baseTime;
         int cnt = 1;
@@ -21,32 +41,27 @@ public class BattleAnimation : PauseMenu {
         {
             if (!menuOut)
             {
-                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x, pauseMenu.transform.position.y + howFast / cnt++, pauseMenu.transform.position.z);
+                bad.anchoredPosition -= new Vector2(0, howFast / cnt++);
             }
             else
             {
-                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x, pauseMenu.transform.position.y - howFast / cnt++, pauseMenu.transform.position.z);
+                bad.anchoredPosition += new Vector2(0, howFast / cnt++);
             }
             yield return null;
             time -= Time.unscaledDeltaTime;
-            //time -= Time.deltaTime;
-
-            //Time.timeScale = 0;
         }
 
         if (menuOut)
         {
-            pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x, inPos, pauseMenu.transform.position.z);
+            bad.anchoredPosition = new Vector2(bad.anchoredPosition.x, inPos);
             menuOut = false;
         }
         else
         {
-            pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x, outPos, pauseMenu.transform.position.z);
+            bad.anchoredPosition = new Vector2(bad.anchoredPosition.x, outPos);
             menuOut = true;
         }
 
         cantDo.SetValue(false);
-
-        //cantPause.SetValue(false);
     }
 }

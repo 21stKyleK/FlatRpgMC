@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class PauseListen : BackMenu
 {
-    public UnityEvent ClickBruh;
-
     private void Update()
     {
         if (!notPos && Input.GetAxisRaw("Fire1") > 0)
@@ -17,11 +15,6 @@ public class PauseListen : BackMenu
             //notPos.SetValue(false);
 
             PauseOn.Invoke();
-        }
-
-        if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
-        {
-            ClickBruh.Invoke();
         }
     }
 

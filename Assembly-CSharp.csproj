@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\SceneLoading\StartGame.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\StartScene.cs" />
     <Compile Include="Assets\Scripts\ToFightScreen.cs" />
+    <Compile Include="Assets\Scripts\User Interface\AntiClick.cs" />
     <Compile Include="Assets\Scripts\User Interface\BackMenu.cs" />
     <Compile Include="Assets\Scripts\User Interface\BattleAnimation.cs" />
     <Compile Include="Assets\Scripts\User Interface\ImageSO.cs" />

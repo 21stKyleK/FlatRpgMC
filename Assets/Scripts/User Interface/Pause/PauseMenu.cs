@@ -17,6 +17,13 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenu;
 
+    private RectTransform bod;
+
+    private void Start()
+    {
+        bod = pauseMenu.GetComponent<RectTransform>();
+    }
+
     public void DoAnim()
     {
         if (!cantDo)
@@ -49,7 +56,7 @@ public class PauseMenu : MonoBehaviour
     public void CantDo()
     {
         StopAllCoroutines();
-        pauseMenu.transform.position = new Vector3(inPos, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+        bod.anchoredPosition = new Vector2(inPos, bod.anchoredPosition.y);
         pauseMenu.GetComponent<CanvasGroup>().interactable = false;
         menuOut = false;
         //cantDo.SetValue(true);
@@ -74,11 +81,11 @@ public class PauseMenu : MonoBehaviour
         {
             if (!menuOut)
             {
-                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x + howFast/cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+                bod.anchoredPosition += new Vector2(howFast/cnt++, 0);
             }
             else
             {
-                pauseMenu.transform.position = new Vector3(pauseMenu.transform.position.x - howFast / cnt++, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+                bod.anchoredPosition -= new Vector2(howFast / cnt++, 0);
             }
             yield return null;
             time -= Time.unscaledDeltaTime;
@@ -89,12 +96,12 @@ public class PauseMenu : MonoBehaviour
 
         if (menuOut)
         {
-            pauseMenu.transform.position = new Vector3(inPos, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+            bod.anchoredPosition = new Vector2(inPos, bod.anchoredPosition.y);
             menuOut = false;
         }
         else
         {
-            pauseMenu.transform.position = new Vector3(outPos, pauseMenu.transform.position.y, pauseMenu.transform.position.z);
+            bod.anchoredPosition = new Vector2(outPos, bod.anchoredPosition.y);
             menuOut = true;
         }
 
