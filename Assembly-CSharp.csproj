@@ -85,10 +85,11 @@
     <Compile Include="Assets\Scripts\SceneLoading\StartScene.cs" />
     <Compile Include="Assets\Scripts\ToFightScreen.cs" />
     <Compile Include="Assets\Scripts\User Interface\BackMenu.cs" />
+    <Compile Include="Assets\Scripts\User Interface\BattleAnimation.cs" />
     <Compile Include="Assets\Scripts\User Interface\ImageSO.cs" />
-    <Compile Include="Assets\Scripts\User Interface\MenuAnim.cs" />
-    <Compile Include="Assets\Scripts\User Interface\PauseListen.cs" />
-    <Compile Include="Assets\Scripts\User Interface\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\User Interface\Pause\MenuAnim.cs" />
+    <Compile Include="Assets\Scripts\User Interface\Pause\PauseListen.cs" />
+    <Compile Include="Assets\Scripts\User Interface\Pause\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\User Interface\PauseNav.cs" />
     <Compile Include="Assets\Scripts\VariableScript\BoolVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
