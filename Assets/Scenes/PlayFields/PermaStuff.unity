@@ -401,6 +401,8 @@ GameObject:
   - component: {fileID: 356926496}
   - component: {fileID: 356926495}
   - component: {fileID: 356926494}
+  - component: {fileID: 356926498}
+  - component: {fileID: 356926497}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -456,6 +458,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &356926497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356926493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c33e24576c3d424b8590c3552d8e179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetButton: {fileID: 1747449344}
+--- !u!114 &356926498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356926493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9bc16570449f243b455e74c9478161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClickBruh:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 356926497}
+        m_MethodName: SetCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &462066891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,7 +1127,6 @@ GameObject:
   - component: {fileID: 997439525}
   - component: {fileID: 997439524}
   - component: {fileID: 997439523}
-  - component: {fileID: 997439527}
   m_Layer: 5
   m_Name: BattleCanvas
   m_TagString: Untagged
@@ -1175,19 +1215,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &997439527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997439522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c33e24576c3d424b8590c3552d8e179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetButton: {fileID: 1092160304}
 --- !u!1 &1041940549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,8 +1837,6 @@ GameObject:
   - component: {fileID: 1334536423}
   - component: {fileID: 1334536422}
   - component: {fileID: 1334536426}
-  - component: {fileID: 1334536427}
-  - component: {fileID: 1334536428}
   m_Layer: 5
   m_Name: OverworldCanvas
   m_TagString: Canvas
@@ -1939,7 +1964,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1334536427}
+      - m_Target: {fileID: 0}
         m_MethodName: SetCursor
         m_Mode: 2
         m_Arguments:
@@ -1960,45 +1985,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &1334536427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334536421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c33e24576c3d424b8590c3552d8e179, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetButton: {fileID: 1747449344}
---- !u!114 &1334536428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1334536421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9bc16570449f243b455e74c9478161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ClickBruh:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1334536427}
-        m_MethodName: SetCursor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1460320873
 GameObject:
@@ -2296,7 +2282,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1334536427}
+      - m_Target: {fileID: 356926497}
         m_MethodName: SetCursor
         m_Mode: 2
         m_Arguments:
@@ -2592,7 +2578,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 997439527}
+      - m_Target: {fileID: 356926497}
         m_MethodName: SetCursor
         m_Mode: 2
         m_Arguments:
@@ -2782,7 +2768,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1334536427}
+      - m_Target: {fileID: 356926497}
         m_MethodName: SetCursor
         m_Mode: 2
         m_Arguments:
