@@ -16,14 +16,20 @@ public class FightBouncer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        //Time.timeScale = 0;
+        if (enabled) {
+            //Time.timeScale = 0;
 
-        bg.SetColor(bgc);
+            bg.SetColor(bgc);
 
-        bg.SetLayer1(l1);
-        bg.SetLayer2(l2);
-        bg.SetLayer3(l3);
+            bg.SetLayer1(l1);
+            bg.SetLayer2(l2);
+            bg.SetLayer3(l3);
 
-        Encountered.Invoke();
+            Encountered.Invoke();
+
+            //disabling this script will prevent future run-ins until turned on
+
+            enabled = false;
+        }
     }
 }

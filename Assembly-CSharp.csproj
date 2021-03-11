@@ -77,7 +77,9 @@
     <Compile Include="Assets\Scripts\PlayerScript\PlayerExMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerSpawn.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\FightHandling\EnemyStore.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\FightHandling\SetColor.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\FightHandling\SetEnemy.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\FightHandling\SetSprite.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\LoadZoneTrigger.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\SceneSetup.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Assets\Scripts\User Interface\PauseNav.cs" />
     <Compile Include="Assets\Scripts\VariableScript\BoolVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\GameObjectVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\GenericNumVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\IntegerVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\LoadZoneRTS.cs" />

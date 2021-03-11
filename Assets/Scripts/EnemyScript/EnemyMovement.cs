@@ -61,6 +61,7 @@ public class EnemyMovement : MonoBehaviour
         //home range (x boundaries and y boundaries)
     }
 
+    //gets turned off with Time.scale = 0
     private void FixedUpdate()
     {
         if (!coRo1)
