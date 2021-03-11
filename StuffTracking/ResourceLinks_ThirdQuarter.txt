@@ -127,3 +127,5 @@ Serialization turns something into bytes and stuff, which can be put into a file
 "Field Name serialized multiple times ; Unity Forum" : https://forum.unity.com/threads/what-does-this-error-mean-exactly.122136/
 
 "C# Attributes and Reflection Unity ; Game Dev Guide" : https://www.youtube.com/watch?v=vLKeqS1PeTU
+
+"Disabling OnTriggerEnter ; Unity Forums" : https://forum.unity.com/threads/should-ontriggerenter-be-getting-called-even-when-the-script-is-disabled.240391/
