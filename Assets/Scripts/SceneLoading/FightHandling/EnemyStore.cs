@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyStore : MonoBehaviour
 {
     public GameObjectVar enemy;
+
+    public bool defeated;
     //public GameObject enemy;
 
     //public void SetEnemy(GameObject en)
@@ -12,9 +14,14 @@ public class EnemyStore : MonoBehaviour
     //    enemy = en;
     //}
 
-    public void DestroyEnemy()
+    public void SetStyle(bool kill)
     {
-        Destroy(enemy.Value);
+        defeated = kill;
+    }
+
+    public void HandleEnemy()
+    {
+        if (defeated) { Destroy(enemy.Value); }
 
         //put destruction in enemy's script
 

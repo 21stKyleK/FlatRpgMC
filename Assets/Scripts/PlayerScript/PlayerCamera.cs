@@ -214,6 +214,15 @@ public class PlayerCamera : MonoBehaviour
 
     public IEnumerator FadeFightEnd()
     {
+        StartCoroutine(FadeIn());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSecondsRealtime(0.2f);
+
         StartCoroutine(FadeOut());
 
         while (yell)
