@@ -32,4 +32,25 @@ public class FightBouncer : MonoBehaviour
             enabled = false;
         }
     }
+
+    //entrance from event to handle the enemy after a fight is over
+    public void PostFightBreak(bool peace)
+    {
+        StartCoroutine(Afterwards(peace));
+    }
+
+    //if not peace, then destroy object, else enabled = true;
+    public IEnumerator Afterwards(bool peace)
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        if (peace)
+        {
+            enabled = peace;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 }

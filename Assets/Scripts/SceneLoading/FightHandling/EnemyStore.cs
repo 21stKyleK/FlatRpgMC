@@ -21,10 +21,11 @@ public class EnemyStore : MonoBehaviour
 
     public void HandleEnemy()
     {
-        if (defeated) { Destroy(enemy.Value); }
+        //if (defeated) { Destroy(enemy.Value); }
 
         //put destruction in enemy's script
+        enemy.Value.GetComponent<FightBouncer>().PostFightBreak(!defeated);
 
-        enemy = null;
+        enemy.SetValue(new GameObject());
     }
 }

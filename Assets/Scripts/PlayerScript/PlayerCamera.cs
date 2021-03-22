@@ -21,7 +21,9 @@ public class PlayerCamera : MonoBehaviour
     //is a coroutine running
     private bool yell = false;
     
-    public UnityEvent FadeInEnd, FadeOutEnd, FightInEnd, FightOutEnd;
+    public UnityEvent FadeInEnd, FadeOutEnd, FightInEnd, FightOutEnd
+        //, FightOutStart
+        ;
     //will trigger the scene change itself
 
     //void Start()
@@ -221,6 +223,9 @@ public class PlayerCamera : MonoBehaviour
             yield return null;
         }
 
+        //FightOutStart.Invoke();
+        FightOutEnd.Invoke();
+
         yield return new WaitForSecondsRealtime(0.2f);
 
         StartCoroutine(FadeOut());
@@ -232,7 +237,7 @@ public class PlayerCamera : MonoBehaviour
 
         Time.timeScale = 1;
 
-        FightOutEnd.Invoke();
+        //FightOutEnd.Invoke();
     }
 
     //might need to make different IEnumerators for entering fight scenes

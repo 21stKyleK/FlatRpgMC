@@ -10,7 +10,7 @@ public class AntiClick : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
         {
-            Debug.Log("I'm here");
+            //Debug.Log("I'm here");
             ClickBruh.Invoke();
         }
     }
