@@ -690,6 +690,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 61b757634594e114f8f0c1f5781778f8, type: 2}
+        m_MethodName: SetValue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &591288892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1611,6 +1622,7 @@ GameObject:
   - component: {fileID: 1182691399}
   - component: {fileID: 1182691400}
   - component: {fileID: 1182691401}
+  - component: {fileID: 1182691402}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1755,6 +1767,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: c53779dee942c6146b60719644b3f06e, type: 2}
+        m_MethodName: SetValue
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1182691398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1860,6 +1883,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   papi: {fileID: 11400000, guid: d99d67bda4c2dd3439e1103470f242d8, type: 2}
+  theThing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1182691397}
+        m_MethodName: FadeFight
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1182691402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182691393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f93d02e11b8df3468771cc453c0745d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  papi: {fileID: 11400000, guid: e7c9e80d201539444a92d08d81dbf96e, type: 2}
   theThing:
     m_PersistentCalls:
       m_Calls:
@@ -2143,23 +2193,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1212320568}
+        m_MethodName: FlipEnabled
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 356926497}
         m_MethodName: SetCursor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1747449344}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1212320568}
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2742,17 +2792,6 @@ MonoBehaviour:
       - m_Target: {fileID: 104828391}
         m_MethodName: CantDo
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 61b757634594e114f8f0c1f5781778f8, type: 2}
-        m_MethodName: SetValue
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

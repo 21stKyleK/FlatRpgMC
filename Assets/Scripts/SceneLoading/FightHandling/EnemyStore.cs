@@ -26,6 +26,6 @@ public class EnemyStore : MonoBehaviour
         //put destruction in enemy's script
         enemy.Value.GetComponent<FightBouncer>().PostFightBreak(!defeated);
 
-        enemy.SetValue(new GameObject());
+        //enemy.SetValue(new GameObject());
     }
 }

@@ -69,9 +69,11 @@ public class PlayerCamera : MonoBehaviour
     //    FadeOutEnd.Invoke();
     //}
 
+    //for screen transitions
     public void Fading(bool toBlack)
     {
         //sbyte fadeDir;
+        StopAllCoroutines();
 
         if (toBlack)
         {
@@ -94,8 +96,11 @@ public class PlayerCamera : MonoBehaviour
         //^waiting for coroutines will freexe your everything^
     }
 
+    //for fight transitions
     public void FadeFight(bool toFight)
     {
+        StopAllCoroutines();
+
         if (toFight)
         {
             StartCoroutine(FadeFightStart());

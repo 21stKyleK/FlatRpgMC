@@ -16,6 +16,8 @@ public class FightBouncer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+        //Debug.Log(enabled);
+
         if (enabled) {
             //Time.timeScale = 0;
 
@@ -42,15 +44,25 @@ public class FightBouncer : MonoBehaviour
     //if not peace, then destroy object, else enabled = true;
     public IEnumerator Afterwards(bool peace)
     {
+        Debug.Log("bruh");
+
         yield return new WaitForSeconds(0.5f);
+
+        //Debug.Log("bruh 2");
 
         if (peace)
         {
+            Debug.Log("bruh 3");
+
             enabled = peace;
         }
         else
         {
-            Destroy(this);
+            Debug.Log("bruh 4");
+
+            Destroy(gameObject);
         }
+
+        //Debug.Log("bruh 2");
     }
 }

@@ -22,4 +22,9 @@ public class BackMenu : MonoBehaviour
     {
         Time.timeScale = Time.timeScale.Equals(0) ? 1 : 0;
     }
+
+    public void FlipEnabled()
+    {
+        enabled = enabled ? false : true;
+    }
 }
