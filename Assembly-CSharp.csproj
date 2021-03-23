@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\BasicAction.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Fighter.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\CardinalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\DiagonalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\FreeMove.cs" />
@@ -72,9 +74,7 @@
     <Compile Include="Assets\Scripts\EnemyScript\FightBouncer.cs" />
     <Compile Include="Assets\Scripts\EventHandling\GameEventEar.cs" />
     <Compile Include="Assets\Scripts\EventHandling\GameEventHolder.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerCamera.cs" />
-    <Compile Include="Assets\Scripts\PlayerScript\PlayerExMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerSpawn.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\FightHandling\EnemyStore.cs" />
@@ -85,7 +85,6 @@
     <Compile Include="Assets\Scripts\SceneLoading\SceneSetup.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\StartGame.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\StartScene.cs" />
-    <Compile Include="Assets\Scripts\ToFightScreen.cs" />
     <Compile Include="Assets\Scripts\User Interface\AntiClick.cs" />
     <Compile Include="Assets\Scripts\User Interface\BackMenu.cs" />
     <Compile Include="Assets\Scripts\User Interface\BattleAnimation.cs" />

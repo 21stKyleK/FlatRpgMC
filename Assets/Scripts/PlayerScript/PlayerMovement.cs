@@ -39,4 +39,9 @@ public class PlayerMovement : MonoBehaviour
         Vector2 normie = new Vector2(x, y).normalized;
         rb.velocity = normie * mSpd * Time.deltaTime * (1 + b * boostAmt);
     }
+
+    //for(int i = 2; i<4; i++){
+    //        //should either lead to 1/2 or 1/4 increments, x = new x, new y, x-2 = horizontal, vertical
+    //        dArray[i] = Mathf.Clamp(dArray[i] - ((dArray[i - 2] * -0.125f) + Mathf.Clamp(dArray[i] - (dArray[i] * Mathf.Abs(dArray[i - 2]) ), -0.5f, 0.5f ) )  , -1, 1);
+    //    }
 }

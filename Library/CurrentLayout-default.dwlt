@@ -366,7 +366,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 13470
+  m_LastSelectedObjectID: 13618
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,20 +406,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/PlayerStuff/UserInterface
+    - Assets/PlayerStuff/PlayerSOs
   m_ViewMode: 1
   m_StartGridSize: 56
   m_LastFolders:
-  - Assets/PlayerStuff/UserInterface
+  - Assets/PlayerStuff/PlayerSOs
   m_LastFoldersGridSize: 56
   m_LastProjectPath: C:\Users\100040199\Desktop\IndependentStu\FlatRpgMC
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 28}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 20360000
     m_LastClickedID: 13856
-    m_ExpandedIDs: 00000000ee350000f0350000f2350000f4350000f6350000f8350000fa350000fc350000fe35000000360000023600000436000006360000083600000a3600000c360000
+    m_ExpandedIDs: 00000000f0350000f2350000f4350000f6350000f8350000fa350000fc350000fe35000000360000023600000436000006360000083600000a3600000c3600000e3600000c380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -447,7 +447,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 272}
     m_SelectedIDs: fa360000
     m_LastClickedID: 14074
-    m_ExpandedIDs: 00000000ee350000f0350000f2350000f4350000f6350000f8350000fa350000fc350000fe35000000360000023600000436000006360000083600000a3600000c360000
+    m_ExpandedIDs: 00000000f0350000f2350000f4350000f6350000f8350000fa350000fc350000fe35000000360000023600000436000006360000083600000a3600000c3600000e360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -491,7 +491,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 3}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -570,9 +570,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: da340000
-      m_LastClickedID: 13530
-      m_ExpandedIDs: 46f1ffff6efbffff6a340000da3400001a35000030350000
+      m_SelectedIDs: 32350000
+      m_LastClickedID: 13618
+      m_ExpandedIDs: 6efbffff1c350000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
