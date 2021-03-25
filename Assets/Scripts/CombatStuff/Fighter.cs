@@ -7,7 +7,9 @@ public class Fighter : MonoBehaviour
     // how many hit points until the enemy is defeated
     public int hp, maxHp;
 
-    //immunities
+    //status resistances
+
+    //current ailment list
 
     public void TakeDamage(int dmg)
     {
@@ -18,5 +20,10 @@ public class Fighter : MonoBehaviour
     {
         //other damage calulations
         TakeDamage(dmg);
+    }
+
+    public void ApplyStatus()
+    {
+
     }
 }

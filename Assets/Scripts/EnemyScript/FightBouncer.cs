@@ -44,7 +44,7 @@ public class FightBouncer : MonoBehaviour
     //if not peace, then destroy object, else enabled = true;
     public IEnumerator Afterwards(bool peace)
     {
-        Debug.Log("bruh");
+        //Debug.Log("bruh");
 
         yield return new WaitForSeconds(0.5f);
 
@@ -52,13 +52,13 @@ public class FightBouncer : MonoBehaviour
 
         if (peace)
         {
-            Debug.Log("bruh 3");
+            //Debug.Log("bruh 3");
 
             enabled = peace;
         }
         else
         {
-            Debug.Log("bruh 4");
+            //Debug.Log("bruh 4");
 
             Destroy(gameObject);
         }

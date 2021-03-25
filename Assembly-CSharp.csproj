@@ -64,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CombatStuff\Actions\BasicAction.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\IgnoreStatus.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\StatChange.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\StrengthMod.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Fighter.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\CardinalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\DiagonalMove.cs" />

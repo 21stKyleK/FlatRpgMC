@@ -6,10 +6,10 @@ using UnityEngine;
 public class BasicAction : ScriptableObject
 {
     //positive, does damage; negative, heals damage;
-    public int Damage;
+    //public int Damage;
 
-    public virtual void AttackTarget(GameObject tar)
+    public virtual void AttackTarget(GameObject tar, int dmg)
     {
-        tar.GetComponent<Fighter>().CalcDamage(Damage);
+        tar.GetComponent<Fighter>().CalcDamage(dmg);
     }
 }
