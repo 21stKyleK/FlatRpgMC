@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Modified")]
+[CreateAssetMenu(menuName = "Attacks/Modified")]
 public class StrengthMod : BasicAction
 {
     //can be used as certain status effects

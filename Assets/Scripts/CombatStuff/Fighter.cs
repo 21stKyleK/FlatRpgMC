@@ -11,19 +11,19 @@ public class Fighter : MonoBehaviour
 
     //current ailment list
 
-    public void TakeDamage(int dmg)
+    public virtual void TakeDamage(int dmg)
     {
         hp -= dmg;
     }
 
-    public void CalcDamage(int dmg)
+    public virtual void CalcDamage(int dmg)
     {
         //other damage calulations
         TakeDamage(dmg);
     }
 
-    public void ApplyStatus()
+    public virtual void ApplyStatus()
     {
-
+        //stat changes should be monobehaviours (stat amount changed, able to be created without much hassle)
     }
 }

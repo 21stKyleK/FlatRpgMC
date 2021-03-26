@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Piercing")]
+[CreateAssetMenu(menuName = "Attacks/Piercing")]
 public class IgnoreStatus : BasicAction
 {
     public override void AttackTarget(GameObject tar, int dmg)
