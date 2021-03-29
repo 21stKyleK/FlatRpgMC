@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fighter : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Fighter : MonoBehaviour
     //status resistances
 
     //current ailment list
+
+    //graphics
+    Image thing;
 
     public virtual void TakeDamage(int dmg)
     {
