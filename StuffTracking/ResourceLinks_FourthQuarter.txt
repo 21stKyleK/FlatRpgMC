@@ -4,4 +4,7 @@
 
 (Inheriting from Multiple Sources ; GeeksForGeeks) : https://www.geeksforgeeks.org/c-sharp-multiple-inheritance-using-interfaces/
 (Interfaces 1 ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface
-(Interfaces 2; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/
+(Interfaces 2 ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/
+(Restricting an INterface to Monobehaviours ; Unity Forums) : https://forum.unity.com/threads/interfaces-with-monobehaviours-only.883750/
+(Using Monobehaviours with Interfaces ; Unity Answers) : https://answers.unity.com/questions/1461843/how-to-use-monobehaviour-with-an-interface.html
+(Changing Datatypes in C# inheritance ; StackOverflow) : https://stackoverflow.com/questions/6351025/overriding-an-abstract-property-with-a-derived-return-type-in-c-sharp
