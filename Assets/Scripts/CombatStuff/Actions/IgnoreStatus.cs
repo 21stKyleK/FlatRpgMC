@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Attacks/Piercing")]
-public class IgnoreStatus : BasicAction
+public class IgnoreStatus : ScriptableObject
 {
-    public override void AttackTarget(GameObject tar, int dmg)
+    public virtual void AttackTarget(GameObject tar, int dmg)
     {
         tar.GetComponent<Fighter>().TakeDamage(dmg);
     }

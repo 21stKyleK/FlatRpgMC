@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Attacks/Modified")]
-public class StrengthMod : BasicAction
+//[CreateAssetMenu(menuName = "Attacks/Modified")]
+public interface StrengthMod
 {
     //can be used as certain status effects
 
     //how much stronger the supplied damage will be
-    public float Application;
+    float Application { get; set; }
 
-    public override void AttackTarget(GameObject tar, int dmg)
-    {
-        base.AttackTarget(tar, (int) (dmg*Application) );
-    }
+    int CalcDmg(int dmg); //=> dmg;
 }
