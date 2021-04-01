@@ -8,3 +8,9 @@
 (Restricting an INterface to Monobehaviours ; Unity Forums) : https://forum.unity.com/threads/interfaces-with-monobehaviours-only.883750/
 (Using Monobehaviours with Interfaces ; Unity Answers) : https://answers.unity.com/questions/1461843/how-to-use-monobehaviour-with-an-interface.html
 (Changing Datatypes in C# inheritance ; StackOverflow) : https://stackoverflow.com/questions/6351025/overriding-an-abstract-property-with-a-derived-return-type-in-c-sharp
+
+(C# Generics ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/
+(C# Generic Parameters ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-type-parameters
+(C# Generic Interfaces ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-interfaces
+(ScriptableObject Pros + Cons ; Infallible Code) : https://www.youtube.com/watch?v=lRBKN7msVnY
+(When to use Unity Events ; Infallible Code) : https://www.youtube.com/watch?v=zXGFvs5d2Nk
