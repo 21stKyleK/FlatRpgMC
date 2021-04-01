@@ -14,3 +14,4 @@
 (C# Generic Interfaces ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-interfaces
 (ScriptableObject Pros + Cons ; Infallible Code) : https://www.youtube.com/watch?v=lRBKN7msVnY
 (When to use Unity Events ; Infallible Code) : https://www.youtube.com/watch?v=zXGFvs5d2Nk
+(Unified Modeling Language ; Learn UML) : https://www.tutorialspoint.com/uml/uml_class_diagram.htm
