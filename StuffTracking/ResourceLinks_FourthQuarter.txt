@@ -17,3 +17,7 @@
 (Unified Modeling Language ; Learn UML) : https://www.tutorialspoint.com/uml/uml_class_diagram.htm
 
 (C# Casting Floats ; Microsoft Visual Studio) : https://social.msdn.microsoft.com/Forums/vstudio/en-US/c633db6d-fc3c-4c83-be8d-90f9640bbbf4/how-can-i-convert-float-to-int?forum=csharpgeneral
+(Simple State Machine ; Infallible Code) : https://www.youtube.com/watch?v=G1bd75R10m4
+(Finite-State Machine ; Infallible Code) : https://www.youtube.com/watch?v=5PTd0WdKB-4
+(Scriptable Object Events with Parameter Passing ; FumetsuHito) : https://www.youtube.com/watch?v=0G6LAyINwcw
+(Using Constructors in Unity ; Unity Answers) : https://answers.unity.com/questions/862032/c-constructor-in-monobehaviour.html
