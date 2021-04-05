@@ -8,8 +8,11 @@ public class ThroughDef : IgnoreStatus
     //positive, does damage; negative, heals damage;
     //public int Damage;
 
-    public override void AttackTarget(GameObject tar, int dmg)
-    {
-        tar.GetComponent<Fighter>().CalcDamage(dmg);
-    }
+    public override void AttackTarget(GameObject tar, int dmg) =>
+    //{
+        //Debug.Log("over");
+        //This version was called when activated
+
+        tar.GetComponent<Fighter>().CalcDamage(CalcDamage(dmg) );
+    //}
 }

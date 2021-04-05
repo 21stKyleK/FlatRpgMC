@@ -13,17 +13,17 @@ public class Fighter : MonoBehaviour
     //current ailment list
 
     //graphics
-    Image thing;
+    //Image thing;
 
     public virtual void TakeDamage(int dmg)
     {
         hp -= dmg;
     }
 
-    public virtual void CalcDamage(int dmg)
+    public virtual void CalcDamage(float dmg)
     {
         //other damage calulations
-        TakeDamage(dmg);
+        TakeDamage((int) dmg);
     }
 
     public virtual void ApplyStatus()

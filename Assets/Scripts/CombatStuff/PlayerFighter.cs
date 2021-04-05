@@ -10,8 +10,8 @@ public class PlayerFighter : Fighter
         hp.AddValue(-dmg);
     }
 
-    public override void CalcDamage(int dmg)
+    public override void CalcDamage(float dmg)
     {
-        TakeDamage(dmg);
+        TakeDamage( (int) dmg);
     }
 }

@@ -5,8 +5,29 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Attacks/Piercing")]
 public class IgnoreStatus : ScriptableObject
 {
-    public virtual void AttackTarget(GameObject tar, int dmg)
+    //1 = no change in damage
+    public float Application;
+
+    //list of statuses, don't need several interfaces, just leave in default values
+
+    //bool heals;
+    //if true, removes statuses
+
+    public virtual void AttackTarget(GameObject tar, int dmg) =>
+    //{
+        //Debug.Log("under");
+        //in case smaller numbers are hard to come by
+        //tar.GetComponent<Fighter>().TakeDamage((int)Mathf.Clamp(dmg * Application, 1, float.MaxValue));
+
+        tar.GetComponent<Fighter>().TakeDamage((int)CalcDamage(dmg));
+    //}
+
+    public float CalcDamage(int dmg) => dmg * Application;
+
+    public void DoAction(GameObject tar, int dmg)
     {
-        tar.GetComponent<Fighter>().TakeDamage(dmg);
+        AttackTarget(tar, dmg);
+
+        //Apply statuses
     }
 }
