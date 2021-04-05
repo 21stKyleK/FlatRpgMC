@@ -63,9 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CombatStuff\Actions\DebuffBasic.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Actions\Debug_Attack.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Actions\IgnoreStatus.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\Paralysis.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Actions\ThroughDef.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Fighter.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\PlayerFighter.cs" />
