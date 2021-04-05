@@ -15,3 +15,5 @@
 (ScriptableObject Pros + Cons ; Infallible Code) : https://www.youtube.com/watch?v=lRBKN7msVnY
 (When to use Unity Events ; Infallible Code) : https://www.youtube.com/watch?v=zXGFvs5d2Nk
 (Unified Modeling Language ; Learn UML) : https://www.tutorialspoint.com/uml/uml_class_diagram.htm
+
+(C# Casting Floats ; Microsoft Visual Studio) : https://social.msdn.microsoft.com/Forums/vstudio/en-US/c633db6d-fc3c-4c83-be8d-90f9640bbbf4/how-can-i-convert-float-to-int?forum=csharpgeneral
