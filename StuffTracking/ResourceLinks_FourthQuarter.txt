@@ -21,3 +21,7 @@
 (Finite-State Machine ; Infallible Code) : https://www.youtube.com/watch?v=5PTd0WdKB-4
 (Scriptable Object Events with Parameter Passing ; FumetsuHito) : https://www.youtube.com/watch?v=0G6LAyINwcw
 (Using Constructors in Unity ; Unity Answers) : https://answers.unity.com/questions/862032/c-constructor-in-monobehaviour.html
+
+(Protected Keyword ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected
+(Protected Internal ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected-internal
+(Private Protected ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/private-protected
