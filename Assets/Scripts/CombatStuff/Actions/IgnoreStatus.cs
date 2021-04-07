@@ -9,6 +9,7 @@ public class IgnoreStatus : ScriptableObject
     public float Application;
 
     //list of statuses, don't need several interfaces, just leave in default values
+    public List<StatusBase> ailments;
 
     //bool heals;
     //if true, removes statuses
@@ -23,6 +24,8 @@ public class IgnoreStatus : ScriptableObject
     //}
 
     public float CalcDamage(int dmg) => dmg * Application;
+
+    public void AffectTarget(GameObject tar) => tar.GetComponent<Fighter>().ApplyStatus(ailments);
 
     public void DoAction(GameObject tar, int dmg)
     {

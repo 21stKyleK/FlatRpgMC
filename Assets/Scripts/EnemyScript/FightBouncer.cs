@@ -12,6 +12,7 @@ public class FightBouncer : MonoBehaviour
 
     public Color bgc;
 
+    //probably better off with a list of some ScriptableObject
     public Sprite l1, l2, l3;
 
     private void OnCollisionEnter2D(Collision2D col)

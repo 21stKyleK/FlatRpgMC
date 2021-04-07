@@ -37,6 +37,14 @@ public class ObjectRTS : ScriptableObject
         return Things[0];
     }
 
+    //public GameObject GetThing(GameObject i)
+    //{
+    //    if (Things.Contains(i))
+    //    {
+    //        return Things.Find(i);
+    //    } return Things[0];
+    //}
+
     public int GetLength()
     {
         return Things.Count;

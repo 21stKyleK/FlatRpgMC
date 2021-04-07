@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{51CAFBEE-F937-08B4-06A9-578FE00238DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -55,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -65,8 +67,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CombatStuff\Actions\Debug_Attack.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Actions\IgnoreStatus.cs" />
-    <Compile Include="Assets\Scripts\CombatStuff\Actions\Paralysis.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\StatusBase.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Actions\ThroughDef.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\EnemyFighter.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Fighter.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\PlayerFighter.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\CardinalMove.cs" />

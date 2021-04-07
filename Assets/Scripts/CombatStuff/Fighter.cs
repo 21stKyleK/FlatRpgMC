@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Fighter : MonoBehaviour
+public abstract class Fighter : MonoBehaviour
 {
     // how many hit points until the enemy is defeated
     public int hp, maxHp;
 
     //status resistances
+    public List<int> resist;
 
     //current ailment list
+    public List<StatusBase> ailments;
 
     //graphics
-    //Image thing;
+    public Sprite enemyDude;
 
     public virtual void TakeDamage(int dmg)
     {
@@ -26,8 +28,9 @@ public class Fighter : MonoBehaviour
         TakeDamage((int) dmg);
     }
 
-    public virtual void ApplyStatus()
+    public virtual void ApplyStatus(List<StatusBase> ail)
     {
         //stat changes should be monobehaviours (stat amount changed, able to be created without much hassle)
+
     }
 }
