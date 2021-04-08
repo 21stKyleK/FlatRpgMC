@@ -27,3 +27,4 @@
 (Private Protected ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/private-protected
 
 (Removing GameObjects in Lists ; Unity Answers) : https://answers.unity.com/questions/1315488/destroy-a-gameobject-referenced-in-list-and-remove.html
+(List<T>.RemoveAll() ; Microsfot Docs) : https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.removeall?view=net-5.0
