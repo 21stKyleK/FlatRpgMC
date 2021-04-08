@@ -25,3 +25,5 @@
 (Protected Keyword ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected
 (Protected Internal ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected-internal
 (Private Protected ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/private-protected
+
+(Removing GameObjects in Lists ; Unity Answers) : https://answers.unity.com/questions/1315488/destroy-a-gameobject-referenced-in-list-and-remove.html
