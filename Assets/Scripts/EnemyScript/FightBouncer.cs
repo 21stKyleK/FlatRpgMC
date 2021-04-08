@@ -15,6 +15,10 @@ public class FightBouncer : MonoBehaviour
     //probably better off with a list of some ScriptableObject
     public Sprite l1, l2, l3;
 
+    //public List<Fighter> cohorts;
+    //might want to make regular game objects so can prefab easier
+    public List<GameObject> cohorts;
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         //Debug.Log(enabled);

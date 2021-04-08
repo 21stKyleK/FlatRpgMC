@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyStore : MonoBehaviour
 {
+    //could probably make it a public static
+
     public GameObjectVar enemy;
 
     public bool defeated;
