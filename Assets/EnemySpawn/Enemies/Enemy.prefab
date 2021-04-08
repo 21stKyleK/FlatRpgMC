@@ -135,6 +135,8 @@ MonoBehaviour:
   l1: {fileID: 21300000, guid: 28e60868c8c170b4dab7ee2f9ac6708c, type: 3}
   l2: {fileID: 0}
   l3: {fileID: 0}
+  cohorts:
+  - {fileID: 2129747109411695266, guid: d2eed8d5496081f4e89cc8298f776152, type: 3}
 --- !u!70 &-6904423008295368711
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

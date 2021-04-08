@@ -7,6 +7,11 @@ public class ObjectRTS : ScriptableObject
 {
     public List<GameObject> Things = new List<GameObject>();
 
+    public void Set(List<GameObject> thing)
+    {
+        Things = thing;
+    }
+
     public void Add(GameObject thing)
     {
         if (!Things.Contains(thing))
@@ -17,15 +22,18 @@ public class ObjectRTS : ScriptableObject
 
     public void Remove(GameObject thing)
     {
-        if (Things.Contains(thing))
-        {
-            Things.Remove(thing);
-        }
+        //if (Things.Contains(thing))
+        //{
+        //    Things.Remove(thing);
+        //}
+
+        Things.Remove(thing);
     }
 
     public void ClearOut()
     {
-        Things = new List<GameObject>();
+        //Things = new List<GameObject>();
+        Things.Clear();
     }
 
     public GameObject GetThing(int i)
