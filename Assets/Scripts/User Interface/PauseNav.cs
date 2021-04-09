@@ -23,10 +23,12 @@ public class PauseNav : MonoBehaviour
     //might be able to use this in button events
     public void SetCursor(GameObject tb)
     {
-        EventSystem.current.SetSelectedGameObject(null);
+        //EventSystem.current.SetSelectedGameObject(null);
 
-        EventSystem.current.SetSelectedGameObject(tb);
+        //EventSystem.current.SetSelectedGameObject(tb);
 
         targetButton = tb;
+
+        SetCursor();
     }
 }

@@ -137,6 +137,7 @@ MonoBehaviour:
   l3: {fileID: 0}
   cohorts:
   - {fileID: 2129747109411695266, guid: d2eed8d5496081f4e89cc8298f776152, type: 3}
+  rTS: {fileID: 11400000, guid: 234b202ec4289dd4295c03e501fc0ba0, type: 2}
 --- !u!70 &-6904423008295368711
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

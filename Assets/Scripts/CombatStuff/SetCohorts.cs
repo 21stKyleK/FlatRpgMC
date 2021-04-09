@@ -1,19 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SetCohorts : MonoBehaviour
 {
     public ObjectRTS enemies;
 
-    public int i = 0;
+    public GameObjectVar en;
 
-    public void SetEnemies(List<GameObject> l)
+    private int i = 0;
+
+    public void SetEnemies(/*List<GameObject> l*/)
     {
-        enemies.Set(l);
+        //enemies.Set(l);
         i = 0;
 
-        //CreateEnemies();
+        CreateEnemies();
     }
 
     public void CreateEnemies()
@@ -25,14 +28,27 @@ public class SetCohorts : MonoBehaviour
         //use foreach in final
     }
 
-    public Fighter GetCurrent()
-    {
-        return enemies.GetThing(i).GetComponent<Fighter>();
-    }
+    public Fighter GetFighter() =>
+    //{
+        /*return*/ GetObject().GetComponent<Fighter>();
+    //}
+
+    public Button GetButton() =>
+        GetObject().GetComponent<Button>();
+
+    //only need this for Pause Nav, though probably a B to get over there
+    public GameObject GetObject() =>
+        enemies.GetThing(i);
+
+    public void ActivateButton() =>
+        GetButton().interactable = true;
+
+    public void DeactivateButton() =>
+        GetButton().interactable = false;
 
     public void Remove()
     {
-        GameObject des = enemies.GetThing(i);
+        GameObject des = GetObject();
 
         enemies.Remove(des);
 
@@ -45,11 +61,10 @@ public class SetCohorts : MonoBehaviour
 
         while (enemies.GetLength() > 0)
         {
-            GameObject des = enemies.GetThing(i);
-
-            enemies.Remove(des);
-
-            Destroy(des);
+            Remove();
         }
     }
+
+    public void OnDestroy() =>
+        enemies.ClearOut();
 }

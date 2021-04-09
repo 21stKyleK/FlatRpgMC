@@ -7,10 +7,10 @@ public class ObjectRTS : ScriptableObject
 {
     public List<GameObject> Things = new List<GameObject>();
 
-    public void Set(List<GameObject> thing)
-    {
+    public void Set(List<GameObject> thing) =>
+    //{
         Things = thing;
-    }
+    //}
 
     public void Add(GameObject thing)
     {
@@ -20,21 +20,23 @@ public class ObjectRTS : ScriptableObject
         }
     }
 
-    public void Remove(GameObject thing)
-    {
+    public void Remove(GameObject thing) =>
+    //{
         //if (Things.Contains(thing))
         //{
         //    Things.Remove(thing);
         //}
 
         Things.Remove(thing);
-    }
+    //}
 
-    public void ClearOut()
-    {
+
+
+    public void ClearOut() =>
+    //{
         //Things = new List<GameObject>();
         Things.Clear();
-    }
+    //}
 
     public GameObject GetThing(int i)
     {
@@ -53,13 +55,16 @@ public class ObjectRTS : ScriptableObject
     //    } return Things[0];
     //}
 
-    public int GetLength()
-    {
-        return Things.Count;
-    }
+    public int GetIndex(GameObject thing) =>
+        Things.IndexOf(thing);
 
-    public bool CheckThing(GameObject thing)
-    {
-        return Things.Contains(thing);
-    }
+    public int GetLength() =>
+    //{
+        /*return*/ Things.Count;
+    //}
+
+    public bool CheckThing(GameObject thing) =>
+    //{
+        /*return*/ Things.Contains(thing);
+    //}
 }

@@ -19,12 +19,16 @@ public class FightBouncer : MonoBehaviour
     //might want to make regular game objects so can prefab easier
     public List<GameObject> cohorts;
 
+    public ObjectRTS rTS;
+
     private void OnCollisionEnter2D(Collision2D col)
     {
         //Debug.Log(enabled);
 
         if (enabled) {
             //Time.timeScale = 0;
+
+            rTS.Set(cohorts);
 
             bg.SetColor(bgc);
 
