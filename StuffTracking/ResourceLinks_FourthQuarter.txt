@@ -32,3 +32,7 @@
 (Abstract vs. Interfaces (Java) ; GeeksForGeeks) : https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-java/
 (Abstract classes (Java) ; GeeksForGeeks) : https://www.geeksforgeeks.org/abstract-classes-in-java/
 (Interfaces (Java) ; GeeksForGeeks) : https://www.geeksforgeeks.org/interfaces-in-java/
+(Comparable ; Oracle Docs) : https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html
+(Lambda Expressions ; Oracle Docs) : https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+(Collection ; Oracle Docs) : https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html
+(Generics ; Oracle Docs) : https://docs.oracle.com/javase/tutorial/java/generics/index.html
