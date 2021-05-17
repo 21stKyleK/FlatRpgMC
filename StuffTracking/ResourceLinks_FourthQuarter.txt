@@ -47,4 +47,5 @@
 (Minimax ; Wikipedia) : https://en.wikipedia.org/wiki/Minimax
 
 (Enum ; Oracle) : https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+(Enum Methods ; Oracle) : https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html
 (Key Events ; Oracle) : https://docs.oracle.com/javase/7/docs/api/java/awt/event/KeyEvent.html
