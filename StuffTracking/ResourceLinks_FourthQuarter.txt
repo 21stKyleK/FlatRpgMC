@@ -49,3 +49,5 @@
 (Enum ; Oracle) : https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
 (Enum Methods ; Oracle) : https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html
 (Key Events ; Oracle) : https://docs.oracle.com/javase/7/docs/api/java/awt/event/KeyEvent.html
+
+(Enums as Integers ; StackOverflow) : https://stackoverflow.com/questions/13792110/java-enum-return-int
