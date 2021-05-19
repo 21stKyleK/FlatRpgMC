@@ -51,3 +51,5 @@
 (Key Events ; Oracle) : https://docs.oracle.com/javase/7/docs/api/java/awt/event/KeyEvent.html
 
 (Enums as Integers ; StackOverflow) : https://stackoverflow.com/questions/13792110/java-enum-return-int
+
+(Jump to Different Cases ; StackOverflow) ; https://stackoverflow.com/questions/31498571/can-we-call-a-case-inside-another-case-in-the-same-switch-statement-in-java
