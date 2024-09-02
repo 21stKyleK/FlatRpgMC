@@ -63,26 +63,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\EnemyScript\EnBattleTactics.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\BasicAction.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Fighter.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\CardinalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\DiagonalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\FreeMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\NoMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemySpawn.cs" />
+    <Compile Include="Assets\Scripts\EnemyScript\FightBouncer.cs" />
     <Compile Include="Assets\Scripts\EventHandling\GameEventEar.cs" />
     <Compile Include="Assets\Scripts\EventHandling\GameEventHolder.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerCamera.cs" />
-    <Compile Include="Assets\Scripts\PlayerScript\PlayerExMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerScript\PlayerSpawn.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\FightHandling\EnemyStore.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\FightHandling\SetColor.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\FightHandling\SetEnemy.cs" />
+    <Compile Include="Assets\Scripts\SceneLoading\FightHandling\SetSprite.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\LoadZoneTrigger.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\SceneSetup.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\StartGame.cs" />
     <Compile Include="Assets\Scripts\SceneLoading\StartScene.cs" />
-    <Compile Include="Assets\Scripts\ToFightScreen.cs" />
+    <Compile Include="Assets\Scripts\User Interface\AntiClick.cs" />
+    <Compile Include="Assets\Scripts\User Interface\BackMenu.cs" />
+    <Compile Include="Assets\Scripts\User Interface\BattleAnimation.cs" />
+    <Compile Include="Assets\Scripts\User Interface\ImageSO.cs" />
+    <Compile Include="Assets\Scripts\User Interface\Pause\MenuAnim.cs" />
+    <Compile Include="Assets\Scripts\User Interface\Pause\PauseListen.cs" />
+    <Compile Include="Assets\Scripts\User Interface\Pause\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\User Interface\PauseNav.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\BoolVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\FloatVar.cs" />
+    <Compile Include="Assets\Scripts\VariableScript\GameObjectVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\GenericNumVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\IntegerVar.cs" />
     <Compile Include="Assets\Scripts\VariableScript\LoadZoneRTS.cs" />
@@ -90,7 +103,6 @@
     <Compile Include="Assets\Scripts\VariableScript\ScriptableObjectRTS.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example1.cs" />
     <Compile Include="Assets\Technician\TestingStuff\Example2.cs" />
-    <Compile Include="Assets\Technician\User Interface\PauseMenu.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/100040199/Desktop/IndependentStu/FlatRpgMC/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

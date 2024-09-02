@@ -22,6 +22,10 @@ public class StartGame : MonoBehaviour
 
         //should've been setting the active scene to sceneLoad, but hasn't 9probably because the scene isn't fully loaded whan it reaches thisS
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName(sceneLoad));
+
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+
         Destroy(this);
     }
 }

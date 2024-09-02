@@ -17,8 +17,13 @@ public class PlayerCamera : MonoBehaviour
     ;
 
     //IEnumerator bruh;
+
+    //is a coroutine running
+    private bool yell = false;
     
-    public UnityEvent FadeInEnd;
+    public UnityEvent FadeInEnd, FadeOutEnd, FightInEnd, FightOutEnd
+        //, FightOutStart
+        ;
     //will trigger the scene change itself
 
     //void Start()
@@ -29,7 +34,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, -conX, conX), Mathf.Clamp(player.transform.position.y, -conY, conY), -10);
+        transform.position = new Vector3(Mathf.Clamp(player.transform.position.x, -conX, conX), Mathf.Clamp(player.transform.position.y, -conY, conY), -20);
     }
 
     /*
@@ -48,17 +53,35 @@ public class PlayerCamera : MonoBehaviour
         conY.SetValue(y);
     }
 
+    //actually, would have all the methods happen instantly
+
+    //public void FadeChangeScene()
+    //{
+    //    Time.timeScale = 0;
+    //    Fading(true);
+    //    FadeInEnd.Invoke();
+    //}
+
+    //public void FadeEndTran()
+    //{
+    //    Fading(false);
+    //    Time.timeScale = 1f;
+    //    FadeOutEnd.Invoke();
+    //}
+
+    //for screen transitions
     public void Fading(bool toBlack)
     {
         //sbyte fadeDir;
+        StopAllCoroutines();
 
         if (toBlack)
         {
-            StartCoroutine(FadeIn());
+            StartCoroutine(FadeSceneStart());
         }
         else
         {
-            StartCoroutine(FadeOut());
+            StartCoroutine(FadeSceneEnd());
         }
 
         //bruh = FadeImage(fadeDir);
@@ -73,27 +96,47 @@ public class PlayerCamera : MonoBehaviour
         //^waiting for coroutines will freexe your everything^
     }
 
+    //for fight transitions
+    public void FadeFight(bool toFight)
+    {
+        StopAllCoroutines();
+
+        if (toFight)
+        {
+            StartCoroutine(FadeFightStart());
+        }
+        else
+        {
+            StartCoroutine(FadeFightEnd());
+        }
+    }
+
     //uses the Raw Image, probably could make these public
     //to black
     public IEnumerator FadeIn()
     {
+        yell = true;
+
         //GameManager.Instance.CurrentState = 0;
         //player.GetComponent<PlayerMovement>().Activity = false;
-	Time.timeScale = 0;
-	//freezes all movement
+        //Time.timeScale = 0;
+        //freezes all movement
 
         while (fader.color.a < 1)
         {
             fader.color = new Color(0, 0, 0, fader.color.a + Time.unscaledDeltaTime);
             yield return null;
         }
-	
-	FadeInEnd.Invoke();
+
+        yell = false;
+
+        //FadeInEnd.Invoke();
     }
 
     //to screen
     public IEnumerator FadeOut()
     {
+        yell = true;
 		//yield return null;
 
         //Debug.Log("Bruh");
@@ -105,22 +148,114 @@ public class PlayerCamera : MonoBehaviour
         }
         //player.GetComponent<PlayerMovement>().Activity = true;
         //Debug.Log("ow");
-	
-	Time.timeScale = 1f;
-	//resumes all movement, though may happen elsewhere
+
+        //Time.timeScale = 1f;
+        //resumes all movement, though may happen elsewhere
+
+        //FadeOutEnd.Invoke();
+        yell = false;
     }
-    
+
+    //for scene transistions
+    public IEnumerator FadeSceneStart()
+    {
+        Time.timeScale = 0;
+
+        StartCoroutine(FadeIn());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        FadeInEnd.Invoke();
+    }
+
+    public IEnumerator FadeSceneEnd()
+    {
+        //Time.timeScale = 1;
+
+        StartCoroutine(FadeOut());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        Time.timeScale = 1;
+
+        FadeOutEnd.Invoke();
+    }
+
+    //For fight scene transitions, wait a little inside the body
+    public IEnumerator FadeFightStart()
+    {
+        Time.timeScale = 0;
+
+        StartCoroutine(FadeIn());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSecondsRealtime(0.2f);
+
+        FightInEnd.Invoke();
+
+        StartCoroutine(FadeOut());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        /*
+         * Can either activate canvas's in here or outside (should probably do it outside)
+         */
+
+        //Debug.Log("woah");
+
+        //FightInEnd.Invoke();
+    }
+
+    public IEnumerator FadeFightEnd()
+    {
+        StartCoroutine(FadeIn());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        //FightOutStart.Invoke();
+        FightOutEnd.Invoke();
+
+        yield return new WaitForSecondsRealtime(0.2f);
+
+        StartCoroutine(FadeOut());
+
+        while (yell)
+        {
+            yield return null;
+        }
+
+        Time.timeScale = 1;
+
+        //FightOutEnd.Invoke();
+    }
+
     //might need to make different IEnumerators for entering fight scenes
 
-/*
-    public void SetBGImage(Texture bruh)
-    {
-        bg.texture = bruh;
-    }
+    /*
+        public void SetBGImage(Texture bruh)
+        {
+            bg.texture = bruh;
+        }
 
-    public void ActivateBG(bool bruh)
-    {
-        bg.enabled = bruh;
-    }
-    */
+        public void ActivateBG(bool bruh)
+        {
+            bg.enabled = bruh;
+        }
+        */
 }
