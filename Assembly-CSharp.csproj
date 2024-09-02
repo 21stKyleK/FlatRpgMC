@@ -63,8 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CombatStuff\Actions\BasicAction.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\Debug_Attack.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\IgnoreStatus.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\StatusBase.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\Actions\ThroughDef.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\EnemyFighter.cs" />
     <Compile Include="Assets\Scripts\CombatStuff\Fighter.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\PlayerFighter.cs" />
+    <Compile Include="Assets\Scripts\CombatStuff\SetCohorts.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\CardinalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\DiagonalMove.cs" />
     <Compile Include="Assets\Scripts\EnemyScript\EnemyMoveTypes\FreeMove.cs" />

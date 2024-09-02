@@ -12,7 +12,14 @@ public class FightBouncer : MonoBehaviour
 
     public Color bgc;
 
+    //probably better off with a list of some ScriptableObject
     public Sprite l1, l2, l3;
+
+    //public List<Fighter> cohorts;
+    //might want to make regular game objects so can prefab easier
+    public List<GameObject> cohorts;
+
+    public ObjectRTS rTS;
 
     private void OnCollisionEnter2D(Collision2D col)
     {
@@ -20,6 +27,8 @@ public class FightBouncer : MonoBehaviour
 
         if (enabled) {
             //Time.timeScale = 0;
+
+            rTS.Set(cohorts);
 
             bg.SetColor(bgc);
 
@@ -44,7 +53,7 @@ public class FightBouncer : MonoBehaviour
     //if not peace, then destroy object, else enabled = true;
     public IEnumerator Afterwards(bool peace)
     {
-        Debug.Log("bruh");
+        //Debug.Log("bruh");
 
         yield return new WaitForSeconds(0.5f);
 
@@ -52,13 +61,13 @@ public class FightBouncer : MonoBehaviour
 
         if (peace)
         {
-            Debug.Log("bruh 3");
+            //Debug.Log("bruh 3");
 
             enabled = peace;
         }
         else
         {
-            Debug.Log("bruh 4");
+            //Debug.Log("bruh 4");
 
             Destroy(gameObject);
         }
