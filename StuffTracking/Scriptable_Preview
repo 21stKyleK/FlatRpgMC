@@ -5,6 +5,15 @@
 //bitbucket link is defunt : https://bitbucket.org/richardfine/scriptableobjectdemo/
 
 /*
+How work:
+You write the script (C#) with the [CreateAssetMenu]
+You create an asset, name it (because.)
+Set the value; this is like using instances
+So while each asset might be edited and change everything (haven't tested)
+Each asset with ScriptableObject won't change if a ScriptableObject of the same kind is changed
+*/
+
+/*
 Focus on data
 Editable w/o code
 Only one outcome/expectable outcomes
@@ -27,14 +36,14 @@ Also good for renderers, mini map stuff
 
 Can also be used like Enums (Elements and/or their extensions and what they beat/lose to)
 
-You CAN write entire objects or more inside a ScriptableObject, they aren't just "data buckets"
+You !! CAN !! write entire objects or more inside a ScriptableObject, they aren't just "data buckets"
 
 Inventory Example:
 -ScriptableObject Master List
 -ScriptableObject per item(? just to avoid changing everything)
 --can have different inventories for each scene
 
-Systems CAN interact with other systems
+Systems !! CAN !! interact with other systems
 
 
 Shared (values used across multiple objects) v non-shared (exclusive to one instance/type) states
@@ -75,7 +84,9 @@ public class BiggerThing : ScriptableObject{
 //different file ?
 
 
+//gets broken down into bytes that can be turned into a file or back to its object
 [Serializable]
+
 public class DataReference{
   public bool UseConstant = bool;
   public type Constant;
@@ -85,6 +96,7 @@ public class DataReference{
     get{ UseConstant ? Constant : Vari.Value;}
   }
 }
+//
 
 
 //different file ?
@@ -230,3 +242,231 @@ public class ValueChange : Collectable{
   }
 }
 */
+
+
+
+//actually looking at Unite 2017 files
+//scripts (like above) were put into own folder, different from assets (which were created by them)
+
+//taken straight from file
+namespace RoboRyanTron.Unite2017.Variables
+{
+    [CreateAssetMenu]
+    public class FloatVariable : ScriptableObject
+    {
+#if UNITY_EDITOR
+        [Multiline]
+        public string DeveloperDescription = "";
+#endif
+        public float Value;
+
+        public void SetValue(float value)
+        {
+            Value = value;
+        }
+
+        public void SetValue(FloatVariable value)
+        {
+            Value = value.Value;
+        }
+
+        public void ApplyChange(float amount)
+        {
+            Value += amount;
+        }
+
+        public void ApplyChange(FloatVariable amount)
+        {
+            Value += amount.Value;
+        }
+    }
+}
+//should be obvious you'd want getters and setters, except there are no getters
+
+
+public class KeyboardMover : MonoBehaviour
+    {
+        [Serializable]
+	//having this on lets you change the MoveAxis Parameters inside the inspector
+	//perhaps lets you treat non-object classes like one?
+
+        public class MoveAxis
+        {
+            public KeyCode Positive;
+            public KeyCode Negative;
+
+            public MoveAxis(KeyCode positive, KeyCode negative)
+            {
+                Positive = positive;
+                Negative = negative;
+            }
+
+            public static implicit operator float(MoveAxis axis)
+            {
+                return (Input.GetKey(axis.Positive)
+                    ? 1.0f : 0.0f) -
+                    (Input.GetKey(axis.Negative)
+                    ? 1.0f : 0.0f);
+            }
+        }
+
+        public FloatVariable MoveRate;
+        public MoveAxis Horizontal = new MoveAxis(KeyCode.D, KeyCode.A);
+        public MoveAxis Vertical = new MoveAxis(KeyCode.W, KeyCode.S);
+
+        private void Update()
+        {
+            Vector3 moveNormal = new Vector3(Horizontal, Vertical, 0.0f).normalized;
+
+            transform.position += moveNormal*Time.deltaTime*MoveRate.Value;
+        }
+    }
+
+
+//extedning an abstract RunTimeSet
+//v can be put over any class, including an abstract parent apparently
+[CreateAssetMenu]
+public class ThingSet : RunTimeSet<Thing>{
+//that's all that's neccesary, but just in case you want it
+	public void override Add(Thing t){ //I actually don't know, as VisualStudio is not displaying any errors
+		//something else
+	}
+
+	private int DoThing(){
+		//something new
+	}
+}
+
+
+//UI thing for the Sets demo
+
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace RoboRyanTron.Unite2017.Sets
+{
+    public class ThingMonitor : MonoBehaviour
+    {
+        public ThingRuntimeSet Set;
+
+        public Text Text;
+
+        private int previousCount = -1;
+
+        private void OnEnable()
+        {
+            UpdateText();
+        }
+
+        private void Update()
+        {
+            if (previousCount != Set.Items.Count)
+            {
+                UpdateText();
+                previousCount = Set.Items.Count;
+            }
+        }
+
+        public void UpdateText()
+        {
+            Text.text = "There are " + Set.Items.Count + " things.";
+        }
+    }
+}
+
+[CreateAssetMenu]
+    public class GameEvent : ScriptableObject
+    {
+        /// <summary>
+        /// The list of listeners that this event will notify if it is raised.
+        /// </summary>
+        private readonly List<GameEventListener> eventListeners = 
+            new List<GameEventListener>();
+
+        public void Raise()
+        {
+            for(int i = eventListeners.Count -1; i >= 0; i--)
+                eventListeners[i].OnEventRaised();
+        }
+
+        public void RegisterListener(GameEventListener listener)
+        {
+            if (!eventListeners.Contains(listener))
+                eventListeners.Add(listener);
+        }
+
+        public void UnregisterListener(GameEventListener listener)
+        {
+            if (eventListeners.Contains(listener))
+                eventListeners.Remove(listener);
+        }
+    }
+
+
+public class GameEventListener : MonoBehaviour
+    {
+        [Tooltip("Event to register with.")]
+        public GameEvent Event;
+
+        [Tooltip("Response to invoke when Event is raised.")]
+        public UnityEvent Response;
+
+        private void OnEnable()
+        {
+            Event.RegisterListener(this);
+        }
+
+        private void OnDisable()
+        {
+            Event.UnregisterListener(this);
+        }
+
+        public void OnEventRaised()
+        {
+            Response.Invoke();
+        }
+    }
+
+//how events work (w/ scriptable objects)
+/*
+Have the GameEvent and GameEventListener scripts (Scriptable and MonoBehaviour respectively)
+Create an asset out of the GameEvent (call it whatever)
+In an event thing (such as a button's), have the function to be called the GameEvent's Raise()
+put the Asset (Whatever) inside the parameter thing/holder
+Create an Object and add the GEListener
+Add the Asset to the GameEvent variable thing
+Under the Respone() event tab, attach the script/event/object to happen, then the function
+When the object with the component is initialized/eneabled, the OnEnable() command calls
+placing it into the Event list, letting it be called when the Event asset is triggered
+*/
+
+
+//Enums
+
+public class Elemental : MonoBehaviour
+    {
+        [Tooltip("Element represented by this elemental.")]
+        public AttackElement Element;
+
+        [Tooltip("Text to fill in with the element name.")]
+        public Text Label;
+
+        private void OnEnable()
+        {
+            if(Label != null)
+                Label.text = Element.name;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Elemental e = other.gameObject.GetComponent<Elemental>();
+            if (e != null)
+            {
+                if (e.Element.DefeatedElements.Contains(Element))
+                    Destroy(gameObject);
+            }
+        }
+    }
+
+//where AttackElement is a ScriptableObject that has just a List of itself
+// and is turned into an Asset where other AttackElements are put in

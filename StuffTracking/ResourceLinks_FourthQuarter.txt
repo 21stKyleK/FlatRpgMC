@@ -1,0 +1,55 @@
+(Unity GetComponent using Base Classes ; Unity Answers) : https://answers.unity.com/questions/25422/any-way-to-getcomponent-as-a-base-class.html
+
+(Good Design Bad Design 12 ; Design Doc) : https://www.youtube.com/watch?v=lZX2Z-GCK_8
+
+(Inheriting from Multiple Sources ; GeeksForGeeks) : https://www.geeksforgeeks.org/c-sharp-multiple-inheritance-using-interfaces/
+(Interfaces 1 ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface
+(Interfaces 2 ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/
+(Restricting an INterface to Monobehaviours ; Unity Forums) : https://forum.unity.com/threads/interfaces-with-monobehaviours-only.883750/
+(Using Monobehaviours with Interfaces ; Unity Answers) : https://answers.unity.com/questions/1461843/how-to-use-monobehaviour-with-an-interface.html
+(Changing Datatypes in C# inheritance ; StackOverflow) : https://stackoverflow.com/questions/6351025/overriding-an-abstract-property-with-a-derived-return-type-in-c-sharp
+
+(C# Generics ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/
+(C# Generic Parameters ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-type-parameters
+(C# Generic Interfaces ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-interfaces
+(ScriptableObject Pros + Cons ; Infallible Code) : https://www.youtube.com/watch?v=lRBKN7msVnY
+(When to use Unity Events ; Infallible Code) : https://www.youtube.com/watch?v=zXGFvs5d2Nk
+(Unified Modeling Language ; Learn UML) : https://www.tutorialspoint.com/uml/uml_class_diagram.htm
+
+(C# Casting Floats ; Microsoft Visual Studio) : https://social.msdn.microsoft.com/Forums/vstudio/en-US/c633db6d-fc3c-4c83-be8d-90f9640bbbf4/how-can-i-convert-float-to-int?forum=csharpgeneral
+(Simple State Machine ; Infallible Code) : https://www.youtube.com/watch?v=G1bd75R10m4
+(Finite-State Machine ; Infallible Code) : https://www.youtube.com/watch?v=5PTd0WdKB-4
+(Scriptable Object Events with Parameter Passing ; FumetsuHito) : https://www.youtube.com/watch?v=0G6LAyINwcw
+(Using Constructors in Unity ; Unity Answers) : https://answers.unity.com/questions/862032/c-constructor-in-monobehaviour.html
+
+(Protected Keyword ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected
+(Protected Internal ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/protected-internal
+(Private Protected ; Microsoft Docs) : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/private-protected
+
+(Removing GameObjects in Lists ; Unity Answers) : https://answers.unity.com/questions/1315488/destroy-a-gameobject-referenced-in-list-and-remove.html
+(List<T>.RemoveAll() ; Microsfot Docs) : https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1.removeall?view=net-5.0
+
+(Abstract vs. Interfaces (Java) ; GeeksForGeeks) : https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-java/
+(Abstract classes (Java) ; GeeksForGeeks) : https://www.geeksforgeeks.org/abstract-classes-in-java/
+(Interfaces (Java) ; GeeksForGeeks) : https://www.geeksforgeeks.org/interfaces-in-java/
+(Comparable ; Oracle Docs) : https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html
+(Lambda Expressions ; Oracle Docs) : https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+(Collection ; Oracle Docs) : https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html
+(Generics ; Oracle Docs) : https://docs.oracle.com/javase/tutorial/java/generics/index.html
+
+(Nash Equilibrium ; Wikipedia) : https://en.wikipedia.org/wiki/Nash_equilibrium
+(Game Without a Value ; Wikipedia) : https://en.wikipedia.org/wiki/Game_without_a_value
+(Folk Theorem ; Wikipedia) : https://en.wikipedia.org/wiki/Folk_theorem_(game_theory)
+(Combinatorial Game Theory ; Wikipedia) : https://en.wikipedia.org/wiki/Combinatorial_game_theory
+(Heuristic ; Wikipedia) : https://en.wikipedia.org/wiki/Heuristic
+(Alpha-Beta Pruning ; Wikipedia) : https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
+(Negamax ; Wikipedia) : https://en.wikipedia.org/wiki/Negamax
+(Minimax ; Wikipedia) : https://en.wikipedia.org/wiki/Minimax
+
+(Enum ; Oracle) : https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
+(Enum Methods ; Oracle) : https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html
+(Key Events ; Oracle) : https://docs.oracle.com/javase/7/docs/api/java/awt/event/KeyEvent.html
+
+(Enums as Integers ; StackOverflow) : https://stackoverflow.com/questions/13792110/java-enum-return-int
+
+(Jump to Different Cases ; StackOverflow) ; https://stackoverflow.com/questions/31498571/can-we-call-a-case-inside-another-case-in-the-same-switch-statement-in-java

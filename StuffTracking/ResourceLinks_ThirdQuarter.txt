@@ -26,3 +26,106 @@ https://git-scm.com/docs/git-branch
 "Sprite editor + sheets 2019.1-": https://learn.unity.com/tutorial/introduction-to-sprite-editor-and-sheets#
 
 "deleting git repository" : https://www.codegrepper.com/code-examples/delphi/how+to+delete+git+repository+local
+
+"austin unity 2017 blog" : http://www.roboryantron.com/2017/10/unite-2017-game-architecture-with.html
+"austin unity 2017 git" : https://github.com/roboryantron/Unite2017   //don't think I can really look at any of this outside of Unity
+"tryharding" : https://www.youtube.com/watch?v=oS4mT_4aQMM
+
+"force git checkout" : https://stackoverflow.com/questions/17223527/how-do-i-force-git-to-checkout-the-master-branch-and-remove-carriage-returns-aft
+"unity discussion: failed to load window layout" : https://stackoverflow.com/questions/17223527/how-do-i-force-git-to-checkout-the-master-branch-and-remove-carriage-returns-aft
+"unity answer: failed to load window layout" : https://answers.unity.com/questions/757942/how-do-i-fix-failed-to-load-window-layout.html
+"unity answer: failed to load window layout (popular)" : https://answers.unity.com/questions/1712501/stuck-in-failed-to-load-window-layout-loop.html
+
+"basic branching and merging" : https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+"stashing and cleaning" : https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning#_git_stashing
+"enter a commit message for merge" : https://stackoverflow.com/questions/19085807/please-enter-a-commit-message-to-explain-why-this-merge-is-necessary-especially
+"abort git merge" : https://stackoverflow.com/questions/44048982/abort-a-git-merge/44049103
+
+"implicit and explicit keywords" : https://medium.com/dev-genius/implicit-and-explicit-operators-c-30d28fb573e0
+//implicit lets you convert a class to a different one without the need of casts, while explicit lets you do the same only with casting
+"using implicit/explicit" : https://stackoverflow.com/questions/32519131/c-sharp-implicit-operator-with-generic
+
+"Serializing (Scripting), Unity Doc" : https://docs.unity3d.com/ScriptReference/Serializable.html
+"Serializing (Manual), Unity Doc" : https://docs.unity3d.com/Manual/script-Serialization.html
+"ScriptableObjects (Manual), Unity Doc" : https://docs.unity3d.com/Manual/class-ScriptableObject.html
+"CreateAssetMenu, UnityDoc" : https://docs.unity3d.com/ScriptReference/CreateAssetMenuAttribute.html
+Serialization turns something into bytes and stuff, which can be put into a file and/or brought back for later use
+
+"New Input System announcement" : https://blogs.unity3d.com/2019/10/14/introducing-the-new-input-system/
+
+"changing remote's origin url thing": https://docs.github.com/en/github/using-git/changing-a-remotes-url
+
+"CreateAssetMenu  issue" : https://forum.unity.com/threads/using-createassetmenu-and-scriptableobject.518022/
+
+"Markdown" : https://www.markdownguide.org/
+"Markdown with Github" : https://guides.github.com/features/mastering-markdown/
+
+"ScriptableObjects demonstration; Brackeyes" : https://www.youtube.com/watch?v=aPXvoWVabPY
+"ScriptableObjects introdction; Game Dev Guide" : https://www.youtube.com/watch?v=lJxy3oTZeCs
+"ScriptableObjects demonstration; Sirenex" : https://www.youtube.com/watch?v=W5ECIJyoW80
+"ScriptableObject usage; Unite '17 Seoul (very good at end)" : https://www.youtube.com/watch?v=VtuSKmfrFDU
+"ScriptableObject demonstration; Dapper Dino" : https://www.youtube.com/watch?v=iBBUv9MIIK8
+
+"Interfaces; Microsoft Documentation" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/
+"Abstract, Sealed, and Class Members" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members
+"Safely Update Interfaces; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-methods-versions
+"Explicit Interface Implementation; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation
+"Properties in Interfaces; Microsfot Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/interface-properties
+"Polymorphism; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/polymorphism
+"Virtual keyword; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual
+
+"Why you shouldn't use game engines" : https://www.youtube.com/watch?v=nBaCRp9UzDw
+"How to code (almost) any feature" : https://www.youtube.com/watch?v=h1o5UzKfZcQ
+"Free GameDev tools" : https://www.youtube.com/watch?v=ung_U17kxDI
+
+"foreach; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/foreach-in
+"Lambda expressions" : https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/lambda-expressions
+
+"overriding C# variables; StackOverflow" : https://stackoverflow.com/questions/8844649/how-do-i-override-not-hide-a-member-variable-field-in-a-c-sharp-subclass
+
+"Mathf Round; Unity Docs" : https://docs.unity3d.com/ScriptReference/Mathf.Round.html
+"Math Round; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/api/system.math.round?view=net-5.0
+"Creating Objects at Runtime; StudyTonight" : https://www.studytonight.com/game-development-in-2D/basic-fundamentals-of-game-objects
+"Instantiating At Runtime; Unity Manual" : https://docs.unity3d.com/Manual/InstantiatingPrefabs.html
+"Object Instantiate; Unity Docs" : https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
+"Create Objects with Script; Unity Answers" : https://answers.unity.com/questions/315908/create-objects-with-script.html
+"Try and Catch; Microsoft Docs" : https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch
+
+"Visual Studio Keyboard Shortcuts ; Microsft Docs" : https://docs.microsoft.com/en-us/visualstudio/ide/default-keyboard-shortcuts-in-visual-studio?view=vs-2019
+"Visual Studio Shortcut Tips ; Microsoft Docs" : https://docs.microsoft.com/en-us/visualstudio/ide/productivity-shortcuts?view=vs-2019
+"Visual Studio Multiple Select; Stack Overflow" : https://stackoverflow.com/questions/16495727/multiple-select-in-visual-studio
+
+"Check if Coroutine is running; UnityAnswers" : https://answers.unity.com/questions/126783/can-i-check-if-a-coroutine-is-running.html
+
+"Earthbound in Unity; Alberto Castañeda" : https://www.youtube.com/watch?v=qr4H6wyu64w
+
+"Managing Different UIs ; Unity Forums" : https://forum.unity.com/threads/how-do-your-manage-your-different-ui-menus.391598/
+"Pause Menu Unity ; Brakeyes" : https://www.youtube.com/watch?v=zc8ac_qUXQY
+"Multiple Menus in Unity ; Learn to Be Indie" : https://www.youtube.com/watch?v=23p1vFsNvKo
+
+"UI ; Unity Manual" : https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/index.html
+
+"Making Pause Menu ; Brackeyes" : https://www.youtube.com/watch?v=JivuXdrIHK0
+"UI Navigation ; Unity Learn" : https://learn.unity.com/tutorial/ui-navigation-2019-3#
+"Dropdown UI ; Unity Answers" : https://forum.unity.com/threads/nest-dropdowns.401804/
+"Controller UI navigation ; gamesplusjames" : https://www.youtube.com/watch?v=SXBgBmUcTe0
+
+"How personality affects what you play" : https://www.youtube.com/watch?v=gvjVP56r0BA
+"Houdini Engine now Free" : https://www.youtube.com/watch?v=J14LIyitJ3c
+"Red X's Unity UI : Unity Answers" : https://answers.unity.com/questions/889161/unity-ui-red-xs-in-scene-view.html
+
+"Earthbound Battle Backgrounds ; Retro Game Mechanics Explained" : https://www.youtube.com/watch?v=zjQik7uwLIQ
+"Earthbound Backgrounds Java ; Garen J. Torikian" : https://www.gjtorikian.com/Earthbound-Battle-Backgrounds-JS/
+"Earthbound BGs in Unity ; Reddit" : https://www.reddit.com/r/Unity2D/comments/aup7py/earthboundlike_battle_backgrounds_made_with_unity/
+"UI Image ; Unity Doc" : https://docs.unity3d.com/2018.3/Documentation/ScriptReference/UI.Image.html
+"Changing and Image ; Unity Forum" : https://forum.unity.com/threads/ui-image-change-sprite-on-script.264056/
+"Earthbound Background Making ; Mother 4 (Oddity) Blog" : https://blog.mother4game.com/post/123598820159/update-2-focus-on-the-background-hey-folks
+
+"Disable Mouse ; Unity Answers" : https://answers.unity.com/questions/1507986/disable-mouse-input-and-cursor-in-game.html
+"Stop Mouse Stealing Focus ; Unity Answers" : https://answers.unity.com/questions/943854/ui-46-disable-mouse-from-stealing-focus.html?_ga=2.247606471.1741570486.1614978418-1031676528.1600094299
+
+"Field Name serialized multiple times ; Unity Forum" : https://forum.unity.com/threads/what-does-this-error-mean-exactly.122136/
+
+"C# Attributes and Reflection Unity ; Game Dev Guide" : https://www.youtube.com/watch?v=vLKeqS1PeTU
+
+"Disabling OnTriggerEnter ; Unity Forums" : https://forum.unity.com/threads/should-ontriggerenter-be-getting-called-even-when-the-script-is-disabled.240391/
