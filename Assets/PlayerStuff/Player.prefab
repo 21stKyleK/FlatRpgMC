@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7380277635758664900}
   - component: {fileID: 7380277635758664901}
-  - component: {fileID: 7380277635758664903}
-  - component: {fileID: -5607861345843912310}
+  - component: {fileID: 9119881793389162445}
+  - component: {fileID: -8852868122009442179}
+  - component: {fileID: 582613129401733994}
   - component: {fileID: 7380277635758664902}
   - component: {fileID: 8576349882540018264}
   m_Layer: 0
@@ -85,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7380277635758664903
+--- !u!114 &9119881793389162445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,12 +95,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7380277635758664920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98617fa0079d2884d81711ef679af219, type: 3}
+  m_Script: {fileID: 11500000, guid: e029be2785c2ca941b08aec87fc38505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mSpd: 120
+  mSpd: {fileID: 11400000, guid: e9aa546648741cf47a348c691b3b1cc5, type: 2}
+  boostAmt: {fileID: 11400000, guid: 8674f6c698726c9448ee2e31d87d6f09, type: 2}
   rb: {fileID: 7380277635758664902}
---- !u!114 &-5607861345843912310
+--- !u!114 &-8852868122009442179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,14 +110,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 7380277635758664920}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e858871669780a4f86534d34569a6d8, type: 3}
+  m_Script: {fileID: 11500000, guid: ade87874b475e4540a99c92e91558064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  hpMax: 0
-  act: 0
-  actMax: 0
-  lvl: 0
+  xSpwn: {fileID: 11400000, guid: 6d5c026e80380ff41ad323bf80afe02a, type: 2}
+  ySpwn: {fileID: 11400000, guid: 667ab38bd75cedf47b4eff001e2e4289, type: 2}
+--- !u!114 &582613129401733994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7380277635758664920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f93d02e11b8df3468771cc453c0745d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  papi: {fileID: 11400000, guid: 836b914759fca9c4d940e50616f70662, type: 2}
+  theThing:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8852868122009442179}
+        m_MethodName: SetPosition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &7380277635758664902
 Rigidbody2D:
   serializedVersion: 4
